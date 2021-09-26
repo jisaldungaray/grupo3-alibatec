@@ -15,7 +15,10 @@ Juanchi Saldungaray:
 Joaquin Barrionuevo:
 
 
-Pedro Soto:  
+Pedro Soto:  Soy de Medellín, Colombia tengo 32 años de edad y actualemte trabajo en una empresa de Marketing Digital. 
 
 
 Referencias de sitios web, ¿Por qué los elegimos?:
+1. https://www.studioproper.com.au/
+2. https://www.mercadolibre.com
+3. https://www.guru.com/

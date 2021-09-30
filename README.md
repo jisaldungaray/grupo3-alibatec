@@ -29,5 +29,3 @@ Nuestro selecto publico son aquellas pequeñas, medianas y grandes empresas con 
 <h2>Adjuntamos preseleccion de Logos desarrollados, por los cuales nos encontramos decidiendo el final...<h2>
 
 ![logos!](logos/Grupo3-AlibaTec-Logos.png)
-
-<p>Definir Logo, Color y Tipografias.</p>

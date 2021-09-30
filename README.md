@@ -27,4 +27,4 @@ Referencias de sitios web, ¿Por qué los elegimos?:
 
 Adjuntamos preseleccion de Logos desarrollados, por los cuales nos encontramos decidiendo el final...
 
-![logos!](/media/jis/wfs/dh/proyectoIntegrador/Grupo3-AlibaTec/logos/Grupo3-AlibaTec-Logos.png)
+![logos!](logos/Grupo3-AlibaTec-Logos.png)

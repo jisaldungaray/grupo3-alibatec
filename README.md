@@ -32,14 +32,14 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 <p>Soy de Medellín, Colombia tengo 32 años de edad y actualemte trabajo en una empresa de Marketing Digital.</p>
 
 <h2>Referencias de sitios web, ¿Por qué los elegimos?</h2>
-<p>
+
 1. https://www.studioproper.com.au (por su diseño de página)
 2. https://www.gurusoluciones.com.ar (por la interacción de la página)
 3. https://www.mexx.com.ar (por los productos que vende y clientes que apunta)
 4. https://www.tradeweb.com.ar (por el servicio que vende)
 5. https://www.mercadolibre.com (como ejemplo de e-commerce)
 6. https://www.dafiti.com.ar (como ejemplo de e-commerce)
-</p>
+
 
 <h2>Adjuntamos preseleccion de Logos desarrollados, por los cuales nos encontramos decidiendo el final...<h2>
 

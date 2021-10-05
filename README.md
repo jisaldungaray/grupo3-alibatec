@@ -1,5 +1,3 @@
-
-
 <h1>Proyecto Integrador ALIBATEC</h1>
 <h2>Tecnología y soluciones digitales</h2>
 

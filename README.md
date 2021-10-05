@@ -1,4 +1,5 @@
-<h1>ALIBATEC</h1><h2>Tecnología y soluciones digitales</h2>
+<h1>ALIBATEC</h1>
+<h2>Tecnología y soluciones digitales</h2>
 
 Grupo #3
 

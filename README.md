@@ -10,7 +10,7 @@ Grupo #3
 <p>Trello: https://bit.ly/2Yki4wM</p>
 
 
-<h2>Descripción de Productos y Servicios Alibatec:</h2>
+<h2>Descripción de Productos y Servicios Alibatec</h2>
 
 <p>Somos un equipo de desarrolladores inspirados en la Tecnología con el fin comun de llevar a cada usuario los mejores productos y servicios.
 

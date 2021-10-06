@@ -57,3 +57,11 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 <hr>
 <img src="diseno/logos/at-logo-completo-45.png" width=30%/>
 <hr>
+
+<h2>Styles<h2>
+
+<a href="diseno/AlibaTec - Styles.pdf">Abrir Styles</a>
+
+<h2>Wireframes<h2>
+
+<a href="https://bit.ly/3leuJKI">Abrir Wireframes</a>

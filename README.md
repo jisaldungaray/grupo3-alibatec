@@ -1,4 +1,4 @@
-<img src="diseno/logos/at-logo-completo.png"/>
+<img src="diseno/logos/at-logo-completo.png" width=50%/>
 <h2>Tecnología y soluciones digitales</h2>
 
 Grupo #3
@@ -48,11 +48,12 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 
 <h2>Logos<h2>
 
-<img src="diseno/logos/at-logo-letra.png" width=50% />
 <hr>
-<img src="diseno/logos/at-logo-favicon.png" width=50%/>
+<img src="diseno/logos/at-logo-letra.png" width=30%/>
 <hr>
-<img src="diseno/logos/at-logo-completo.png" width=50%/>
+<img src="diseno/logos/at-logo-favicon.png" width=30%/>
 <hr>
-<img src="diseno/logos/at-logo-completo-45.png" width=50%/>
+<img src="diseno/logos/at-logo-completo.png" width=30%/>
+<hr>
+<img src="diseno/logos/at-logo-completo-45.png" width=30%/>
 <hr>

@@ -60,8 +60,8 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 
 <h2>Styles<h2>
 
-<a href="diseno/AlibaTec - Styles.pdf">Abrir Styles</a>
+<a target="_blank" href="diseno/AlibaTec - Styles.pdf">Abrir Styles</a>
 
 <h2>Wireframes<h2>
 
-<a href="https://bit.ly/3leuJKI">Abrir Wireframes</a>
+<a target="_blank" href="https://bit.ly/3leuJKI">Abrir Wireframes</a>

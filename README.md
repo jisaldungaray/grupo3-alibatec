@@ -1,4 +1,4 @@
-<h1>ALIBATEC</h1>
+<img src="diseno/logos/at-logo-completo.png"/>
 <h2>Tecnología y soluciones digitales</h2>
 
 Grupo #3
@@ -46,10 +46,9 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 6. https://www.dafiti.com.ar | Como ejemplo de e-commerce.
 
 
-<h2>Logos - Preseleccion<h2>
+<h2>Logos<h2>
 
-![logos!](diseno/logos/Grupo3-AlibaTec-Logos.png)
-
-<h2>Logo - Definitivo<h2>
-
-<p>En proceso</p>
+<img src="diseno/logos/at-logo-letra.png"/>
+<img src="diseno/logos/at-logo-favicon.png"/>
+<img src="diseno/logos/at-logo-completo.png"/>
+<img src="diseno/logos/at-logo-completo-45.png"/>

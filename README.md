@@ -24,7 +24,7 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 
 <h2>Integrantes de Alibatec</h2>
 
-<h3>Rosemary Calderon</h3>
+<h3>Rosemary Calderon (https://github.com/rosscalpe)</h3>
 <p>Ingeniero de Gas y músico, metódica, dinámica, detallista y con amplia capacidad de análisis.</p>
 
 <h3>Juan Ignacio Saldungaray</h3>

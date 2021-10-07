@@ -30,8 +30,9 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 <h3>Juan Ignacio Saldungaray</h3>
 <p>Me dicen Juanchi, Juani, Juanito... Soy de la Localidad de Bahía Blanca, al sur de la Ciudad de Buenos Aires, Argentina. Desde joven trabajando en empresas de Servicios, Técnico en Armado y Reparación de PC y Celulares, Emprendedor... Y ahora, intentando ampliar conocimientos en esta hermosa profesión.</p>
 
-<h3>Joaquin Barrionuevo</h3>
-<p>Soy Joaco, tengo 29 años, naci en Jujuy, vivo en Neuquen Capital. Estudio Marketing y Publicidad Digital, Me gusta la lectura y disfruto de escribir en ocasiones. Con este curso busco potenciar mi carrera profesional. </p>
+<h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>
+
+<p>Soy Joaco, tengo 29 años, naci en Jujuy, vivo en Neuquen Capital. Estudio Marketing y Publicidad Digital. Con este curso busco potenciar mi carrera profesional. </p>
 
 <h3>Pedro Soto</h3>
 <p>Soy de Medellín, Colombia tengo 32 años de edad y actualemte trabajo en una empresa de Marketing Digital.</p>

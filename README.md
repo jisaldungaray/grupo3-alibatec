@@ -34,7 +34,7 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 
 <p>Soy Joaco, tengo 29 años, naci en Jujuy, vivo en Neuquen Capital. Estudio Marketing y Publicidad Digital. Con este curso busco potenciar mi carrera profesional. </p>
 
-<h3>Pedro Soto</h3>
+<h3>Pedro Soto (https://github.com/psoto89)</h3>
 <p>Soy de Medellín, Colombia tengo 32 años de edad y actualemte trabajo en una empresa de Marketing Digital.</p>
 
 <h2>Referencias de sitios web - ¿Por qué los elegimos?</h2>

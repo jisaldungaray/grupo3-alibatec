@@ -27,7 +27,7 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 <h3>Rosemary Calderon (https://github.com/rosscalpe)</h3>
 <p>Ingeniero de Gas y músico, metódica, dinámica, detallista y con amplia capacidad de análisis.</p>
 
-<h3>Juan Ignacio Saldungaray</h3>
+<h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p>Me dicen Juanchi, Juani, Juanito... Soy de la Localidad de Bahía Blanca, al sur de la Ciudad de Buenos Aires, Argentina. Desde joven trabajando en empresas de Servicios, Técnico en Armado y Reparación de PC y Celulares, Emprendedor... Y ahora, intentando ampliar conocimientos en esta hermosa profesión.</p>
 
 <h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>

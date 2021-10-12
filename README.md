@@ -1,4 +1,4 @@
-<img src="diseno/logos/at-logo-completo.png" width=50%/>
+<img src="public/img/at-logo-completo.png" width=50%/>
 <h2>Tecnología y soluciones digitales</h2>
 
 Grupo #3
@@ -50,18 +50,18 @@ Nuestros productos y servicios estan dirigidos principalmente a pequeñas, media
 <h2>Logos<h2>
 
 <hr>
-<img src="diseno/logos/at-logo-letra.png" width=30%/>
+<img src="public/diseno/logos/at-logo-letra.png" width=30%/>
 <hr>
-<img src="diseno/logos/at-logo-favicon.png" width=30%/>
+<img src="public/diseno/logos/at-logo-favicon.png" width=30%/>
 <hr>
-<img src="diseno/logos/at-logo-completo.png" width=30%/>
+<img src="public/diseno/logos/at-logo-completo.png" width=30%/>
 <hr>
-<img src="diseno/logos/at-logo-completo-45.png" width=30%/>
+<img src="public/diseno/logos/at-logo-completo-45.png" width=30%/>
 <hr>
 
 <h2>Styles<h2>
 
-<a href="diseno/AlibaTec - Styles.pdf">Abrir Styles</a>
+<a href="public/diseno/AlibaTec - Styles.pdf">Abrir Styles</a>
 
 <h2>Wireframes<h2>
 

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' sans-serif;
+}
+body{
+    color: #1c1b1b;
+}
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size:  22px;
+}
+h3{
+    font-size: 13px;
+}
+p{
+    font-size: 14px
+}
+
+header div.logo-Aliba{
+    width: 90%;
+}
+main section article div img.foto{
+    width: 30%;  
+}
+main section article div.producto-detalle{
+    padding: 5px;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+article div.form-pago{
+    border:1px solid red;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+     
+}
+div.precio-pago{
+    align-items: flex-start;
+}
+article .detalle{
+    display: flex;
+    margin: 10px;
+    border: 1px solid blue;
+}

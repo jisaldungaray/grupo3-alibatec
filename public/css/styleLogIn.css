@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+main {
+    background-color: #adadad;
+    padding: 5px;
+}
+
+/* ----- Div del formulario----*/
+
+.datos{
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 90px;
+    height: 98vh;
+    
+}
+
+.logo img{
+    width: 85%;
+    margin-top: 50px;
+    
+}
+
+h3{
+    font-size: 20px;
+    margin: 30px auto;
+
+}
+
+.grande{
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.botones button{
+    width: 70%;
+    height: 35px;
+    margin-top: 15px;
+    background-color: #32ABF0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+p {
+    margin-top: 30px;
+    color: #7cd933;
+    text-decoration: underline;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #b7b7b7;
+}
+/* ----- Div del banner----*/
+
+.banner{
+    width: 64%;
+    float: right;
+    display: none;
+}
+
+/* ------ Media Querys--------*/
+
+@media (min-width: 950px){
+
+    main div.login{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .banner{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        background-image: url("/img/Marketing/at-marketing1.jpg");
+        height: 98vh;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 3px;
+        width: 63%;
+       
+        
+    }
+
+    .datos{
+        width: 35%;
+        float: left;
+        margin: 4px;
+    }
+}
+
+    

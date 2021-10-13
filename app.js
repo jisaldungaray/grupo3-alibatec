@@ -15,6 +15,10 @@ app.get('/producto',(req, res ) => {
     res.sendFile(path.join(__dirname, './views/productDetail.html'))
 });
 
+app.get('/login',(req, res ) => {
+    res.sendFile(path.join(__dirname, './views/login.html'))
+});
+
 // Hasta aca
 
 app.listen (4000, () => {

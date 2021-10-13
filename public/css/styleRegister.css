@@ -1,7 +1,11 @@
+/* -----Codigo Correspondiente a Body-----*/
 *{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+/* -----Codigo Correspondiente a Header-----*/
 .header {
     width: 100%;
     border-bottom: solid 2px rgb(0,171,240);
@@ -43,6 +47,27 @@
 .nav-complete {
     display: none;
 }
+
+
+/* -----Codigo Correspondiente a Formulario-----*/
+.formulario__contenedor {
+    background-color: gainsboro;
+    width: 40%;
+    height: 85vh;
+    float: left;
+}
+
+/* -----Codigo Correspondiente a Banner-----*/
+
+.banner{
+    width: 60%;
+    height: 85vh;
+    float: right;
+    background-image: url("/img/Marketing/at-marketing5.jpg");
+}
+
+
+/* -----Codigo Correspondiente a Header Responsive-----*/
 @media (min-width: 1024px){
     .nav-complete{
         display: flex;

@@ -5,46 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alibatec | Tecnología y soluciones digitales</title>
+    <link rel="shortcut icon" href="./diseno/logos/at-logo-favicon.png">
     <link rel="stylesheet" href="/css/styleindex.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--header-->
     <header class="header">
         <div class="header-content">
             <div class="header-phone">
                 <div class="header-logo">
-                    <img src="../diseno/logos/at-logo-completo.png" alt="logo Alibatec" class="logo"><a href="#"></a>
+                    <img src="./diseno/logos/at-logo-completo.png" alt="logo Alibatec" class="logo"><a href="#"></a>
                 </div>
+                <!--menu responsive-->
                 <div class="header-menu">
                     <a href="#"><i id="sim-men" class="fas fa-angle-double-down"></i></a>
+                    <ul class="menu">
+                        <li class="menu-item-container-submenu">
+                            <a href="#" class="submenu-btn">Productos <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu-pro">
+                                <li class="menu-item"><a href="">Producto1</a></li>
+                                <li class="menu-item"><a href="">Producto2</a></li>
+                                <li class="menu-item"><a href="">Producto3</a></li>
+                                <li class="menu-item"><a href="">Producto4</a></li>
+                                <li class="menu-item"><a href="">Producto5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="">Servicios</a></li>
+                        <li class="menu-item-container-submenu"><a href="#" class="submenu-btn">Cuenta <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu-cuenta">
+                                <li class="menu-item"><a href="/register">Registrarse</a></li>
+                                <li class="menu-item"><a href="/login">Iniciar sesión</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="">Carrito</a></li>
+                    </ul>
                 </div>
             </div>
+            <!--menu desktop-->
             <div class="nav-complete">
                 <nav class="nav-bar">
                     <ul class="lista-horizontal">
                         <li class="horizontal-item">
                         <a href="#" class="">Productos <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Producto1</a></li>
+                                <li><a href="#">Producto2</a></li>
+                                <li><a href="#">Producto3</a></li>
+                                <li><a href="#">Producto4</a></li>
+                                <li><a href="#">Producto5</a></li>
+                            </ul>
                         </li>
                         <li class="horizontal-item">
-                        <a href="#" class="">Servicios <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="">Servicios</a>
                         </li>
                     </ul>
 
                     <ul class="lista-horizontal">
-                        <li class="horizontal-item">
-                        <a href="#" class="">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                        <li class="horizontal-item"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/register">Registrarse</a></li>
+                                <li><a href="/login">Iniciar sesión</a></li>
+                            </ul>
                         </li>
                         <li class="horizontal-item">
                         <a href="#" class=""><i id="iconos-header" class="fas fa-shopping-cart"></i></a>
                         </li>
                     </ul>
-                </nav>   
+                </nav>
             </div>
         </div>
     </header>
     <main>
-      <!--ya comenzaré a trabajar en el contenido-->  
+        <!--carrusel de imágenes-->
+        <div class="carrusel">
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="./img/marketing/slide11.jpg" alt="slide1">
+                </li>
+                <li id="slide2">
+                 <img src="./img/marketing/slide222.jpg" alt="slide2">   
+                </li>
+                <li id="slide3">
+                    <img src="./img/marketing//slide2.jpg" alt="slide3">
+                </li>
+            </ul>
+        </div>
+        <!--productos destacados-->
+        <div class="comentario">
+            <h2 class="inv-text">TECNOLOGÍA A UN CLICK</h2>
+            <h3 class="cita-text">La tecnología, tu aliado para comprender las necesidades de tus colaboradores.  Guido Cattaneo</h3>
+        </div>    
+            <br>
+        <section class="destacados">
+            <div class="producto">
+                <div class="img-product">
+                    <img class="images" src="./img/productos/airpods.png" alt="airpods">
+                </div>
+                <div class="precio-detalle">
+                    <div class="detalle-producto">
+                        <div class="tipo">
+                            <a href="#">Airpods</a>
+                        </div>
+                     <a href="#" class="precio">$25.000</a>
+                    </div>
+                    <div class="buy">
+                        <a href="#" class="buy-btn">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="img-product">
+                    <img class="images" id="tlf" src="./img/productos/i13-4.png" alt="I13-blanco">
+                </div>
+                <div class="precio-detalle">
+                    <div class="detalle-producto">
+                        <div class="tipo">
+                            <a href="#">Iphone 13 PRO Blanco</a>
+                        </div>
+                        <a href="#" class="precio">$300.000</a>
+                    </div>
+                    <div class="buy">
+                        <a href="#" class="buy-btn">Comprar</a>
+                    </div>
+                </div>
+            </div>  
+            <div class="producto">
+                <div class="img-product">
+                    <img class="images" id="tbl" src="./img/productos/tablet.png" alt="tablet">
+                </div>
+                <div class="precio-detalle">
+                    <div class="detalle-producto">
+                        <div class="tipo">
+                            <a href="#">Tablet Sony Xperia Z4</a>
+                        </div>
+                        <a href="#" class="precio">$60.000</a>
+                    </div>
+                    <div class="buy">
+                        <a href="#" class="buy-btn">Comprar</a>
+                    </div>
+                </div>
+            </div>      
+            </section>
+
+        </div>
+        
     </main>
 </body>
 </html>

@@ -2,14 +2,15 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+/*Estilo header*/
 .header {
     width: 100%;
-    border-bottom: solid 2px rgb(0,171,240);
 }
 .header-content {
     display: flex;
     justify-content: space-between;
     padding: 15px 18px;
+    border-bottom: solid 2px rgb(0,171,240);
 }
 .logo {
     width: 100%;
@@ -34,6 +35,65 @@
     text-align: center;
     border-radius: 20%;
     height: 40px;
+    position: relative;
+}
+.menu {
+    background-color: rgb(124,217,51);
+    width: 150px;
+    border-radius: 5%;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    overflow: hidden;
+    opacity: 0;
+}
+.header-menu:hover .menu{
+    overflow: visible;
+    opacity: 1;
+    transition: all 800ms;
+}
+.menu-item-container-submenu {
+    position: relative;
+    padding-top: 10px;
+}
+.menu-item a{
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+.submenu-pro a, .submenu-cuenta a{
+    background-color: rgb(254,100,26);
+}
+.submenu-pro, .submenu-cuenta {
+    height: 0;
+    overflow: hidden;
+    transition: all 800ms;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+}
+.menu-item-container-submenu:hover .submenu-pro {
+    overflow: visible;
+    opacity: 1;
+    transition: all 800ms;
+}
+.menu-item-container-submenu:hover .submenu-cuenta {
+    overflow: visible;
+    opacity: 1;
+    transition: all 800ms;
+}
+.menu-item:hover {
+    background-color: rgb(124,217,51);
+    font-weight: bold;
+    font-style: italic;
+    transition: all 800ms;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .header-menu a{
     color: white;
@@ -43,7 +103,99 @@
 .nav-complete {
     display: none;
 }
+.carrusel {
+    display: none;
+}
+/*Estilo Productos destacados*/
+.inv-text {
+    text-align: center;
+    font-weight: 900;
+    color: rgb(0,171,240);
+    box-sizing: border-box;
+    box-shadow: 1px 1px rgb(199,0,143);
+}
+.cita-text {
+    text-align: center;
+    font-style: italic;
+    border: dotted 1px rgb(124,217,51);
+    border-radius: 2%;
+    padding: 10px;
+    font-weight: lighter;
+}
+.destacados {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.images {
+    width: 90%;
+    margin-left: 20px;
+}
+.producto {
+    border: solid 1px rgb(254,100,26);
+    border-radius: 5%;
+    margin-bottom: 15px;
+}
+.producto a{
+    text-decoration: none;
+}
+
+.detalle-producto {
+    border-top: solid 1px rgb(252, 173, 136);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    margin: 0 10px;
+}
+.buy {
+    text-align: center;
+    padding: 15px;
+}
+.buy-btn {
+    border-top: solid 1px rgb(124,217,51);
+    border-bottom: solid 1px rgb(124,217,51);
+    padding: 5px;
+}
+.tipo {
+    font-weight: bold;
+}
+.precio {
+    color: rgb(124,217,51);
+    font-weight: 700;
+}
+@media (min-width: 768px){
+    /*Estilo productos destacados*/
+    .inv-text {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(0,171,240);
+        box-sizing: border-box;
+        box-shadow: 0px 1px 2px rgb(199,0,143);
+    }
+    .cita-text {
+        text-align: center;
+        font-size: 27px;
+        font-style: italic;
+        padding: 10px;
+        font-weight: lighter;
+        border: none;
+    }
+    .destacados {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+    }
+    .producto {
+        width: 30%;
+    }
+    .img-product {
+        margin-bottom: 10px;
+    }
+}
 @media (min-width: 1024px){
+    /*Estilo header*/
     .nav-complete{
         display: flex;
         justify-content: space-between;
@@ -53,6 +205,7 @@
     .header-menu {
         display: none;
     }
+    /*Estilo nav-bar*/
     .nav-bar{
         display: flex;
         width: 100%;
@@ -73,13 +226,15 @@
     .lista-horizontal a{
         color: black;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: bold; 
     }
     .horizontal-item {
         display: flex;
         margin: auto;
         margin-right: 40px;
         padding: 0 15px;
+        font-weight: bold;
+        position: relative;
     }
     .header-content {
         justify-content: space-between;
@@ -88,5 +243,92 @@
         color: rgb(199,0,143);
         margin-left: 5px;
         text-align: center;
+    }
+    .submenu {
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+        z-index: 1000; 
+        opacity: 0;
+    }
+    .submenu li a {
+        display: block;
+        margin-bottom: 10px;
+        background-color: rgb(0,171,240);
+        padding: 10px;
+        border-radius: 5%;
+        color: rgb(54, 52, 52);
+        cursor: pointer;
+    }   
+    .horizontal-item:hover .submenu {
+        overflow: visible;
+        display: block;
+        top: 60px;
+        opacity: 1; 
+    }
+    .submenu li a:hover {
+        background-color: rgb(199,0,143);
+        padding: 10px;
+        border-radius: 5%;
+        color: white;
+        font-weight: bold;
+        transition: ease-in 450ms;
+    }
+/*Estilo carrusel*/
+    .carrusel {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 30px 0;
+        overflow: hidden;
+    }
+    ul, li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .slider {
+        display: flex;
+        width: 300%;
+        animation: cambio 20s infinite alternate;
+        animation-timing-function: ease-in ;
+    }
+    .slider li {
+        width: 100%;
+    }
+    .slider img {
+        width: 100%;
+        object-fit: cover;
+        height: 650px;
+    }
+    @keyframes cambio {
+      0% { margin-left: 0;}
+      15% { margin-left: 0;}
+
+      20% { margin-left: -100%;} 
+      35% { margin-left: -100%;}
+
+      40% { margin-left: -200%;}
+      55% { margin-left: -200%;}
+    }
+    /*Estilo Productos destacados*/
+    .destacados {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+    }
+    .producto {
+        width: 30%;
+    }
+    .producto a {
+        font-size: 24px;
+    }
+    .producto:hover {
+        box-shadow: 0px 0px 10px rgb(252, 173, 136);
+    }
+    .buy-btn:hover {
+        box-shadow: 0px 0px 10px rgb(136, 252, 142);
     }
 }

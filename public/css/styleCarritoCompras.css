@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main div.informacion{
+    text-align: center;
+}
+
+/* ----- Div del detalle de facturación----*/
+
+main div.facturacion{
+    margin: 50px auto;
+    width: 75%;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #009fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 11px;
+}
+
+main div img.logo{
+    width: 70%;
+    margin: 35px
+
+}
+
+div .medio-pago{
+    border: 1px solid #002197;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px 55px;
+}
+div .medio-pago h3{
+    margin: auto 10px;
+    background-color: #002197;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 75%;
+    font-size: 17px;
+   margin: 10px auto;
+
+}
+
+.grande{
+    width: 95%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+button.botones{
+    width: 80%;
+    height: 35px;
+    margin-top: 15px;
+    background-color: #32ABF0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 450ms;
+    ;
+}
+
+button.botones:hover{
+    background-color: white;
+    color: #32ABF0;
+    border: 1px solid #32ABF0;
+    
+}
+
+/* ----- Div del detalle de pedido----*/
+
+main div.detalle-pedido{
+    padding-bottom: 30px;   
+    text-align: center; 
+}
+
+div.producto1{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px 60px;
+    padding-bottom: 20px;
+}
+
+img.productos{
+    width: 70%;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+h4{
+    text-decoration: underline;
+    font-size: 18px;
+    color: #c7048f;
+    margin-top: 10px;
+}
+
+.envio div{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 60px;
+}
+
+.envio div h2 h3{
+    text-align: left;
+}
+
+
+
+
+@media (min-width: 375px){
+    
+    button.botones{
+        display: block;
+        margin: 20px auto;
+    }
+
+}
+
+@media (min-width: 800px){
+    
+    main {
+        display: flex;
+    }
+
+    main div.facturacion{
+        width: 65%;
+        margin: 15px 35px;
+        padding: 5px 20px;
+    }
+
+    div .medio-pago{
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        margin: 5px 20px;
+    }
+
+    div .medio-pago h3 {
+        width: 45%;
+        font-size: 11px;
+        border-radius: 5px;
+        margin: 3px 2px;
+        
+    }
+
+    main div.detalle-pedido{
+        width: 50%;
+        background-color: #FAFAFA;
+        padding-top: 80px;
+        
+    }
+
+    main div.producto1{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    img.productos{
+        width: 40%;
+        text-align: center;
+    }
+
+    div.detalle{
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    p{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    h4{
+        text-align: right;
+       
+    }
+
+    
+
+}
+

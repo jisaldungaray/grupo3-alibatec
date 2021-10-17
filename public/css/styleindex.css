@@ -106,13 +106,14 @@ ul {
 .carrusel {
     display: none;
 }
-/*Estilo Productos destacados*/
+/*comentario*/
 .inv-text {
     text-align: center;
-    font-weight: 900;
+    text-shadow: 0 0 1px rgb(0,171,240);
+    font-size: 18px;
     color: rgb(0,171,240);
     box-sizing: border-box;
-    box-shadow: 1px 1px rgb(199,0,143);
+    box-shadow: 2px 2px 2px rgb(199,0,143);
 }
 .cita-text {
     text-align: center;
@@ -122,6 +123,7 @@ ul {
     padding: 10px;
     font-weight: lighter;
 }
+/*Estilo Productos destacados*/
 .destacados {
     display: block;
     box-sizing: border-box;
@@ -135,6 +137,9 @@ ul {
     border: solid 1px rgb(254,100,26);
     border-radius: 5%;
     margin-bottom: 15px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 40px;
 }
 .producto a{
     text-decoration: none;
@@ -155,14 +160,187 @@ ul {
     border-top: solid 1px rgb(124,217,51);
     border-bottom: solid 1px rgb(124,217,51);
     padding: 5px;
+    color: rgb(54, 52, 52);
+    font-weight: bold;
 }
-.tipo {
+.tipo a{
+    color: black;
     font-weight: bold;
 }
 .precio {
     color: rgb(124,217,51);
     font-weight: 700;
 }
+.ver-todo {
+    width: 40%;
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(124,217,51);
+    border-radius: 10px;
+    padding: 5px;
+    }
+.ver-todo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.ofrecimiento {
+    display: none;
+}
+.carrusel-de-marcas {
+    display: none;
+}
+/*estilos separacion OFERTAS*/
+.linea-separacion {
+    display: inline-block;
+    position: relative;
+    margin-left: 130px;
+}
+.linea-separacion::after, .linea-separacion::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(0,171,240);
+    top: 15px;
+}
+.linea-separacion::before {
+    left: -110px;
+}
+.linea-separacion::after {
+    right: -110px;
+}
+/*Estilo de OFERTAS*/
+.ofertas {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.imag {
+    width: 90%;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+.pro-oferta {
+    border: solid 1px rgb(124,217,51);
+    border-radius: 5%;
+    margin-bottom: 15px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+.pro-oferta a{
+    text-decoration: none;
+}
+.pro-deta {
+    border-top: solid 1px rgb(136, 252, 142);
+    padding: 15px 10px;
+    margin: 0 10px;
+}
+.tip a{
+    color: black;
+    font-weight: 900;
+}
+.descu {
+    color: rgb(124,217,51);
+    font-weight: bold;
+}
+.buys {
+    text-align: left;
+    padding: 15px 5px;
+    margin-left: 10px;
+}
+.buys-btn {
+    border: solid 1px rgb(136, 252, 142);
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(54, 52, 52);
+    font-weight: bold;
+}
+/*Estilo Footer*/
+.footer-complete {
+    display: block;
+    padding: 10px;
+    border-top: solid 2px rgb(0,171,240);
+}
+.suscribirse {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: solid 2px rgb(0,171,240);
+}
+.sus-mail {
+    padding-top: 20px;
+}
+.insert-email {
+    border-radius: 5px
+}
+.enviar-sus {
+    color: rgb(254,100,26);
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(254,100,26);
+}
+.contact-redes {
+    background-color: #ebebeb;
+    padding: 10px;
+    border-radius: 5px;
+}
+.nos {
+    color: rgb(199,0,143);
+    text-decoration: underline;
+}
+.nos-met-con {
+    text-align: center;
+}
+.nos-met-con ul li a{
+    text-decoration: none;
+    color: rgb(54, 52, 52);
+}
+.nos-met-con li {
+    margin-bottom: 5px;
+}
+#icon {
+    color: rgb(0,171,240);
+}
+.iconos-redes ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.iconos-redes ul li {
+    width: 50%;
+    text-align: center;
+}
+.iconos-redes ul li a {
+    border: solid 1px rgb(124,217,51);
+    border-radius: 50%;
+    padding: 15px;
+}
+.red {
+    color: rgb(254,100,26);
+    text-align: center;
+}
+#icon-red {
+    color: rgb(124,217,51);
+    font-size: 20px;
+}
+.logo-final {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border-bottom: solid 2px rgb(199,0,143);
+}
+.logo-footer {
+    width: 30%;  
+}
+.copyright {
+    font-size: 8px;
+    text-align: center;
+}
+
 @media (min-width: 768px){
     /*Estilo productos destacados*/
     .inv-text {
@@ -187,11 +365,84 @@ ul {
         width: 100%;
         padding: 20px;
     }
+    .images {
+        width: 80%;
+        margin-left: 20px;
+    }
     .producto {
         width: 30%;
     }
-    .img-product {
-        margin-bottom: 10px;
+    .ver-todo {
+        width: 30%;
+    }
+    /*Estilos de Ofrecimiento*/
+    .ofrecimiento {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 30px;
+    }
+    .ofre-img {
+        width: 30%;
+        position: relative;
+    }
+    .imgpro {
+        width: 100%;
+    }
+    .descrip {
+        position: absolute;
+        bottom: 25px;
+        left: 5px;
+        padding: 10px;
+    }
+    .descrip a {
+        text-decoration: none;
+        background-color: white;
+        padding: 10px;
+        color:rgb(0,171,240);
+        font-size: 14px;
+        font-weight: 900;
+        border: solid 2px rgb(0,171,240);
+        border-radius: 5px;
+    }
+    .titulo {
+        font-size: 18px;
+        color: rgb(199,0,143);
+        font-weight: 900;
+        border-bottom: solid 2px rgb(0,171,240);
+    }
+    /*Estilo carrusel de marcas*/
+    .carrusel-de-marcas {
+        display: none;
+    }
+    /*estilos separacion OFERTAS*/
+    .linea-separacion {
+        display: inline-block;
+        position: relative;
+        margin-left: 320px;
+    }
+    .linea-separacion::after, .linea-separacion::before {
+        width: 300px;
+        height: 3px;
+        background-color: rgb(0,171,240);
+        top: 15px;
+    }  
+    .linea-separacion::before {
+        left: -310px;
+    }
+    .linea-separacion::after {
+        right: -310px;
+    }
+    /*Estilo de OFERTAS*/
+    .ofertas {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px;
+    }
+    .pro-oferta {
+        width: 42%
     }
 }
 @media (min-width: 1024px){
@@ -205,7 +456,6 @@ ul {
     .header-menu {
         display: none;
     }
-    /*Estilo nav-bar*/
     .nav-bar{
         display: flex;
         width: 100%;
@@ -259,7 +509,6 @@ ul {
         padding: 10px;
         border-radius: 5%;
         color: rgb(54, 52, 52);
-        cursor: pointer;
     }   
     .horizontal-item:hover .submenu {
         overflow: visible;
@@ -317,10 +566,17 @@ ul {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 20px;
+        padding: 30px;
     }
     .producto {
-        width: 30%;
+        width: 29%;
+    }
+    .tipo a {
+        color: black;
+    }
+    .images {
+        width: 90%;
+        margin-left: 25px;
     }
     .producto a {
         font-size: 24px;
@@ -330,5 +586,206 @@ ul {
     }
     .buy-btn:hover {
         box-shadow: 0px 0px 10px rgb(136, 252, 142);
+        color: rgb(124,217,51);
+        font-weight: 900;
     }
+    .buy a{
+        color: black;
+    }
+    .ver-todo {
+        width: 15%;
+        font-size: 30px;
+        padding: 10px; 
+    }
+    .ver-todo:hover a {
+        text-shadow: 1px 1px rgb(254,100,26);
+    }
+    .ver-todo:hover {
+        box-shadow: 1px 1px 1px 2px rgb(254,100,26);
+    }
+    /*Estilos de Ofrecimiento*/
+    .ofrecimiento {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 30px;
+        border-bottom: solid 2px rgb(0,171,240);
+    }
+    .ofre-img {
+        width: 30%;
+        position: relative;
+    }
+    .imgpro {
+        width: 100%;
+    }
+    .descrip {
+        position: absolute;
+        bottom: 80px;
+        left: 20px;
+        padding: 10px;
+    }
+    .descrip a {
+        text-decoration: none;
+        background-color: white;
+        padding: 10px;
+        color:rgb(0,171,240);
+        font-size: 20px;
+        font-weight: 900;
+        border: solid 2px rgb(0,171,240);
+        border-radius: 5px;
+    }
+    .titulo {
+        font-size: 24px;
+        color: rgb(199,0,143);
+        font-weight: 900;
+        border-bottom: solid 2px rgb(0,171,240);
+    }
+    .boton-ver:hover {
+        background-color: rgb(0,171,240);
+        color: white;
+        font-weight: 700;
+    }
+    /*Estilos carrusel de marcas*/
+    .carrusel-de-marcas {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 30px 0;
+        overflow: hidden;
+    }
+    .marcas {
+        display: flex;
+        justify-content: space-between;
+        width: 300%;
+        animation: cambio 20s infinite alternate;
+        animation-timing-function: ease-in ;
+    }
+    .marcas li {
+        width: 70%;
+    }
+    .marcas img {
+        width: 50%;
+        height: 300px;
+    }
+    @keyframes cambio {
+      0% { margin-left: 0;}
+      15% { margin-left: 0;}
+
+      20% { margin-left: -100%;} 
+      35% { margin-left: -100%;}
+
+      40% { margin-left: -200%;}
+      55% { margin-left: -200%;}
+    }
+    /*estilos separacion OFERTAS*/
+    .linea-separacion {
+        display: inline-block;
+        position: relative;
+        margin-left: 900px;
+        font-size: 30px;
+        font-weight: 900;
+        margin-top: 30px;
+        text-shadow: 1px 1px 1px rgb(0,171,240);
+    }
+    .linea-separacion::after, .linea-separacion::before {
+        width: 600px;
+        height: 3px;
+        background-color: rgb(199,0,143);
+        top: 18px;
+    }  
+    .linea-separacion::before {
+        left: -610px;
+    }
+    .linea-separacion::after {
+        right: -610px;
+    }
+    /*Estilo de OFERTAS*/
+    .pro-oferta {
+        width: 22%;
+    }
+    .pro-deta {
+        font-size: 20px;
+    }
+    .buys-btn {
+        font-size: 20px;
+    }
+    .buys-btn:hover {
+        box-shadow: 0px 0px 10px rgb(136, 252, 142);
+        color: rgb(124,217,51);
+        font-weight: 900;
+    }
+    /*Estilo Footer*/
+    .texto-sus {
+        width: 45%;
+        margin-left: 20px;
+    }
+    .sus-mail {
+        width: 45%;
+        margin-left: 20px;
+        text-align: end;
+        margin-top: 35px;
+    }
+    .suscrib-text {
+        font-size: 40px;
+    }
+    .enterate {
+        font-size: 24px;
+        color: rgb(54, 52, 52);
+    }
+    .insert-email {
+        font-size: 20px;
+        width: 70%;
+        height: 35%;
+    }
+    .enviar-sus {
+        width: 20%;
+        height: 38%;
+    }
+    .enviar-sus:hover {
+        background-color: rgb(254,100,26);
+        color: white;
+        font-weight: 700;
+    }
+    .contact-redes {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nos-met-con {
+        width: 22%;
+    }
+    .nos {
+        font-size: 30px;
+    }
+    .nos-met-con li a {
+        font-size: 24px;
+    }
+    .ul-conct li:hover{
+        text-decoration: underline;
+    }
+    .nos-met-con li {
+        margin-bottom: 15px;
+    }
+    .red {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    #icon-red {
+        font-size: 45px;
+    }
+    #icon-red:hover {
+        box-shadow: 1px 1px 2px 2px rgb(254,100,26);
+    }
+    .iconos-redes ul li a {
+        border: none
+    }
+    .logo-final {
+        display: block;
+    }
+    .logo-footer {
+        width: 20%;  
+    }
+    .copyright {
+        font-size: 20px;
+    }
+
 }

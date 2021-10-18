@@ -1,50 +1,190 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-    font-family: 'Montserrat' sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
-    color: #1c1b1b;
-}
-h1{
-    font-size: 24px;
-}
-h2{
-    font-size:  22px;
-}
-h3{
-    font-size: 13px;
-}
-p{
-    font-size: 14px
-}
-
-header div.logo-Aliba{
     width: 90%;
+    align-items: center;
+    background-color: #fafaff;
+    color: #1c1b1b;
+    margin:auto;
 }
-main section article div img.foto{
-    width: 30%;  
+header .logo{
+    width: 40%;
 }
-main section article div.producto-detalle{
-    padding: 5px;
+/*-------PRODUCTO --------*/
+.head-product img{
+    width: 70%;
     display: block;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    margin: auto;
 }
-article div.form-pago{
-    border:1px solid red;
-    margin: 10px 0;
+.head-product{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    
-     
+    flex-direction: column;
+    align-items: center;
 }
-div.precio-pago{
-    align-items: flex-start;
+div.product{
+    text-align: center;    
 }
-article .detalle{
-    display: flex;
+main section.product{
+    width:50%;
     margin: 10px;
-    border: 1px solid blue;
+    display:flex;
+    flex-wrap: wrap;
+}
+.main-product{
+    line-height: 25px;
+    margin-left: 10px;
+}
+.main-product>h2{
+    margin: 10px 0;
+}
+.main-product>p{
+    font-size: 15px;
+    margin: 8px 0;
+}
+.main-product-precio{
+    line-height: 18px;
+    margin-left: 10px;
+}
+.main-product-precio>h4{
+    margin: 5px 0;
+    color: rgba(199 0 143);
+}
+.button-pedido{
+    background-color: rgb(29 65 226);
+    color: #fafafa;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border:none;
+}
+hr{
+    margin:20px;
+}
+/*-----DETALLES DE COMPRA------*/
+.main-section-details{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.desplegable{
+    width: 100%;
+    font-size: 15px;
+    line-height: 23px;
+    align-items: flex-end;    
+}
+.desplegable ul li{
+    font-size: 15px;
+    font-weight: bold;
+    list-style:none;      
+}
+.desplegable ul li a{
+    margin: 25px ;
+    color: #1c1b1b;
+    text-decoration: none; 
+}
+.desplegable ul li i.fas:hover {
+    transform: rotate(-90deg);
+}
+/*----DETALLE PRODUCTO-----*/
+.main-section-info-product{
+    width: 90%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    line-height: 25px;   
+}
+.main-section-info-product>h3{
+    margin: 12px;
+}
+/*---OFERTAS-----*/
+
+section h3{
+    margin:20px;
+}
+.off{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.off img{
+    width: 90%;
+    display: block;
+    margin: auto;
+
+}
+.off div.ofert-iphone,
+.ofert-iphone12,
+.ofert-iphone-mini{
+    margin:20px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+.off h3{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.off p{
+    font-weight: lighter;
+    color: rgb(199 0 143);
+}
+.off button.buy{
+    width:50%;
+    background-color: rgb(29 65 226);
+    margin: 10px;   
+    padding: 10px;
+    border-radius: 5px;
+    color: #fafafa;
+    border:none;
+    text-decoration: none;   
+}
+/*-------MEDIA QUERIES--------*/
+@media(min-width: 700px){
+
+    .head-product{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+    div.product{
+        text-align: start;
+        font-size: larger;
+        line-height: 10%;    
+    }
+    .main-product{
+        line-height: 25px;
+        margin-left: 10px;
+    }
+    .main-product>h2{
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .button-pedido{
+        width: 100%;
+        margin-top: 10px;
+        align-self: flex-start;
+    }   
+    .main-section-details{
+        display: flex;
+        flex-direction: row;    
+    }
+    .desplegable{
+        align-self: flex-start;
+        margin-top: 20px;
+    }
+    .off{
+        display: flex;
+        flex-direction: row;
+        
+       
+    }
+    
+    
 }

@@ -41,6 +41,7 @@ Grupo #3
 <p><b>3. Continuar haciendo:</b> .</p>
 <p><b>4. Hacer menos:</b> .</p>
 <p><b>5. Dejar de hacer:</b> .</p>
+<hr>
 
 <h3>Sprint 2</h3>
 
@@ -71,3 +72,4 @@ Grupo #3
 <p><b>3. Continuar haciendo:</b> .</p>
 <p><b>4. Hacer menos:</b> .</p>
 <p><b>5. Dejar de hacer:</b> .</p>
+<hr>

@@ -97,7 +97,7 @@ p {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        background-image: url("/img/Marketing/at-marketing1.jpg");
+        background-image: url("/img/marketing/at-marketing1.jpg");
         height: 98vh;
         background-position-x: center;
         background-position-y: center;

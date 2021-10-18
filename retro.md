@@ -16,58 +16,58 @@ Grupo #3
 
 <h3>Rosemary Calderon (https://github.com/rosscalpe)</h3>
 <p><b>1. Comenzar a hacer:</b> .</p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p><b>1. Comenzar a hacer:</b> Estar mas al dia con todos los temas.</p>
-<p>2. Hacer mas: Practicas.</p>
-<p>3. Continuar haciendo: Organizando, gestionar, estudiar...</p>
-<p>4. Hacer menos: Dejar para mañana...</p>
-<p>5. Dejar de hacer: Procastinar...</p>
+<p><b>2. Hacer mas:</b> Practicas.</p>
+<p><b>3. Continuar haciendo:</b> Organizando, gestionar, estudiar...</p>
+<p><b>4. Hacer menos:</b> Dejar para mañana...</p>
+<p><b>5. Dejar de hacer:</b> Procastinar...</p>
 
 <h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>
-<p>1. Comenzar a hacer: </p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>
 
 <h3>Pedro Soto (https://github.com/psoto89)</h3>
-<p>1. Comenzar a hacer: </p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>
 
 <h3>Sprint 2</h3>
 
 <h3>Rosemary Calderon (https://github.com/rosscalpe)</h3>
-<p>1. Comenzar a hacer: </p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
-<p>1. Comenzar a hacer: Estar mas al dia con todos los temas.</p>
-<p>2. Hacer mas: Practicas.</p>
-<p>3. Continuar haciendo: Organizando, gestionar, estudiar...</p>
-<p>4. Hacer menos: Dejar para mañana...</p>
-<p>5. Dejar de hacer: Procastinar...</p>
+<p><b>1. Comenzar a hacer:</b> Estar mas al dia con todos los temas.</p>
+<p><b>2. Hacer mas:</b> Practicas.</p>
+<p><b>3. Continuar haciendo:</b> Organizando, gestionar, estudiar...</p>
+<p><b>4. Hacer menos:</b> Dejar para mañana...</p>
+<p><b>5. Dejar de hacer:</b> Procastinar...</p>
 
 <h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>
-<p>1. Comenzar a hacer: </p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>
 
 <h3>Pedro Soto (https://github.com/psoto89)</h3>
-<p>1. Comenzar a hacer: </p>
-<p>2. Hacer mas: </p>
-<p>3. Continuar haciendo: </p>
-<p>4. Hacer menos: </p>
-<p>5. Dejar de hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
+<p><b>2. Hacer mas:</b> .</p>
+<p><b>3. Continuar haciendo:</b> .</p>
+<p><b>4. Hacer menos:</b> .</p>
+<p><b>5. Dejar de hacer:</b> .</p>

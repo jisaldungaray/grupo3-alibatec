@@ -15,14 +15,14 @@ Grupo #3
 <h3>Sprint 1</h3>
 
 <h3>Rosemary Calderon (https://github.com/rosscalpe)</h3>
-<p>1. Comenzar a hacer: </p>
+<p><b>1. Comenzar a hacer:</b> .</p>
 <p>2. Hacer mas: </p>
 <p>3. Continuar haciendo: </p>
 <p>4. Hacer menos: </p>
 <p>5. Dejar de hacer: </p>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
-<p>1. Comenzar a hacer: Estar mas al dia con todos los temas.</p>
+<p><b>1. Comenzar a hacer:</b> Estar mas al dia con todos los temas.</p>
 <p>2. Hacer mas: Practicas.</p>
 <p>3. Continuar haciendo: Organizando, gestionar, estudiar...</p>
 <p>4. Hacer menos: Dejar para mañana...</p>

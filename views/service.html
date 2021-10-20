@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--Codigo Correspondiente a Head-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alibatec | Tecnología y soluciones digitales</title>
+    <title>Alibatec | Servicios</title>
     <link rel="shortcut icon" href="/diseno/logos/at-logo-favicon.png">
     <link rel="stylesheet" href="/css/styleindex.css">
-    <link rel="stylesheet" href="/css/styleRegister.css">
+    <link rel="stylesheet" href="/css/styleservice.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
-
-<!--Codigo Correspondiente a Body-->
 <body>
-
-    <!--Codigo Correspondiente a Header-->
+    <!--HEADER-->
     <header class="header">
         <div class="header-content">
             <div class="header-phone">
@@ -38,14 +33,14 @@
                                 <li class="menu-item"><a href="">Accesorios</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="">Servicios</a></li>
+                        <li class="menu-item"><a href="/service">Servicios</a></li>
                         <li class="menu-item-container-submenu"><a href="#" class="submenu-btn">Cuenta <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu-cuenta">
                                 <li class="menu-item"><a href="/register">Registrarse</a></li>
                                 <li class="menu-item"><a href="/login">Iniciar sesión</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="">Carrito</a></li>
+                        <li class="menu-item"><a href="/productCart">Carrito</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +49,7 @@
                 <nav class="nav-bar">
                     <ul class="lista-horizontal">
                         <li class="horizontal-item">
-                        <a href="/producto">Productos <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                        <a href="/producto" class="">Productos <i id="iconos-header" class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="#">Computadoras</a></li>
                                 <li><a href="#">Notebooks</a></li>
@@ -64,7 +59,7 @@
                             </ul>
                         </li>
                         <li class="horizontal-item">
-                        <a href="#" class="">Servicios</a>
+                        <a href="/service" class="">Servicios</a>
                         </li>
                     </ul>
 
@@ -76,105 +71,63 @@
                             </ul>
                         </li>
                         <li class="horizontal-item">
-                        <a href="#" class=""><i id="iconos-header" class="fas fa-shopping-cart"></i></a>
+                        <a href="/productCart"><i id="iconos-header" class="fas fa-shopping-cart"></i></a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-
-    <!--Codigo Correspondiente a Main-->
     <main>
-
-        <!--Codigo Correspondiente a Section Formulario-->
-        <section class="formulario__contenedor" id="grupo__contenedor">
-
-            <form method="post" action="" class="formulario" id="formulario">
-
-                <!--Codigo Correspondiente a Grupo Nombre-->
-                <div class="formulario__grupo" id="grupo__nombre">
-                    <label for="nombre" class="formulario__label">Nombre</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un Nombre valido.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Grupo Apellido-->
-                <div class="formulario__grupo" id="grupo__apellido">
-                    <label for="apellido" class="formulario__label">Apellido</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un Apellido valido.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Grupo E-Mail-->
-                <div class="formulario__grupo" id="grupo__email">
-                    <label for="email" class="formulario__label">E-Mail</label>
-                    <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="email" id="email" placeholder="email@email.com">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un E-Mail valido.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Grupo Contraseña-->
-                <div class="formulario__grupo" id="grupo__password">
-                    <label for="password" class="formulario__label">Contraseña</label>
-                    <div class="formulario__grupo-input">
-                        <input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese su Contraseña">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">La contraseña debe tener de 6 a 12 digitos.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Grupo Contraseña Validacion-->
-                <div class="formulario__grupo" id="grupo__password2">
-                    <label for="password2" class="formulario__label">Validar Contraseña</label>
-                    <div class="formulario__grupo-input">
-                        <input type="password2" class="formulario__input" name="password2" id="password2" placeholder="Valide su Contraseña">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">La contraseña debe coincidir.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Terminos y Condiciones-->
-                <div class="formulario__grupo" id="grupo__tyc">
-                    <label class="formulario__label">
-                        <input class="formulario__checkbox" type="checkbox" name="tyc" id="tyc">
-                        Acepto los Terminos y Condiciones
-                    </label>
-                </div>
-
-                <!--Codigo Correspondiente a Mensaje de Error-->
-                <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i><b>Error: </b>Complete su Formulario correctamente.</p>
-                </div>
-
-                <!--Codigo Correspondiente a Boton de Envio-->
-                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario Registrado con Exito!</p>
-                </div>                
-
-            </form>
-
-        </section>
-
-        <!--Codigo Correspondiente a Div Banner-->
-        <div class="banner">
-            <img src="/img/marketing/at-marketing5.jpg">
+        <div class="somos-alib">
+            <img src="/diseno/logos/at-logo-letra.png" alt="logo-letra-alibatec" class="log-alib">
+            <br>
+            <p>
+                <strong>Somos un equipo de desarrolladores inspirados en la Tecnología con el fin comun de llevar a cada usuario los mejores productos y servicios.
+                Contamos con amplio conocimiento de herramientas informáticas y nos adecuamos a diferentes industrias, aportando soluciones creativas y flexibilidad, adaptándonos a las estrategias y metas del negocio que deposita su confianza en nosotros.</strong>
+            </p>
         </div>
-
+        <div class="propuestas">
+            <div class="propu">
+                <img src="/img/marketing/desa-it.png" alt="develop">
+                <h2 class="text">Diseño y desarrollo Web</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/e-commerce.png" alt="e-commerce">
+                <h2 class="text">E-commerce</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/app-develop.png" alt="app-develop">
+                <h2 class="text">Desarrollo de App mobile</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/posicionamiento.jpg" alt="">
+                <h2 class="text">Posicionamiento en buscadores</h2>
+            </div>
+        </div>
+        <br>
+        <form action="" method="GET" class="cuentanos">
+            <p class="cuenta-alib">
+                <label>Nombre Completo: </label>
+                <input type="text" name="nombre" value="nombre">
+            </p>
+            <p class="cuenta-alib">
+                <label>E-mail: </label>
+                <input type="email" name="email" value="email" required>
+            </p>
+            <p class="coment-alib">
+                <label class="contanos">Cuentanos de tu Proyecto, empresa o emprendimiento:</label>
+                <textarea name="comentario" value="comentario">Comentario</textarea>
+                <br>
+                <button type="submit" class="boton-alib">Enviar</button>
+            </p>
+        </form>
     </main>
-
+    <br>
 </body>
-
-<!--Codigo Correspondiente a Div Footer-->
 <footer class="footer-complete">
     <div class="suscribirse">
         <div class="texto-sus">
@@ -218,7 +171,7 @@
                 <ul class="ul-conct">
                     <li><a href="https://www.instagram.com" target="_blank"><i id="icon-red" class="fab fa-instagram"></i></a></li>
                     <li><a href="https://es-la.facebook.com/" target="_blank"><i id="icon-red" class="fab fa-facebook-f"></i></i></a></li>
-                    <li><a href="https://ar.linkedin.com/" target="_blank"><i id="icon-red" class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="//https://ar.linkedin.com/" target="_blank"><i id="icon-red" class="fab fa-linkedin-in"></i></a></li>
                     <li><a href="https://twitter.com/" target="_blank"><i id="icon-red" class="fab fa-twitter"></i></a></li>
                 </ul>
                 <br>
@@ -226,10 +179,10 @@
         </div>
     </div>
     <div class="logo-final">
-        <a href="/"><img src="/diseno/logos/at-logo-completo-45.png" alt="logo-alibatec" class="logo-footer"></a>
+        <img src="/diseno/logos/at-logo-completo-45.png" alt="logo-alibatec" class="logo-footer">
     </div>
     <div class="copyright">
         <h2>Copyright © 2021 | Tecnología y soluciones digitales</h2>
     </div>
 
-</footer>
+</footer>  

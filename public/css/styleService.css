@@ -1,0 +1,147 @@
+/*Estilo servicio*/
+.somos-alib {
+    width: 90%;
+    padding: 20px;
+    margin: 30px 20px;
+}
+.somos-alib img {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+.somos-alib p {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    font-size: 12px;
+}
+.propuestas {
+    width: 100%;
+}
+.propu {
+    width: 90%;
+    margin: auto;
+    border: solid .5px rgb(0,171,240);
+    border-radius: 5px;
+}
+.propu img {
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+.text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cuentanos {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px rgb(124,217,51);
+    border-radius: 5px;
+}
+.cuenta-alib {
+    display: flex;
+    flex-direction: column;
+}
+.cuenta-alib label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(124,217,51);
+}
+.cuenta-alib input{
+    border: none;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    padding: 5px 10px
+}
+.coment-alib {
+    display: flex;
+    flex-direction: column;
+}
+.contanos {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(124,217,51);
+    margin-bottom: 5px;
+}
+.coment-alib textarea {
+    width: 100%;
+    border: none;
+    background-color: #ebebeb;
+    margin: auto;
+    border-radius: 5px;
+    padding: 15px
+}
+.coment-alib button {
+    width: 30%;
+    border: none;
+    background-color: rgb(0,171,240);
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+@media (min-width: 768px){
+    .propuestas {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        border: solid 1px rgb(0,171,240);
+        margin-left: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .propu {
+        width: 20%;
+        border: none;
+    }
+}
+@media (min-width: 1024px) {
+    .somos-alib {
+        width: 60%;
+        margin: auto;
+    }
+    .somos-alib img{
+        width: 40%;
+    }
+    .somos-alib p {
+        font-size: 24px;
+        margin: auto;
+        padding: 20px;
+    }
+    .propuestas {
+        width: 90%;
+        margin: auto;
+    }
+    .text {
+        font-size: 24px;
+    }
+    .cuentanos {
+        width: 60%;
+        margin: auto;
+    }
+    .cuenta-alib label, .coment-alib label {
+        font-size: 24px;
+    }
+    .cuenta-alib input {
+        padding: 15px;
+    }
+    .coment-alib textarea {
+        padding: 30px
+    }
+    .boton-alib {
+        font-size: 24px;
+        padding: 15px;
+    }
+    .boton-alib:hover {
+        box-shadow: 2px 2px 3px rgb(124,217,51);
+        background-color: white;
+        color: rgb(124,217,51);
+        transition: all 425ms;
+    }
+    .cuenta-alib input:hover,
+    .coment-alib textarea:hover {
+        box-shadow: 1px 1px 2px rgb(0,171,240)};
+    }

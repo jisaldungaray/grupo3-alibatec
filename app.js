@@ -27,6 +27,7 @@ app.get('/productCart',(req, res ) => {
     res.sendFile(path.join(__dirname, './views/productCart.html'))
 });
 
+
 // Hasta aca
 
 app.listen (4000, () => {

@@ -4,10 +4,6 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
-
-
-
 main {
     background-color: #adadad;
     padding: 5px;
@@ -23,22 +19,16 @@ main {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 90px;
-    height: 98vh;
-    
+    height: 98vh;   
 }
-
 .logo img{
     width: 85%;
-    margin-top: 50px;
-    
+    margin-top: 50px;   
 }
-
 h3{
     font-size: 20px;
     margin: 30px auto;
-
 }
-
 .grande{
     width: 70%;
     height: 40px;
@@ -65,10 +55,8 @@ h3{
 .botones button:hover{
     background-color: white;
     color: #32ABF0;
-    border: 1px solid #32ABF0;
-    
+    border: 1px solid #32ABF0; 
 }
-
 p {
     margin-top: 30px;
     color: #7cd933;

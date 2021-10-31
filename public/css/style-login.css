@@ -18,8 +18,7 @@ main {
     margin: 30px auto;
     text-align: center;
     padding-top: 25px;
-    padding-bottom: 90px;
-    height: 98vh;   
+    padding-bottom: 90px;   
 }
 .logo img{
     width: 85%;
@@ -86,7 +85,6 @@ p {
         flex-flow: column wrap;
         justify-content: center;
         background-image: url("/img/marketing/at-marketing1.jpg");
-        height: 98vh;
         background-position-x: center;
         background-position-y: center;
         background-repeat: no-repeat;
@@ -94,8 +92,6 @@ p {
         margin: 3px;
         width: 63%;
         border-radius: 5px;
-       
-        
     }
 
     .datos{

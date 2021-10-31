@@ -1,98 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <!--Head-->
+  <%- include('./partials/head.ejs') %>
 
-<!--Head-->
-<%- include('./partials/head.ejs') %>
+  <!--Styles-->
+  <link rel="stylesheet" href="/css/style-register.css" />
 
-<!--Styles-->
-<link rel="stylesheet" href="/css/style-register.css">
-
-<!--Body Code-->
-<body>
-    
-<!--Header-->
-<%- include('./partials/header.ejs') %>
-
-<!--Main Code-->
+  <!--Body Code-->
+  <body>
+    <!--Main Code-->
     <main>
+      <!--Codigo Correspondiente a Section Formulario-->
+      <div class="register">
+        <form method="post" action="" class="datos">
+          <!--Codigo Correspondiente a Logo de Formulario-->
+          <div class="contenedor-logo">
+            <a href="/"
+              ><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"
+            /></a>
+          </div>
 
-        <!--Codigo Correspondiente a Section Formulario-->
-        <section class="formulario__contenedor" id="grupo__contenedor">
+          <h3>Creá tu cuenta</h3>
 
-            <form method="post" action="" class="formulario" id="formulario">
+          <!--Codigo Correspondiente a Grupo Nombre-->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre"
+                id="nombre"
+                placeholder="Nombre"
+                required
+              />
+            </div>
+          </div>
 
-                <!--Codigo Correspondiente a Grupo Nombre-->
-                <div class="formulario__grupo" id="grupo__nombre">
-                    <label for="nombre" class="formulario__label">Nombre</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un Nombre valido.</p>
-                </div>
+          <!--Codigo Correspondiente a Grupo Apellido-->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="apellido"
+                id="apellido"
+                placeholder="Apellido"
+                required
+              />
+            </div>
+          </div>
 
-                <!--Codigo Correspondiente a Grupo Apellido-->
-                <div class="formulario__grupo" id="grupo__apellido">
-                    <label for="apellido" class="formulario__label">Apellido</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un Apellido valido.</p>
-                </div>
+          <!--Codigo Correspondiente a Grupo E-Mail-->
+          <div class="formulario__grupo" id="grupo__email">
+            <label for="email" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="email"
+                class="formulario__input"
+                name="email"
+                id="email"
+                placeholder="E-Mail"
+                required
+              />
+            </div>
+          </div>
 
-                <!--Codigo Correspondiente a Grupo E-Mail-->
-                <div class="formulario__grupo" id="grupo__email">
-                    <label for="email" class="formulario__label">E-Mail</label>
-                    <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="email" id="email" placeholder="email@email.com">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Ingrese un E-Mail valido.</p>
-                </div>
+          <!--Codigo Correspondiente a Grupo Contraseña-->
+          <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="password"
+                class="formulario__input"
+                name="password"
+                id="password"
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+          </div>
 
-                <!--Codigo Correspondiente a Grupo Contraseña-->
-                <div class="formulario__grupo" id="grupo__password">
-                    <label for="password" class="formulario__label">Contraseña</label>
-                    <div class="formulario__grupo-input">
-                        <input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese su Contraseña">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">La contraseña debe tener de 6 a 12 digitos.</p>
-                </div>
+          <!--Codigo Correspondiente a Terminos y Condiciones-->
+          <div class="formulario__grupo" id="grupo__tyc">
+            <label class="formulario__label">
+              <input
+                class="formulario__checkbox"
+                type="checkbox"
+                name="tyc"
+                id="tyc"
+                required
+              />
+              Acepto los Terminos y Condiciones
+            </label>
+          </div>
 
-                <!--Codigo Correspondiente a Terminos y Condiciones-->
-                <div class="formulario__grupo" id="grupo__tyc">
-                    <label class="formulario__label">
-                        <input class="formulario__checkbox" type="checkbox" name="tyc" id="tyc">
-                        Acepto los Terminos y Condiciones
-                    </label>
-                </div>
+          <!--Codigo Correspondiente a Boton de Envio-->
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+          </div>
 
-                <!--Codigo Correspondiente a Mensaje de Error-->
-                <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i><b>Error: </b>Complete su Formulario correctamente.</p>
-                </div>
+          <h3>¿Ya sos usuario?</h3>
 
-                <!--Codigo Correspondiente a Boton de Envio-->
-                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario Registrado con Exito!</p>
-                </div>                
-
-            </form>
-
-        </section>
+          <div>
+            <button class="formulario__btn">
+              <a href="/login"></a>
+              Ingresar
+            </button>
+          </div>
+        </form>
 
         <!--Codigo Correspondiente a Div Banner-->
-        <div class="banner">
-        </div>
-
+        <div class="banner"></div>
+      </div>
     </main>
-
-<!--Footer-->
-<%- include('./partials/footer.ejs') %>
-
-</body>
-
+  </body>
 </html>

@@ -4,12 +4,17 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 main {
     background-color: #adadad;
     padding: 5px;
 }
 
 /* ----- Div del formulario----*/
+
+div.login{
+    height: 100vh;
+}
 
 .datos{
     background-color: white;
@@ -20,10 +25,17 @@ main {
     padding-top: 25px;
     padding-bottom: 90px;   
 }
-.logo img{
-    width: 85%;
-    margin-top: 50px;   
+
+.contenedor-logo{
+    width: 50%;
+    margin: 0 auto;
 }
+
+.contenedor-logo img{
+    width: 100%;
+    margin-top: 25px;
+}
+
 h3{
     font-size: 20px;
     margin: 30px auto;
@@ -100,5 +112,3 @@ p {
         margin: 4px;
     }
 }
-
-    

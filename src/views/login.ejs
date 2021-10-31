@@ -10,9 +10,6 @@
 <!--Body Code-->
 <body>
    
-<!--Header-->
-<%- include('./partials/header.ejs') %>
-
 <!--Main Code-->
     <main>
 
@@ -20,9 +17,10 @@
 
             <div class="datos">
 
-                <div class="logo">
+                <div class="contenedor-logo">
                     <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"></a>
                 </div>
+
                 <h3> Ingresa a tu cuenta</h3>
 
                   <!--Codigo Correspondiente a formulario  -->
@@ -49,7 +47,7 @@
                     <h3>¿Aun no tienes cuenta?</h3>
 
                     <div class="botones">
-                        <a href="/register.ejs"><button>Crear Cuenta</button></a>
+                        <a href="/register"><button>Crear Cuenta</button></a>
                     </div>
 
                 </form>
@@ -65,8 +63,6 @@
 
     </main>
 
-<!--Footer-->
-<%- include('./partials/footer.ejs') %>
 
 </body>
 

@@ -1,16 +1,113 @@
-/* -----Codigo Correspondiente a Formulario-----*/
-.formulario__contenedor {
-    background-color: gainsboro;
-    width: 40%;
-    height: 85vh;
-    float: left;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* -----Codigo Correspondiente a Banner-----*/
+main {
+    background-color: #adadad;
+    padding: 5px;
+}
+
+/* ----- Div del formulario----*/
+
+div.register{
+    height: 100vh;
+}
+
+.datos{
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 90px;   
+}
+
+.formulario__grupo{
+    margin-top: 15px;
+}
+
+.contenedor-logo{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contenedor-logo img{
+    width: 100%;
+    margin-top: 50px;
+}
+
+h3{
+    font-size: 20px;
+    margin: 30px auto;
+}
+
+.formulario__input{
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.formulario__btn{
+    width: 70%;
+    height: 35px;
+    margin-top: 15px;
+    background-color: #32ABF0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 450ms;
+    ;
+}
+
+.formulario__btn:hover{
+    background-color: white;
+    color: #32ABF0;
+    border: 1px solid #32ABF0; 
+}
+
+/* ----- Div del banner----*/
 
 .banner{
-    width: 60%;
-    height: 85vh;
+    width: 64%;
     float: right;
-    background-image: url("/img/Marketing/at-marketing5.jpg");
+    display: none;
+}
+
+/* ------ Media Querys--------*/
+
+@media (min-width: 950px){
+
+    main div.register{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .banner{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        background-image: url("/img/marketing/at-marketing5.jpg");
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 3px;
+        width: 63%;
+        border-radius: 5px;
+    }
+
+    .datos{
+        width: 35%;
+        float: left;
+        margin: 4px;
+    }
 }

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="shortcut icon" href="/diseno/logos/at-logo-favicon.png">
-    <link rel="stylesheet" href="/css/style-login.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-</head>
+
+<!--Head-->
+<%- include('./partials/head.ejs') %>
+
+<!--Styles-->
+<link rel="stylesheet" href="/css/style-login.css">
+
+<!--Body Code-->
 <body>
+   
+<!--Header-->
+<%- include('./partials/header.ejs') %>
 
-    <!--Codigo Correspondiente a Header-->
-
-    <!--Codigo Correspondiente a Main-->
+<!--Main Code-->
     <main>
 
         <div class="login">
@@ -50,7 +49,7 @@
                     <h3>¿Aun no tienes cuenta?</h3>
 
                     <div class="botones">
-                        <button type="submit"> Crear Cuenta</button>
+                        <a href="/register.ejs"><button>Crear Cuenta</button></a>
                     </div>
 
                 </form>
@@ -65,5 +64,10 @@
 
 
     </main>
+
+<!--Footer-->
+<%- include('./partials/footer.ejs') %>
+
 </body>
+
 </html>

@@ -1,0 +1,115 @@
+<<!DOCTYPE html>
+<html lang="es">
+  <!--Head-->
+  <%- include('./partials/head.ejs') %>
+
+  <!--Styles-->
+  <link rel="stylesheet" href="/css/style-register.css" />
+
+  <!--Body Code-->
+  <body>
+    <!--Main Code-->
+    <main>
+      <!--Codigo Correspondiente a Section Formulario-->
+      <div class="register">
+        <form method="post" action="" class="datos">
+          <!--Codigo Correspondiente a Logo de Formulario-->
+          <div class="contenedor-logo">
+            <a href="/"
+              ><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"
+            /></a>
+          </div>
+
+          <h3>Carga tus productos</h3>
+
+          <!--Codigo Correspondiente a Nombre de Producto-->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre_producto"
+                id="nombre_producto"
+                placeholder="Nombre de Producto"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a Descripción-->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="textarea"
+                class="formulario__input"
+                name="descripción"
+                id="descripción"
+                placeholder="Descripción"
+              />
+            </div>
+          </div>
+          <!--Codigo Correspondiente a Imagen -->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label"> Carga la Imagen de tu Producto</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="image"
+                class="formulario__input"
+                name="imagen"
+                id="imagen"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a Categoria-->
+          <div class="formulario__grupo" id="grupo__email">
+            <label for="email" class="formulario__label"> Selecciona la Categoria Correspondiente</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="categoria"
+                id="categoria"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a Colores-->
+          <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Selecciona el Color Correspondinete</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="color"
+                class="formulario__input"
+                name="color"
+                id="color"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a Precio-->
+          <div class="formulario__grupo" id="grupo__tyc">
+            <label class="formulario__label">
+              <input
+                class="formulario__checkbox"
+                type="number"
+                name="precio"
+                id="precio"
+              />
+            Precio del Producto</label>
+          </div>
+
+          <!--Codigo Correspondiente a Boton de Carga-->
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Cargar / Editar</button>
+          </div>
+
+        </form>
+
+        <!--Codigo Correspondiente a Div Banner-->
+        <div class="banner"></div>
+      </div>
+    </main>
+  </body>
+</html>

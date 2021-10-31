@@ -18,6 +18,9 @@ const controller = {
     },
     servicios: (req, res ) => {
         res.render('service')
+    },
+    productAddEdit: (req, res ) => {
+        res.render('productAddEdit')
     }
 }
 

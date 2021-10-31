@@ -15,4 +15,4 @@ router.get('/producto', controller.detalleProducto);
 
 router.get('/service', controller.servicios); 
 
-module.exports = router
+module.exports = router;

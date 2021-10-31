@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alibatec | Servicios</title>
+    <link rel="shortcut icon" href="/diseno/logos/at-logo-favicon.png">
+    <link rel="stylesheet" href="/css/style-index.css">
+    <link rel="stylesheet" href="/css/style-service.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <div class="somos-alib">
+            <img src="/diseno/logos/at-logo-letra.png" alt="logo-letra-alibatec" class="log-alib">
+            <br>
+            <p>
+                <strong>Somos un equipo de desarrolladores inspirados en la Tecnología con el fin comun de llevar a cada usuario los mejores productos y servicios.
+                Contamos con amplio conocimiento de herramientas informáticas y nos adecuamos a diferentes industrias, aportando soluciones creativas y flexibilidad, adaptándonos a las estrategias y metas del negocio que deposita su confianza en nosotros.</strong>
+            </p>
+        </div>
+        <div class="propuestas">
+            <div class="propu">
+                <img src="/img/marketing/desa-it.png" alt="develop">
+                <h2 class="text">Diseño y desarrollo Web</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/e-commerce.png" alt="e-commerce">
+                <h2 class="text">E-commerce</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/app-develop.png" alt="app-develop">
+                <h2 class="text">Desarrollo de App mobile</h2>
+            </div>
+            <br>
+            <div class="propu">
+                <img src="/img/marketing/posicionamiento.jpg" alt="">
+                <h2 class="text">Posicionamiento en buscadores</h2>
+            </div>
+        </div>
+        <br>
+        <form action="" method="GET" class="cuentanos">
+            <p class="cuenta-alib">
+                <label>Nombre Completo: </label>
+                <input type="text" name="nombre" value="nombre">
+            </p>
+            <p class="cuenta-alib">
+                <label>E-mail: </label>
+                <input type="email" name="email" value="email" required>
+            </p>
+            <p class="coment-alib">
+                <label class="contanos">Cuentanos de tu Proyecto, empresa o emprendimiento:</label>
+                <textarea name="comentario" value="comentario">Comentario</textarea>
+                <br>
+                <button type="submit" class="boton-alib">Enviar</button>
+            </p>
+        </form>
+    </main>
+    <br>
+</body>
+<%- include('./partials/footer.ejs') %> 
+</html>

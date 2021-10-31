@@ -4,12 +4,12 @@ const app = express();
 
 const path = require('path');
 
-const router = require('./routes/mainRoutes');
+const router = require('./src/routes/mainRoutes');
 
-app.use(express.static((path.resolve(__dirname,'public'))));
- 
+app.use(express.static('public'));
+
+app.set('views', './src/views');
 app.set('view engine', 'ejs');
-// Rutas aca abajo
 
 app.use(router);
 

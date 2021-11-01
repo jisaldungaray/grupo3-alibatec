@@ -32,8 +32,8 @@ Grupo #3
 
 <h3>Sprint 3</h3>
 
-<p><b>1. Comenzar a hacer:</b> .</p>
-<p><b>2. Hacer mas:</b> .</p>
-<p><b>3. Continuar haciendo:</b> .</p>
-<p><b>4. Hacer menos:</b> .</p>
-<p><b>5. Dejar de hacer:</b> .</p>
+<p><b>1. Comenzar a hacer:</b> Mas Meet's para Codear en Equipo, todos juntos... Mas Practicas generales.</p>
+<p><b>2. Hacer mas:</b> Mas Meet's para Codear en Equipo, todos juntos...</p>
+<p><b>3. Continuar haciendo:</b> Mas Meet's para Codear en Equipo, todos juntos...</p>
+<p><b>4. Hacer menos:</b> Codear en forma individual, donde solo uno entiende y comprende lo realizado.</p>
+<p><b>5. Dejar de hacer:</b> Procastinar...</p>

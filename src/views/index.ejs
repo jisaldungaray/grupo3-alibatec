@@ -128,73 +128,10 @@
         <h2 class="linea-separacion">En Oferta</h2>
         <br>
 <!--OFERTAS-->
-        <section class="ofertas">
-            <div class="pro-oferta">
-                <div class="imagen-prod">
-                    <img class="imag" src="/img/productos/tablet-lenovo.jpg" alt="tab-lenovo">
-                </div>
-                <div class="ofer-detalle">
-                    <div class="pro-deta">
-                        <div class="tip">
-                            <a href="/producto">Tablet Lenovo Yoga</a>
-                        </div>
-                     <a href="/producto" class="descu">25%OFF</a>
-                    </div>
-                    <div class="buys">
-                        <a href="/producto" class="buys-btn">Comprar Ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-oferta">
-                <div class="imagen-prod">
-                    <img class="imag" src="/img/productos/i.png" alt="i-12pro">
-                </div>
-                <div class="ofer-detalle">
-                    <div class="pro-deta">
-                        <div class="tip">
-                            <a href="/producto">Iphone 12 Pro</a>
-                        </div>
-                        <a href="/producto" class="descu">20%OFF</a>
-                    </div>
-                    <div class="buys">
-                        <a href="/producto" class="buys-btn">Comprar Ahora</a>
-                    </div>
-                </div>
-            </div>  
-            <div class="pro-oferta">
-                <div class="imagen-prod">
-                    <img class="imag" src="/img/productos/auriculares-samsung-galaxy-buds-pro.jpg" alt="auriculares-samsung">
-                </div>
-                <div class="ofer-detalle">
-                    <div class="pro-deta">
-                        <div class="tip">
-                            <a href="/producto">Auriculares Samsung Buds</a>
-                        </div>
-                        <a href="/producto" class="descu">30%OFF</a>
-                    </div>
-                    <div class="buys">
-                        <a href="/producto" class="buys-btn">Comprar Ahora</a>
-                    </div>
-                </div>
-            </div>     
-            <div class="pro-oferta">
-                <div class="imagen-prod">
-                    <img class="imag" id="aur" src="/img/productos/imac-i5-21.5.jpg" alt="imac">
-                </div>
-                <div class="ofer-detalle">
-                    <div class="pro-deta">
-                        <div class="tip">
-                            <a href="/producto">Apple imac 21.5"</a>
-                        </div>
-                        <a href="/producto" class="descu">10%OFF</a>
-                    </div>
-                    <div class="buys">
-                        <a href="/producto" class="buys-btn">Comprar Ahora</a>
-                    </div>
-                </div>
-            </div>  
-        </div> 
-        </section>
+       <% for (let i = 0; i < ofertasIndex.length; i++) { %>
+            <%- include('./partials/ofertasProdIndex', {ofertasIndex:ofertasIndex[i]} ) %> 
+        <% } %>
+
     </main>
 </body>
 <!--Footer-->

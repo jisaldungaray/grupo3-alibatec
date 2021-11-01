@@ -1,8 +1,11 @@
 const path = require ('path');
 
+const ofertasIndex = require('./productos');
+
+
 const controller = {
     index: (req,res) => {
-        res.render('index')
+        res.render('index', {ofertasIndex})
    },
     register: (req, res ) => {
         res.render('register')

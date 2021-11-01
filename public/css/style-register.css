@@ -12,10 +12,6 @@ main {
 
 /* ----- Div del formulario----*/
 
-div.register{
-    height: 100vh;
-}
-
 .datos{
     background-color: white;
     border-radius: 5px;

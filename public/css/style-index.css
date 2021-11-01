@@ -424,6 +424,10 @@ ul {
     .pro-oferta {
         width: 42%
     }
+    /*estilo Footer*/
+    .logo-footer {
+        width: 20%;  
+    }
 }
 @media (min-width: 1024px){
     /*Estilo header*/
@@ -432,6 +436,9 @@ ul {
         justify-content: space-between;
         margin-left: 0;
         width: 100%;
+    }
+    .nav-complete li a {
+        font-size: 18px;
     }
     .header-menu {
         display: none;

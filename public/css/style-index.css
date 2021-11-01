@@ -281,7 +281,7 @@ ul {
     border-radius: 5px;
 }
 .nos {
-    color: rgb(199,0,143);
+    color: rgb(54, 52, 52);
     text-decoration: underline;
 }
 .nos-met-con {
@@ -295,7 +295,7 @@ ul {
     margin-bottom: 5px;
 }
 #icon {
-    color: rgb(0,171,240);
+    color: rgb(54, 52, 52);
 }
 .iconos-redes ul{
     display: flex;
@@ -731,10 +731,12 @@ ul {
         width: 22%;
     }
     .nos {
-        font-size: 20px;
+        font-size: 18px;
+        text-align: start;
     }
     .nos-met-con li a {
-        font-size: 16px;
+        font-size: 14px;
+        
     }
     #icon {
         color:rgb(54, 52, 52)
@@ -744,14 +746,15 @@ ul {
     }
     .nos-met-con li {
         margin-bottom: 15px;
+        text-align: start;
     }
     .red {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 50px;
-        color: rgb(199,0,143);
+        color: rgb(54, 52, 52)
     }
     #icon-red {
-        font-size: 45px;
+        font-size: 35px;
         color: rgb(54, 52, 52);
     }
     #icon-red:hover {
@@ -767,7 +770,7 @@ ul {
         width: 10%;  
     }
     .copyright {
-        font-size: 20px;
+        font-size: 8px;
     }
 
 }

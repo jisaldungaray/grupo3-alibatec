@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %>
-<!--Styles-->
-<link rel="stylesheet" href="/css/style-prod-detail.css">
 <body>
 <%- include('./partials/header.ejs') %> 
     <main>
@@ -101,50 +99,27 @@
             </div>
         </section> 
         <!--OFERTAS-->
-        <section>
-            <hr>
-            <h3>Ofertas</h3>
 
-            
-            <div class="off">
-            
-                <div class="ofert-iphone">
-                    <img src="/img/productos/i13-10.png" alt="Iphone11">
-                    <h3>
-                        Iphone 11 128GB
-                    </h3>
-                    <p>
-                        $105.000 
-                    </p>
-                    <a href="/productCart"><button class="buy">COMPRAR</button></a>
-                </div>
-
-                <div class="ofert-iphone12">
-                    <img src="/img/productos/i13-4.png"  alt="iphone12">
-                    <h3>
-                        Iphone 12 512GB
-                    </h3>
-                    <p>
-                        $55.000 
-                    </p>
-                    <a href="/productCart"><button class="buy">COMPRAR</button></a>
-                </div>
-
-                <div class="ofert-iphone-mini">
-                    <img src="/img/productos/i13-1.png" alt="iphone-mini">
-                    <h3>
-                        Iphone 11mini 256GB
-                    </h3>
-                    <p>
-                        $89.000
-                    </p>
-                    <a href="/productCart"><button class="buy">COMPRAR</button></a>
-                </div>
-
-            </div>
-
-        </section>
-
+        <hr>
+        <h3>Ofertas</h3>
+        
+    <div class="off">
+            <% for(let i = 0; i < ofertasProduct.length; i++){ %> 
+            <article>
+                
+                    <div class="ofert-iphone">
+                        <img src=<%= ofertasProduct[i].image %>  alt="Iphone11">
+                        <h3>
+                            <%= ofertasProduct[i].producto %>
+                        </h3>
+                        <p>
+                            <%= ofertasProduct[i].precio %> 
+                        </p>
+                        <a href="/productCart"><button class="buy">COMPRAR</button></a>
+                    </div>
+            </article>  
+        <% } %> 
+    </div>    
     </main>
 </body>
 <%- include('./partials/footer.ejs')  %> 

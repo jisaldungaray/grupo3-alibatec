@@ -204,8 +204,8 @@ ul {
 }
 
 /*Estilo de OFERTAS*/
-.ofertas {
-    display: block;
+article.ofertas {
+    display:flex;
     box-sizing: border-box;
     width: 100%;
 }

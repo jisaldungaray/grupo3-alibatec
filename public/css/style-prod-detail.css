@@ -106,7 +106,7 @@ hr{
 section h3{
     margin:20px;
 }
-.off{
+article div.off{
     width: 100%;
     margin: 10px;
     display: flex;
@@ -119,9 +119,7 @@ section h3{
     margin: auto;
 
 }
-.off div.ofert-iphone,
-.ofert-iphone12,
-.ofert-iphone-mini{
+.off div.ofert-iphone{
     margin:20px;
     border-radius: 5px;
     padding: 5px;

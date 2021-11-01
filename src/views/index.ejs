@@ -161,20 +161,23 @@
       <h2 class="linea-separacion">En Oferta</h2>
       <br />
       <!--OFERTAS-->
-      <% for (let i = 0; i < ofertasIndex.length; i++) { %>
-      <!--OFERTAS INDEX-->
       <article class="ofertas">
+        <% for (let i = 0; i < ofertasIndex.length; i++) { %>
         <div class="pro-oferta">
           <div class="imagen-prod">
-            <img class="imag" src="<%= ofertasIndex.img %> " alt="tab-lenovo" />
+            <img
+              class="imag"
+              src="<%= ofertasIndex[i].image %> "
+              alt="tab-lenovo"
+            />
           </div>
           <div class="ofer-detalle">
             <div class="pro-deta">
               <div class="tip">
-                <a href="/producto"> <%= ofertasIndex.producto %> </a>
+                <a href="/producto"> <%= ofertasIndex[i].producto %> </a>
               </div>
-              <a href="/producto" class="descu"
-                ><%= ofertasIndex.descuento %>
+              <a href="/producto" class="descu">
+                <%= ofertasIndex[i].descuento %>
               </a>
             </div>
             <div class="buys">
@@ -182,8 +185,8 @@
             </div>
           </div>
         </div>
+        <% } %>
       </article>
-      %> <% } %>
     </main>
   </body>
   <!--Footer-->

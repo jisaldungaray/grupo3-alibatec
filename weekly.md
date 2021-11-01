@@ -32,7 +32,7 @@ Grupo #3
 <h3>Pedro Soto (https://github.com/psoto89)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> Volver a ver el contenido de las clases y entenerlo mas a fondo, tuve el tiempo de procesarlo.</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> Fue dificil ir conectando la logica de los controladores, las rutas y las cosas adicionales que ibamos encontrando en el camino.</p>
-<p><b>3. Que hare en el Final de la Semana:</b> Intentar llevar a cabo todos los objetivos con los repasos realizados al inicio de la semana..</p>
+<p><b>3. Que hare en el Final de la Semana:</b> Intentar llevar a cabo todos los objetivos con los repasos realizados al inicio de la semana.</p>
 <hr>
 
 <h3>Weekly 01/11 a 07/11 de 2021</h3>

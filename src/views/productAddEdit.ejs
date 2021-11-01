@@ -1,10 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <!--Head-->
-  <%- include('./partials/head.ejs') %>
+  <%- include('./partials/head.ejs')%>
 
   <!--Styles-->
-  <link rel="stylesheet" href="/css/style-register.css" />
+  <link rel="stylesheet" href="/css/styles-prod-AddEdit.css"/>
 
   <!--Body Code-->
   <body>
@@ -15,96 +15,117 @@
         <form method="post" action="" class="datos">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
-            <a href="/"
-              ><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"
-            /></a>
+            <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
-
-          <h3>Carga tus productos</h3>
+          <h3>Carga y edita tus productos</h3>
 
           <!--Codigo Correspondiente a Nombre de Producto-->
-          <div class="formulario__grupo" id="grupo__nombre">
+          <div class="formulario__grupo">
             <label for="nombre" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
                 type="text"
                 class="formulario__input"
-                name="nombre_producto"
-                id="nombre_producto"
+                name="nombre__producto"
                 placeholder="Nombre de Producto"
               />
             </div>
           </div>
 
           <!--Codigo Correspondiente a Descripción-->
-          <div class="formulario__grupo" id="grupo__apellido">
+          <div class="formulario__grupo">
             <label for="apellido" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
                 type="textarea"
                 class="formulario__input"
                 name="descripción"
-                id="descripción"
                 placeholder="Descripción"
               />
             </div>
           </div>
-          <!--Codigo Correspondiente a Imagen -->
-          <div class="formulario__grupo" id="grupo__apellido">
-            <label for="apellido" class="formulario__label"> Carga la Imagen de tu Producto</label>
+
+          <!--Codigo Correspondiente a Imagen-->
+          <div class="formulario__grupo">
+            <label for="imagen" class="formulario__label"
+              >Imagen de Producto</label
+            >
             <div class="formulario__grupo-input">
               <input
-                type="image"
+                type="file"
+                name="producto"
+                multiple
                 class="formulario__input"
                 name="imagen"
-                id="imagen"
               />
             </div>
           </div>
 
           <!--Codigo Correspondiente a Categoria-->
-          <div class="formulario__grupo" id="grupo__email">
-            <label for="email" class="formulario__label"> Selecciona la Categoria Correspondiente</label>
-            <div class="formulario__grupo-input">
-              <input
-                type="text"
-                class="formulario__input"
-                name="categoria"
-                id="categoria"
-              />
+          <div class="formulario__grupo">
+            <label for="categoria" class="formulario__label"
+              >Selecciona su Categoria</label
+            >
+            <div class="formulario__categoria">
+              <div>
+                <label for="categorias">Celulares</label>
+                <input type="checkbox" name="categorias" value="Celulares" />
+                <br />
+                <label for="categorias">Tablets</label>
+                <input type="checkbox" name="categorias" value="Tablets" />
+                <br />
+                <label for="categorias">Notebook</label>
+                <input type="checkbox" name="categorias" value="Notebook" />
+                <br />
+                <label for="categorias">PC</label>
+                <input type="checkbox" name="categorias" value="PC" />
+                <br />
+                <label for="categorias">Varios</label>
+                <input type="checkbox" name="categorias" value="Varios" />
+                <br />
+              </div>
             </div>
           </div>
 
           <!--Codigo Correspondiente a Colores-->
-          <div class="formulario__grupo" id="grupo__password">
-            <label for="password" class="formulario__label">Selecciona el Color Correspondinete</label>
-            <div class="formulario__grupo-input">
-              <input
-                type="color"
-                class="formulario__input"
-                name="color"
-                id="color"
-              />
+          <div class="formulario__grupo">
+            <label for="color" class="formulario__label"
+              >Seleccione un color</label
+            >
+            <div class="formulario__color">
+              <select name="color">
+                <option>Negro</option>
+                <option>Gris</option>
+                <option>Rojo</option>
+                <option>Verde</option>
+                <option>Azul</option>
+                <option>Amarillo</option>
+                <option>Naranja</option>
+                <option>Violeta</option>
+                <option>Marron</option>
+              </select>
             </div>
           </div>
 
           <!--Codigo Correspondiente a Precio-->
-          <div class="formulario__grupo" id="grupo__tyc">
-            <label class="formulario__label">
-              <input
-                class="formulario__checkbox"
-                type="number"
-                name="precio"
-                id="precio"
-              />
-            Precio del Producto</label>
+          <div class="formulario__grupo">
+            <label for="precio" class="formulario__label">Precio</label>
+            <br />
+            <input
+              type="tel"
+              class="formulario__input"
+              name="precio"
+              minlength="1"
+              maxlength="8"
+            />
           </div>
 
           <!--Codigo Correspondiente a Boton de Carga-->
           <div class="formulario__grupo formulario__grupo-btn-enviar">
-            <button type="submit" class="formulario__btn">Cargar / Editar</button>
+            <button type="submit" class="formulario__btn">
+              Cargar / Editar
+            </button>
           </div>
-
         </form>
 
         <!--Codigo Correspondiente a Div Banner-->

@@ -3,7 +3,7 @@ const ofertasIndex = [
         id:1,
         producto:'tablet Lenovo Yoga',
         descuento: "25% OFF",
-        img: '/img/productos/tablet-lenovo.jpg' 
+        img: '/public/img/productos/tablet-lenovo.jpg' 
     },
     {
         id:2,

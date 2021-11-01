@@ -1,139 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alibatec | Tecnología y soluciones digitales</title>
-    <link rel="shortcut icon" href="/diseno/logos/at-logo-favicon.png">
-    <link rel="stylesheet" href="/css/style-index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="shortcut icon" href="/diseno/logos/at-logo-favicon.png" />
+    <link rel="stylesheet" href="/css/style-index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--HEADER-->
     <%- include ('./partials/header') %>
     <main>
-<!--Carrusel corporativo-->
-        <div class="carrusel">
-            <ul class="slider">
-                <li id="slide1">
-                    <img src="/img/marketing/slide11.jpg" alt="slide1">
-                </li>
-                <li id="slide2">
-                 <img src="/img/marketing/slide222.jpg" alt="slide2">   
-                </li>
-                <li id="slide3">
-                    <img src="/img/marketing/slide2.jpg" alt="slide3">
-                </li>
-            </ul>
+      <!--Carrusel corporativo-->
+      <div class="carrusel">
+        <ul class="slider">
+          <li id="slide1">
+            <img src="/img/marketing/slide11.jpg" alt="slide1" />
+          </li>
+          <li id="slide2">
+            <img src="/img/marketing/slide222.jpg" alt="slide2" />
+          </li>
+          <li id="slide3">
+            <img src="/img/marketing/slide2.jpg" alt="slide3" />
+          </li>
+        </ul>
+      </div>
+      <div class="comentario">
+        <h2 class="inv-text">TECNOLOGÍA A UN CLICK</h2>
+        <h3 class="cita-text">
+          La tecnología hizo posible las grandes poblaciones; ahora las grandes
+          poblaciones hacen que la tecnología sea indispensable. (José Krutch)
+        </h3>
+      </div>
+      <br />
+      <!--productos destacados-->
+      <section class="destacados">
+        <div class="producto">
+          <div class="img-product">
+            <img
+              class="images"
+              src="/img/productos/a-watch.jpg"
+              alt="a-watch"
+            />
+          </div>
+          <div class="precio-detalle">
+            <div class="detalle-producto">
+              <div class="tipo">
+                <a href="/producto">Apple Watch</a>
+              </div>
+              <a href="/producto" class="precio">$68.000</a>
+            </div>
+            <div class="buy">
+              <a href="/producto" class="buy-btn">Comprar</a>
+            </div>
+          </div>
         </div>
-        <div class="comentario">
-            <h2 class="inv-text">TECNOLOGÍA A UN CLICK</h2>
-            <h3 class="cita-text">La tecnología hizo posible las grandes poblaciones; ahora las grandes poblaciones hacen que la tecnología sea indispensable. (José Krutch)</h3>
-        </div>    
-        <br>
-<!--productos destacados-->
-        <section class="destacados">
-            <div class="producto">
-                <div class="img-product">
-                    <img class="images" src="/img/productos/a-watch.jpg" alt="a-watch">
-                </div>
-                <div class="precio-detalle">
-                    <div class="detalle-producto">
-                        <div class="tipo">
-                            <a href="/producto">Apple Watch</a>
-                        </div>
-                     <a href="/producto" class="precio">$68.000</a>
-                    </div>
-                    <div class="buy">
-                        <a href="/producto" class="buy-btn">Comprar</a>
-                    </div>
-                </div>
+        <div class="producto">
+          <div class="img-product">
+            <img
+              class="images"
+              id="tlf"
+              src="/img/productos/iphone-8.jpg"
+              alt="I-8plus"
+            />
+          </div>
+          <div class="precio-detalle">
+            <div class="detalle-producto">
+              <div class="tipo">
+                <a href="/producto">Iphone 8 Plus</a>
+              </div>
+              <a href="/producto" class="precio">$115.000</a>
             </div>
-            <div class="producto">
-                <div class="img-product">
-                    <img class="images" id="tlf" src="/img/productos/iphone-8.jpg" alt="I-8plus">
-                </div>
-                <div class="precio-detalle">
-                    <div class="detalle-producto">
-                        <div class="tipo">
-                            <a href="/producto">Iphone 8 Plus</a>
-                        </div>
-                        <a href="/producto" class="precio">$115.000</a>
-                    </div>
-                    <div class="buy">
-                        <a href="/producto" class="buy-btn">Comprar</a>
-                    </div>
-                </div>
-            </div>  
-            <div class="producto">
-                <div class="img-product">
-                    <img class="images" id="tbl" src="/img/productos/oip.jpg" alt="ipad">
-                </div>
-                <div class="precio-detalle">
-                    <div class="detalle-producto">
-                        <div class="tipo">
-                            <a href="/producto">Ipad mini 5</a>
-                        </div>
-                        <a href="/producto" class="precio">$100.000</a>
-                    </div>
-                    <div class="buy">
-                        <a href="/producto" class="buy-btn">Comprar</a>
-                    </div>
-                </div>
-            </div>      
-        </section>
-        <br>
-        <div class="ver-todo">
-            <a href="/producto" class="ver-btn">VER TODO</a>
+            <div class="buy">
+              <a href="/producto" class="buy-btn">Comprar</a>
+            </div>
+          </div>
         </div>
-        <br>
-<!--Ofrecimiento de Alibatec-->
-        <section class="ofrecimiento">
-            <div class="ofre-img">
-                <img class="imgpro" src="/img/productos/imac.jpg" alt="imac.image">
-                <div class="descrip">
-                    <h3 class="titulo">Computadoras</h3>
-                    <a href="/producto" class="boton-ver">Ver productos</a>
-                </div>    
+        <div class="producto">
+          <div class="img-product">
+            <img
+              class="images"
+              id="tbl"
+              src="/img/productos/oip.jpg"
+              alt="ipad"
+            />
+          </div>
+          <div class="precio-detalle">
+            <div class="detalle-producto">
+              <div class="tipo">
+                <a href="/producto">Ipad mini 5</a>
+              </div>
+              <a href="/producto" class="precio">$100.000</a>
             </div>
-            <div class="ofre-img">
-                <img class="imgpro" src="/img/productos/ipad-pro.jpg" alt="ipad.image">
-                <div class="descrip">
-                    <h3 class="titulo">Portátiles</h3>
-                    <a href="/producto" class="boton-ver">Ver productos</a>
-                </div>
+            <div class="buy">
+              <a href="/producto" class="buy-btn">Comprar</a>
             </div>
-            <div class="ofre-img">
-                <img class="imgpro" src="/img/productos/servi.jpg" alt="servi.image">
-                <div class="descrip">
-                    <h3 class="titulo">Servicios</h3>
-                    <a href="/service" class="boton-ver">Conoce</a>
-                </div>    
+          </div>
+        </div>
+      </section>
+      <br />
+      <div class="ver-todo">
+        <a href="/producto" class="ver-btn">VER TODO</a>
+      </div>
+      <br />
+      <!--Ofrecimiento de Alibatec-->
+      <section class="ofrecimiento">
+        <div class="ofre-img">
+          <img class="imgpro" src="/img/productos/imac.jpg" alt="imac.image" />
+          <div class="descrip">
+            <h3 class="titulo">Computadoras</h3>
+            <a href="/producto" class="boton-ver">Ver productos</a>
+          </div>
+        </div>
+        <div class="ofre-img">
+          <img
+            class="imgpro"
+            src="/img/productos/ipad-pro.jpg"
+            alt="ipad.image"
+          />
+          <div class="descrip">
+            <h3 class="titulo">Portátiles</h3>
+            <a href="/producto" class="boton-ver">Ver productos</a>
+          </div>
+        </div>
+        <div class="ofre-img">
+          <img
+            class="imgpro"
+            src="/img/productos/servi.jpg"
+            alt="servi.image"
+          />
+          <div class="descrip">
+            <h3 class="titulo">Servicios</h3>
+            <a href="/service" class="boton-ver">Conoce</a>
+          </div>
+        </div>
+      </section>
+      <!--carrusel de marcas-->
+      <section class="carrusel-de-marcas">
+        <ul class="marcas">
+          <li><img src="/img/marcas/apple-logo.png" /></li>
+          <li><img src="/img/marcas/asus-logo.png" /></li>
+          <li><img src="/img/marcas/hp-logo.png" /></li>
+          <li><img src="/img/marcas/lenovo-logo.png" /></li>
+          <li><img src="/img/marcas/motorola-logo.png" /></li>
+          <li><img src="/img/marcas/xiaomi-logo.png" /></li>
+        </ul>
+      </section>
+      <br />
+      <h2 class="linea-separacion">En Oferta</h2>
+      <br />
+      <!--OFERTAS-->
+      <% for (let i = 0; i < ofertasIndex.length; i++) { %>
+      <!--OFERTAS INDEX-->
+      <article class="ofertas">
+        <div class="pro-oferta">
+          <div class="imagen-prod">
+            <img class="imag" src="<%= ofertasIndex.img %> " alt="tab-lenovo" />
+          </div>
+          <div class="ofer-detalle">
+            <div class="pro-deta">
+              <div class="tip">
+                <a href="/producto"> <%= ofertasIndex.producto %> </a>
+              </div>
+              <a href="/producto" class="descu"
+                ><%= ofertasIndex.descuento %>
+              </a>
             </div>
-        </section>
-<!--carrusel de marcas-->
-        <section class="carrusel-de-marcas">
-            <ul class="marcas">
-                <li><img src="/img/marcas/apple-logo.png"></li>
-                <li><img src="/img/marcas/asus-logo.png"></li>
-                <li><img src="/img/marcas/hp-logo.png"></li>
-                <li><img src="/img/marcas/lenovo-logo.png"></li>
-                <li><img src="/img/marcas/motorola-logo.png"></li>
-                <li><img src="/img/marcas/xiaomi-logo.png"></li>
-            </ul>
-        </section>
-        <br>
-        <h2 class="linea-separacion">En Oferta</h2>
-        <br>
-<!--OFERTAS-->
-       <% for (let i = 0; i < ofertasIndex.length; i++) { %>
-            <%- include('./partials/ofertasProdIndex', {ofertasIndex:ofertasIndex[i]} ) %> 
-        <% } %>
-
+            <div class="buys">
+              <a href="/producto" class="buys-btn">Comprar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      %> <% } %>
     </main>
-</body>
-<!--Footer-->
-<%- include('./partials/footer') %>
+  </body>
+  <!--Footer-->
+  <%- include('./partials/footer') %>
 </html>

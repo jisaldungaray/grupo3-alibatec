@@ -18,31 +18,26 @@ Grupo #3
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Pedro Soto (https://github.com/psoto89)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 <br>
 
 <h3>Weekly 25/10 a 31/10 de 2021</h3>
@@ -51,29 +46,24 @@ Grupo #3
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Juan Ignacio Saldungaray (https://github.com/jisaldungaray)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Joaquin Barrionuevo (https://github.com/JoaquinBar1)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 
 <h3>Pedro Soto (https://github.com/psoto89)</h3>
 <p><b>1. Que hice en el Inicio de la Semana:</b> .</p>
 <p><b>2. Con que Impedimentos me encontre?:</b> .</p>
 <p><b>3. Que hare en el Final de la Semana:</b> .</p>
-<hr>
 <br>

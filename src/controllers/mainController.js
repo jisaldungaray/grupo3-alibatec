@@ -64,9 +64,12 @@ const controller = {
     servicios: (req, res ) => {
         res.render('service')
     },
-    productAddEdit: (req, res ) => {
-        res.render('productAddEdit')
-    }
+    productAdd: (req, res ) => {
+        res.render('productAdd')
+    },
+    productEdit: (req, res ) => {
+        res.render('productEdit')
+    },
 }
 
 module.exports = controller;

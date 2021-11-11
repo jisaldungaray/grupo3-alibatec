@@ -1,5 +1,6 @@
 const path = require ('path');
 
+
 /* >-------- ARREGLOS PRODUCTOS--------< */ 
 const ofertasIndex = [
     {
@@ -49,27 +50,10 @@ const controller = {
     index: (req,res) => {
         res.render('index', {ofertasIndex})
    },
-    register: (req, res ) => {
-        res.render('register')
-    },
-    login: (req, res ) => {
-        res.render('login')
-    },
-    carritoCompras: (req, res ) => {
-        res.render('productCart')
-    },
-    detalleProducto: (req, res ) => {
-        res.render('productDetail', {ofertasProduct})
-    },
     servicios: (req, res ) => {
         res.render('service')
     },
-    productAdd: (req, res ) => {
-        res.render('productAdd')
-    },
-    productEdit: (req, res ) => {
-        res.render('productEdit')
-    },
+   
 }
 
 module.exports = controller;

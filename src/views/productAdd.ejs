@@ -12,7 +12,7 @@
     <main>
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="post" action="" class="datos">
+        <form method="POST" action="/producto/productAdd" class="datos" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
@@ -21,51 +21,55 @@
 
           <!--Codigo Correspondiente a Nombre de Producto-->
           <div class="formulario__grupo">
-            <label for="nombre" class="formulario__label"></label>
+            <label for="name" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
                 type="text"
                 class="formulario__input"
-                name="nombre__producto"
-                placeholder="Nombre de Producto"
+                name="name"
+                placeholder="Marca Producto"
               />
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Descripción-->
+          <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
-            <label for="apellido" class="formulario__label"></label>
+            <label for="model" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
                 type="textarea"
                 class="formulario__input"
-                name="descripción"
-                placeholder="Descripción"
+                name="model"
+                placeholder="Modelo"
               />
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Imagen-->
+          <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
-            <label for="imagen" class="formulario__label"
-              >Imagen de Producto</label
-            >
+            <label for="price" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
-                type="file"
-                name="producto"
-                multiple
+                type="textarea"
                 class="formulario__input"
-                name="imagen"
+                name="price"
+                placeholder="Precio"
               />
             </div>
           </div>
 
           <!--Codigo Correspondiente a Categoria-->
           <div class="formulario__grupo">
-            <label for="categoria" class="formulario__label"
-              >Selecciona su Categoria</label
-            >
+            <label for="category" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="textarea"
+                class="formulario__input"
+                name="category"
+                placeholder="Categoria"
+              />
+            </div>
+
             <div class="formulario__categoria">
               <div>
                 <label for="categorias">Celulares</label>
@@ -84,40 +88,49 @@
                 <input type="checkbox" name="categorias" value="Varios" />
                 <br />
               </div>
+          </div>
+
+          <!--Codigo Correspondiente a detalle-->
+          <div class="formulario__grupo">
+            <label for="detail" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="textarea"
+                class="formulario__input"
+                name="detail"
+                placeholder="Caracteristica"
+              />
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Colores-->
+          <!--Codigo Correspondiente a Descripción-->
           <div class="formulario__grupo">
-            <label for="color" class="formulario__label"
-              >Seleccione un color</label
+            <label for="description" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="textarea"
+                class="formulario__input"
+                name="description"
+                placeholder="Descripción"
+              />
+            </div>
+          </div>
+
+
+          <!--Codigo Correspondiente a Imagen-->
+          <div class="formulario__grupo">
+            <label for="imagen" class="formulario__label"
+              >Imagen de Producto</label
             >
-            <div class="formulario__color">
-              <select name="color">
-                <option>Negro</option>
-                <option>Gris</option>
-                <option>Rojo</option>
-                <option>Verde</option>
-                <option>Azul</option>
-                <option>Amarillo</option>
-                <option>Naranja</option>
-                <option>Violeta</option>
-                <option>Marron</option>
-              </select>
+            <div class="formulario__grupo-input">
+              <input
+                type="file"
+                name="producto"
+                multiple
+                class="formulario__input"
+                name="imagen"
+              />
             </div>
-          </div>
-
-          <!--Codigo Correspondiente a Precio-->
-          <div class="formulario__grupo">
-            <label for="precio" class="formulario__label">Precio</label>
-            <br />
-            <input
-              type="tel"
-              class="formulario__input"
-              name="precio"
-              minlength="1"
-              maxlength="8"
-            />
           </div>
 
           <!--Codigo Correspondiente a Boton de Carga-->
@@ -129,7 +142,8 @@
         </form>
 
         <!--Codigo Correspondiente a Div Banner-->
-        <div class="banner"></div>
+        <div class="banner" > </div>
+        
       </div>
     </main>
   </body>

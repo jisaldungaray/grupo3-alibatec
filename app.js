@@ -14,7 +14,7 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.use('/', router);
-app.use('/products' , productRouter);
+app.use('/producto' , productRouter);
 app.use('/user' , userRouter);
 
 // Hasta aca

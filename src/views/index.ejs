@@ -43,77 +43,39 @@
           poblaciones hacen que la tecnología sea indispensable. (José Krutch)
         </h3>
       </div>
-      <br />
+      
       <!--productos destacados-->
-      <section class="destacados">
-        <div class="producto">
-          <div class="img-product">
-            <img
-              class="images"
-              src="/img/productos/a-watch.jpg"
-              alt="a-watch"
-            />
-          </div>
-          <div class="precio-detalle">
-            <div class="detalle-producto">
-              <div class="tipo">
-                <a href="/producto">Apple Watch</a>
+        <article class="ofertas">
+          <% for (let i = 0; i < products.length; i++) { %>
+          <div class="pro-oferta">
+            <div class="imagen-prod">
+              <img
+                class="imag"
+                src="<%= products[i].image %> "
+                alt="tab-lenovo"
+              />
+            </div>
+            <div class="ofer-detalle">
+              <div class="pro-deta">
+                <div class="tip">
+                  <a href="/producto"> <%= products[i].producto %> </a>
+                </div>
+                <a href="/producto" class="descu">
+                  <%= products[i].descuento %>
+                </a>
               </div>
-              <a href="/producto" class="precio">$68.000</a>
-            </div>
-            <div class="buy">
-              <a href="/producto" class="buy-btn">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="producto">
-          <div class="img-product">
-            <img
-              class="images"
-              id="tlf"
-              src="/img/productos/iphone-8.jpg"
-              alt="I-8plus"
-            />
-          </div>
-          <div class="precio-detalle">
-            <div class="detalle-producto">
-              <div class="tipo">
-                <a href="/producto">Iphone 8 Plus</a>
+              <div class="buys">
+                <a href="/producto" class="buys-btn">Comprar Ahora</a>
               </div>
-              <a href="/producto" class="precio">$115.000</a>
-            </div>
-            <div class="buy">
-              <a href="/producto" class="buy-btn">Comprar</a>
             </div>
           </div>
-        </div>
-        <div class="producto">
-          <div class="img-product">
-            <img
-              class="images"
-              id="tbl"
-              src="/img/productos/oip.jpg"
-              alt="ipad"
-            />
-          </div>
-          <div class="precio-detalle">
-            <div class="detalle-producto">
-              <div class="tipo">
-                <a href="/producto">Ipad mini 5</a>
-              </div>
-              <a href="/producto" class="precio">$100.000</a>
-            </div>
-            <div class="buy">
-              <a href="/producto" class="buy-btn">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br />
+          <% } %>
+        </article>
+      
       <div class="ver-todo">
         <a href="/producto" class="ver-btn">VER TODO</a>
       </div>
-      <br />
+      
       <!--Ofrecimiento de Alibatec-->
       <section class="ofrecimiento">
         <div class="ofre-img">
@@ -157,27 +119,27 @@
           <li><img src="/img/marcas/xiaomi-logo.png" /></li>
         </ul>
       </section>
-      <br />
+      
       <h2 class="linea-separacion">En Oferta</h2>
-      <br />
+      
       <!--OFERTAS-->
       <article class="ofertas">
-        <% for (let i = 0; i < ofertasIndex.length; i++) { %>
+        <% for (let i = 0; i < products.length; i++) { %>
         <div class="pro-oferta">
           <div class="imagen-prod">
             <img
               class="imag"
-              src="<%= ofertasIndex[i].image %> "
+              src="<%= products[i].image %> "
               alt="tab-lenovo"
             />
           </div>
           <div class="ofer-detalle">
             <div class="pro-deta">
               <div class="tip">
-                <a href="/producto"> <%= ofertasIndex[i].producto %> </a>
+                <a href="/producto"> <%= products[i].producto %> </a>
               </div>
               <a href="/producto" class="descu">
-                <%= ofertasIndex[i].descuento %>
+                <%= products[i].descuento %>
               </a>
             </div>
             <div class="buys">

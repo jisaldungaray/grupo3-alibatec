@@ -16,9 +16,7 @@ const controller = {
 
     productAdd: (req, res ) => {
         res.render('productAdd')
-
     },
-
     store: (req, res ) => {
         const nuevoProducto = {
             id: products.length + 1,
@@ -32,10 +30,10 @@ const controller = {
         }
         
         products.push(nuevoProducto)
-        fs.writeFileSync(products, JSON.stringify(nuevoProducto, null, ' '));
-        res.redirect('productos')
+        fs.writeFileSync(productFilepath, JSON.stringify(products, null, {encoding: 'utf-8'}));
+        res.redirect('/productos')
+        console.log (products)
     },
-
     productEdit: (req, res ) => {
         res.render('productEdit')
     },

@@ -10,10 +10,10 @@ const controller = require ('../controllers/productController');
 // Ejecucion MULTER
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb (null, path.join(__dirname, '../../public/img/productos'))
+        cb (null, 'public/img/productos')
     },
     filename: function (req, file, cb){
-        cb (null, Date.now()+ '_img' + path.extname(file.originalname))
+        cb (null, file.fieldname + Date.now() + '_img' + path.extname(file.originalname))
     }
 })
 const upload = multer({storage})
@@ -30,7 +30,7 @@ router.get('/shop', controller.carritoCompras);
 
 //RUTA CREAR PRODUCTO
 router.get('/add/', controller.productAdd); 
-router.post('/add' , upload.single('imagen'), controller.store );
+router.post('/' , upload.single('imagen'), controller.store );
 //FALTA AGREGAR BOTON DE EDITAR PRODUCTO EN "DETALLE"
 
 //RUTA EDITAR PRODUCTO

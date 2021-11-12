@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-main {
+.main-add {
     background-color: #adadad;
     padding: 5px;
 }
@@ -59,6 +59,12 @@ h3{
     padding: 15px 15px;
 }
 
+.category-text{
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px;
+}
+
 .formulario__color{
     padding: 15px 15px;
 }
@@ -74,7 +80,7 @@ h3{
     font-weight: 500;
     font-size: 17px;
     transition: all 450ms;
-    ;
+    
 }
 
 .formulario__btn:hover{
@@ -119,11 +125,6 @@ h3{
         width: 35%;
         float: left;
         margin: 4px;
-    }
-
-    .contenedor__colores{
-        margin
-        
     }
 
 

@@ -104,16 +104,16 @@
         <h3>Ofertas</h3>
         
     <div class="off">
-            <% for(let i = 0; i < ofertasProduct.length; i++){ %> 
+            <% for(let i = 0; i < products.length; i++){ %> 
             <article>
                 
                     <div class="ofert-iphone">
-                        <img src=<%= ofertasProduct[i].image %>  alt="Iphone11">
+                        <img src=<%= products[i].image %>  alt="Iphone11">
                         <h3>
-                            <%= ofertasProduct[i].producto %>
+                            <%= products[i].producto %>
                         </h3>
                         <p>
-                            <%= ofertasProduct[i].precio %> 
+                            <%= products[i].precio %> 
                         </p>
                         <a href="/productCart"><button class="buy">COMPRAR</button></a>
                     </div>

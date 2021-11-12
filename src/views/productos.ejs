@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+        <article class="ofertas">
+            <% for (let i = 0; i < products.length; i++) { %>
+            <div class="pro-oferta">
+              <div class="imagen-prod">
+                <img
+                  class="imag"
+                  src="<%= products[i].image %> "
+                  alt="tab-lenovo"
+                />
+              </div>
+              <div class="ofer-detalle">
+                <div class="pro-deta">
+                  <div class="tip">
+                    <a href="/productos/detail/<%= products.id %>"> <%= products[i].producto %> </a>
+                  </div>
+                  <a href="/productos/detail/<%= products.id %>" class="descu">
+                    <%= products[i].price %>
+                    <%= products[i].discount %> %OFF 
+                  </a>
+                </div>
+                <div class="buys">
+                  <a href="/productos/detail/<%= products.id %> " class="buys-btn">Comprar Ahora</a>
+                </div>
+              </div>
+            </div>
+            <% } %>
+          </article>
+    </main>
+</body>
+
+<%- include('./partials/footer.ejs') %> 
+
+</html>
+

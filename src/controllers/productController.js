@@ -7,8 +7,12 @@ const products = JSON.parse(fs.readFileSync(productFilepath, 'utf-8'))
 
 const controller = {
     index: (req,res) => {
-        res.render('product' , {products})
+        res.render('productos' , {products})
    },
+
+    detalleProducto: (req, res ) => {
+        res.render('productDetail', {products})
+    },
 
     productAdd: (req, res ) => {
         res.render('productAdd')
@@ -26,10 +30,10 @@ const controller = {
             description:req.body.description,
             image: req.file.filename
         }
-
+        
         products.push(nuevoProducto)
         fs.writeFileSync(products, JSON.stringify(nuevoProducto, null, ' '));
-        res.redirect('product')
+        res.redirect('productos')
     },
 
     productEdit: (req, res ) => {
@@ -40,9 +44,6 @@ const controller = {
         res.render('productCart')
     },
 
-    detalleProducto: (req, res ) => {
-        res.render('productDetail', {products})
-    },
     
 }
 

@@ -22,6 +22,7 @@
                             <p>
                                 256 GB Color:Grey
                             </p>
+
                         </div>
                         <div class="main-product-precio">
                             <h4>
@@ -30,9 +31,15 @@
                             <p>
                                 Hasta 12 cuotas sin interes con tarjeta de credito
                             </p>
+                            <div class="prod-edit-button">
+                                <a href="/productos/edit/<%= products.id %>">Editar producto</a>
+                                <form action="/productos/delete/<%= products.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="button-pedido"> Eliminar producto</button>
+                                </form>
+                            </div>
 
-                            
-                            <a href="/productCart"><button class="button-pedido"> HACER PEDIDO </button></a>
+
+                            <a href="/productos/shop"><button class="button-pedido"> HACER PEDIDO </button></a>
                             
                         </div>
                     </div>

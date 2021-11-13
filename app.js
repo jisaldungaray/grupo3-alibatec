@@ -3,12 +3,14 @@ const express = require('express')
 const app = express();
 
 const path = require('path');
+const methodOverride = require('method-override');
 
 const router = require('./src/routes/mainRoutes');
 const productRouter = require('./src/routes/productsRoutes');
 const userRouter = require('./src/routes/userRoutes');
 
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');

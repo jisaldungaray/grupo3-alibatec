@@ -1,10 +1,12 @@
 [
-    {
-    "id":"1",
-    "name":"Apple",
-    "model":"Iphone 13PRO",
-    "price":12500,"discount":"25",
-    "detail":"256GB Color: RED",
-    "description":"",
-    "image":"/img/productos/i13-13.png"}
+  {
+    "id": "1",
+    "name": "Apple",
+    "model": "Iphone 13PRO",
+    "price": 12500,
+    "discount": "25",
+    "detail": "256GB Color: RED",
+    "description": "",
+    "image": "/img/productos/i13-13.png"
+  }
 ]

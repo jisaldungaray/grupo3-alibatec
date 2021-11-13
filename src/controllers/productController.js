@@ -11,7 +11,9 @@ const controller = {
    },
 
     detalleProducto: (req, res ) => {
-        res.render('productDetail', {products})
+		res.render('productDetail', {products})
+        
+        
     },
 
     productAdd: (req, res ) => {
@@ -32,10 +34,17 @@ const controller = {
         products.push(nuevoProducto)
         fs.writeFileSync(productFilepath, JSON.stringify(products, null, {encoding: 'utf-8'}));
         res.redirect('/productos')
-        console.log (products)
     },
     productEdit: (req, res ) => {
-        res.render('productEdit')
+        const id = req.params.id
+		const producToEdit = products.find(product => {
+			return product.id == id		
+		});
+		res.render('productEdit', {product:producToEdit})
+        
+    },
+    update: (req, res) => {
+        res.render('productos')
     },
 
     carritoCompras: (req, res ) => {

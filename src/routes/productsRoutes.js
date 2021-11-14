@@ -31,15 +31,13 @@ router.get('/shop', controller.carritoCompras);
 //RUTA CREAR PRODUCTO
 router.get('/add/', controller.productAdd); 
 router.post('/' , upload.single('imagen'), controller.store );
-//FALTA AGREGAR BOTON DE EDITAR PRODUCTO EN "DETALLE"
 
 //RUTA EDITAR PRODUCTO
 router.get('/edit/:id', controller.productEdit);
 router.put('/edit/:id', upload.single('imagen'), controller.update);
 
 //RUTA ELIMINAR PRODUCTO
-//router.delete('/delete/:id', controller.delete)
-//FALTA AGREGAR BOTON PARA ELIMINAR PRODUCTO EN "DETALLE"
+router.delete('/delete/:id', controller.delete);
 
 
 

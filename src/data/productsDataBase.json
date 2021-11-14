@@ -1,12 +1,14 @@
 [
-  {
-    "id": "1",
-    "name": "Apple",
-    "model": "Iphone 13PRO",
-    "price": 12500,
-    "discount": "25",
-    "detail": "256GB Color: RED",
-    "description": "",
-    "image": "i13-13.png"
-  }
+ {
+  "id": 1,
+  "name": "Apple",
+  "model": "Watch",
+  "detail": "reloj inteligente",
+  "category": "Accesorios",
+  "color": "Naranja",
+  "price": "30.000",
+  "discount": "0",
+  "image": "imagen1636920577766_img.jpg",
+  "estado": ""
+ }
 ]

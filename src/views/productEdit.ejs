@@ -17,46 +17,61 @@
           <div class="contenedor-logo">
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
-          <h3>Edita tu producto <%=product.name%></h3>
+          <h3>Edita tu Producto</h3>
+          <h3><%=product.name%></h3>
 
           <!--Codigo Correspondiente a Nombre de Producto-->
           <div class="formulario__grupo">
-            <label for="nombre" class="formulario__label"></label>
+            <label for="name" class="formulario__label"></label>
             <div class="formulario__grupo-input">
               <input
                 type="text"
                 class="formulario__input"
-                name="nombre__producto"
-                placeholder="<%= product.name %>"
+                name="name"
+                id="name"
+                placeholder="<%=product.name%>"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a model-->
+          <div class="formulario__grupo">
+            <label for="model" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="model"
+                id="model"
+                placeholder="<%=product.model%>"
               />
             </div>
           </div>
 
           <!--Codigo Correspondiente a Descripción-->
           <div class="formulario__grupo">
-            <label for="apellido" class="formulario__label"></label>
+            <label for="detail" class="formulario__label"></label>
             <div class="formulario__grupo-input">
-              <input
-                type="textarea"
-                class="formulario__input"
-                name="descripción"
-                placeholder="Descripción"
-              />
+                <input
+                  type="text"
+                  class="formulario__input"
+                  name="detail"
+                  id="detail"
+                  placeholder="Caracteristicas"
+                />
             </div>
           </div>
 
           <!--Codigo Correspondiente a Imagen-->
           <div class="formulario__grupo">
-            <label for="imagen" class="formulario__label"
-              >Imagen de Producto</label
-            >
+            <label for="imagen" class="formulario__label">Imagen de Producto</label>
             <div class="formulario__grupo-input">
               <input
                 type="file"
-                name="producto"
+                name="imagen"
+                id="imagen"
                 multiple
                 class="formulario__input"
-                name="imagen"
               />
             </div>
           </div>
@@ -67,23 +82,23 @@
               >Selecciona su Categoria</label
             >
             <div class="formulario__categoria">
-              <div>
-                <label for="categorias">Celulares</label>
-                <input type="checkbox" name="categorias" value="Celulares" />
+              <label class="category-text">Categoria</label> 
+              <br>
+                <label for="category">Celulares</label>
+                <input type="checkbox" name="category" value="Portatiles" />
                 <br />
-                <label for="categorias">Tablets</label>
-                <input type="checkbox" name="categorias" value="Tablets" />
+                <label for="category">Tablets</label>
+                <input type="checkbox" name="category" value="Portatiles" />
                 <br />
-                <label for="categorias">Notebook</label>
-                <input type="checkbox" name="categorias" value="Notebook" />
+                <label for="category"></label>Notebook</label>
+                <input type="checkbox" name="category" value="Portatiles" />
                 <br />
-                <label for="categorias">PC</label>
-                <input type="checkbox" name="categorias" value="PC" />
+                <label for="category">PC</label>
+                <input type="checkbox" name="category" value="Computadoras" />
                 <br />
-                <label for="categorias">Varios</label>
-                <input type="checkbox" name="categorias" value="Varios" />
+                <label for="category">Accesorios</label>
+                <input type="checkbox" name="category" value="Accesorios"/>
                 <br />
-              </div>
             </div>
           </div>
 
@@ -107,23 +122,38 @@
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Precio-->
+          <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
-            <label for="precio" class="formulario__label">Precio</label>
-            <br />
-            <input
-              type="tel"
-              class="formulario__input"
-              name="precio"
-              minlength="1"
-              maxlength="8"
-            />
+            <label for="price" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+              <input
+                type="number"
+                class="formulario__input"
+                name="price"
+                id="price"
+                placeholder="<%=product.price%>"
+              />
+            </div>
+          </div>
+
+          <!--Codigo Correspondiente a Descuento-->
+          <div class="formulario__grupo">
+            <label for="discount" class="formulario__label"></label>
+            <div class="formulario__grupo-input">
+                <input
+                  type="number"
+                  class="formulario__input"
+                  name="discount"
+                  id="discount"
+                  placeholder="Descuento"
+                />
+            </div>
           </div>
 
           <!--Codigo Correspondiente a Boton de Carga-->
           <div class="formulario__grupo formulario__grupo-btn-enviar">
             <button type="submit" class="formulario__btn">
-              Editar
+              Guardar cambios
             </button>
           </div>
         </form>

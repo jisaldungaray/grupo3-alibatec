@@ -23,7 +23,7 @@ const upload = multer({storage})
 router.get('/', controller.index);
 
 //RUTA DETALLE DE UN PRODUCTO
-router.get('/detail/:id?' , controller.detalleProducto);
+router.get('/detail/:id' , controller.detalleProducto);
 
 // RUTA CARRITO DE COMPRAS
 router.get('/shop', controller.carritoCompras);
@@ -34,7 +34,7 @@ router.post('/' , upload.single('imagen'), controller.store );
 //FALTA AGREGAR BOTON DE EDITAR PRODUCTO EN "DETALLE"
 
 //RUTA EDITAR PRODUCTO
-router.get('/edit/:id?', controller.productEdit);
+router.get('/edit/:id', controller.productEdit);
 router.put('/edit/:id', upload.single('imagen'), controller.update);
 
 //RUTA ELIMINAR PRODUCTO

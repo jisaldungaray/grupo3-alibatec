@@ -1,14 +1,1 @@
-[
- {
-  "id": 1,
-  "name": "Apple",
-  "model": "Watch",
-  "detail": "reloj inteligente",
-  "category": "Accesorios",
-  "color": "Naranja",
-  "price": "30.000",
-  "discount": "0",
-  "image": "imagen1636920577766_img.jpg",
-  "estado": ""
- }
-]
+[{"id":1,"name":"Apple","model":"Watch","detail":"reloj inteligente","category":"Accesorios","color":"Naranja","price":"30.000","discount":"0","image":"imagen1636920577766_img.jpg","estado":"destacado"},{"id":3,"name":"Apple","model":"Ipad mini","price":"100.000","discount":"0","detail":"Ipad mini 5, 64GB, wifi","category":"Portatiles","estado":"destacado","image":"imagen1636925000926_img.jpg"},{"id":4,"name":"Lenovo","model":"Tablet Lenovo Yoga","price":"","discount":"25","detail":"Tablet de 10\"","category":"Portatiles","estado":"en-oferta","image":"imagen1636925150149_img.jpg"},{"id":5,"name":"Apple","model":"Iphone 12 PRO","price":"","discount":"20","detail":"512GB color negro","category":"Portatiles","estado":"en-oferta","image":"imagen1636925272677_img.png"},{"id":6,"name":"Samsung","model":"Auriculares Buds","price":"","discount":"30","detail":"gran calidad de sonido","category":"Accesorios","estado":"en-oferta","image":"imagen1636925348920_img.jpg"},{"id":7,"name":"Apple","model":"Imac 21.5\"","price":"","discount":"10","detail":"pantalla de 21.5\"","category":"Computadoras","estado":"en-oferta","image":"imagen1636925425221_img.jpg"},{"id":8,"name":"Apple","model":"Iphone 8","price":"115.000","discount":"","detail":"128GB, pantalla LCD","category":"Portatiles","estado":"destacado","image":"imagen1636925537058_img.jpg"}]

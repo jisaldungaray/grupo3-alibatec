@@ -7,26 +7,32 @@
     <%- include('./partials/header.ejs') %> 
 
     <main>
-      <article class="destacados">
+      <article class="ofertas">
         <% for (let i = 0; i < products.length; i++) { %>
-        <div class="producto">
-          <div class="img-product">
-              <img class="images" src="/img/productos/<%=products[i].image %> " alt="a-watch">
+        <div class="pro-oferta">
+          <div class="imagen-prod">
+            <img
+              class="imag"
+              src="/img/productos/<%=products[i].image %>"
+            />
           </div>
-          <div class="precio-detalle">
-              <div class="detalle-producto">
-                  <div class="tipo">
-                      <a href="/productos/detail/<%= products[i].id %>"><%= products[i].model%></a>
-                  </div>
-               <a href="/productos/detail/<%= products[i].id %>" class="precio">$<%= products[i].price%></a>
+          <div class="ofer-detalle">
+            <div class="pro-deta">
+              <div class="tip">
+                <a href="/productos/detail/<%= products[i].id %>"> <%= products[i].model %> </a>
               </div>
-              <div class="buy">
-                  <a href="/productos/detail/<%= products[i].id %>" class="buy-btn">Comprar</a>
-              </div>
+              <a href="/productos/detail/<%= products[i].id %>" class="descu">
+                <%= products[i].discount %>% OFF
+              </a>
+            </div>
+            <div class="buys">
+              <a href="/productos/detail/<%= products[i].id %>" class="buys-btn">Comprar Ahora</a>
+            </div>
           </div>
         </div>
         <% } %>
       </article>
+
     </main>
 </body>
 

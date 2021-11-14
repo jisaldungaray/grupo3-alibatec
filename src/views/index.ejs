@@ -46,20 +46,20 @@
       
       <!--productos destacados-->
       <article class="destacados">
-        <% for (let i = 0; i < products.length; i++) { %>
+        <% for (let i = 0; i < destacado.length; i++) { %>
         <div class="producto">
           <div class="img-product">
-              <img class="images" src="/img/productos/<%=products[i].image %> " alt="a-watch">
+              <img class="images" src="/img/productos/<%=destacado[i].image %> " alt="a-watch">
           </div>
           <div class="precio-detalle">
               <div class="detalle-producto">
                   <div class="tipo">
-                      <a href="/productos/detail/<%= products[i].id %>"><%= products[i].model%></a>
+                      <a href="/productos/detail/<%= destacado[i].id %>"><%= destacado[i].model%></a>
                   </div>
-               <a href="/productos/detail/<%= products[i].id %>" class="precio">$<%= products[i].price%></a>
+               <a href="/productos/detail/<%= destacado[i].id %>" class="precio">$<%= destacado[i].price%></a>
               </div>
               <div class="buy">
-                  <a href="/productos/detail/<%= products[i].id %>" class="buy-btn">Comprar</a>
+                  <a href="/productos/detail/<%= destacado[i].id %>" class="buy-btn">Comprar</a>
               </div>
           </div>
         </div>
@@ -118,25 +118,25 @@
       
       <!--OFERTAS-->
       <article class="ofertas">
-        <% for (let i = 0; i < products.length; i++) { %>
+        <% for (let i = 0; i < oferta.length; i++) { %>
         <div class="pro-oferta">
           <div class="imagen-prod">
             <img
               class="imag"
-              src="/img/productos/<%=products[i].image %>"
+              src="/img/productos/<%=oferta[i].image %>"
             />
           </div>
           <div class="ofer-detalle">
             <div class="pro-deta">
               <div class="tip">
-                <a href="/productos/detail/<%= products.id %>"> <%= products[i].model %> </a>
+                <a href="/productos/detail/<%= oferta[i].id %>"> <%= oferta[i].model %> </a>
               </div>
-              <a href="/productos/detail/<%= products.id %>" class="descu">
-                <%= products[i].discount %>% OFF
+              <a href="/productos/detail/<%= oferta[i].id %>" class="descu">
+                <%= oferta[i].discount %>% OFF
               </a>
             </div>
             <div class="buys">
-              <a href="/productos/detail/<%= products.id %>" class="buys-btn">Comprar Ahora</a>
+              <a href="/productos/detail/<%= oferta[i].id %>" class="buys-btn">Comprar Ahora</a>
             </div>
           </div>
         </div>

@@ -9,12 +9,17 @@ const products = JSON.parse(fs.readFileSync(productFilepath, 'utf-8'))
 
 const controller = {
     index: (req,res) => {
-        res.render('index', {products})
+        const destacado= products.filter(product=>{
+			return product.estado == 'destacado'
+		})
+		const oferta= products.filter(product=>{
+			return product.estado == 'en-oferta'
+		})
+        res.render('index', {destacado, oferta})
    },
     servicios: (req, res ) => {
         res.render('service')
     },
-   
 }
 
 module.exports = controller;

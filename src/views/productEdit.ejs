@@ -12,12 +12,12 @@
     <main>
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="POST" action="" class="datos" enctype="multipart/form-data">
+        <form method="POST" action="/productos/edit/<%=product.id%>?_method=PUT" class="datos" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
-          <h3>Edita tus productos</h3>
+          <h3>Edita tu producto <%=product.name%></h3>
 
           <!--Codigo Correspondiente a Nombre de Producto-->
           <div class="formulario__grupo">
@@ -27,7 +27,7 @@
                 type="text"
                 class="formulario__input"
                 name="nombre__producto"
-                placeholder="<%= products.name %>"
+                placeholder="<%= product.name %>"
               />
             </div>
           </div>

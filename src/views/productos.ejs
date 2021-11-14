@@ -13,22 +13,22 @@
               <div class="imagen-prod">
                 <img
                   class="imag"
-                  src="<%= products[i].image %>"
+                  src="/img/productos/<%=products[i].image %>"
                   alt="img-producto"
                 />
               </div>
               <div class="ofer-detalle">
                 <div class="pro-deta">
                   <div class="tip">
-                    <a href="/productos/detail/<%= products.id %>"> <%= products[i].producto %> </a>
+                    <a href="/productos/detail/<%= products[i].id %>"> <%= products[i].producto %> </a>
                   </div>
-                  <a href="/productos/detail/<%= products.id %>" class="descu">
+                  <a href="/productos/detail/<%= products[i].id %>" class="descu">
                     <%= products[i].price %>
-                    <%= products[i].discount %> %OFF 
+                    <%= products[i].discount %>% OFF 
                   </a>
                 </div>
                 <div class="buys">
-                  <a href="/productos/detail/<%= products.id %> " class="buys-btn">Comprar Ahora</a>
+                  <a href="/productos/detail/<%= products[i].id %> " class="buys-btn">Comprar Ahora</a>
                 </div>
               </div>
             </div>

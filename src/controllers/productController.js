@@ -9,13 +9,11 @@ const controller = {
     index: (req,res) => {
         res.render('productos' , {products})
    },
-
     detalleProducto: (req, res ) => {
-		res.render('productDetail', {products})
-        
-        
+		const product = products.find(elemento =>
+            elemento.id == req.params.id)
+		res.render('productDetail', {product}) 
     },
-
     productAdd: (req, res ) => {
         res.render('productAdd')
     },
@@ -37,16 +35,12 @@ const controller = {
     },
     productEdit: (req, res ) => {
         const id = req.params.id
-		const producToEdit = products.find(product => {
-			return product.id == id		
-		});
+		const producToEdit = products.find(product => product.id == id);
 		res.render('productEdit', {product:producToEdit})
-        
     },
     update: (req, res) => {
         res.render('productos')
     },
-
     carritoCompras: (req, res ) => {
         res.render('productCart')
     },

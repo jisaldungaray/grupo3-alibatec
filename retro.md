@@ -37,3 +37,11 @@ Grupo #3
 <p><b>3. Continuar haciendo:</b> Mas Meet's para Codear en Equipo, todos juntos...</p>
 <p><b>4. Hacer menos:</b> Codear en forma individual, donde solo uno entiende y comprende lo realizado.</p>
 <p><b>5. Dejar de hacer:</b> Procastinar...</p>
+
+<h3>Sprint 4</h3>
+
+<p><b>1. Comenzar a hacer:</b> Mas practicas en Equipo que nos ayuden a resolver mas rapido los errores y al mismo tiempo asentar los contenidos. Estar mas al dia con los contenidos de la Clase.</p>
+<p><b>2. Hacer mas:</b> Mas practicas Grupales en relacion al Sprint. Explicar los pasos realizados en el Codigo.</p>
+<p><b>3. Continuar haciendo:</b> Practicas Grupales y mantener la buena comunicacion en el Grupo.</p>
+<p><b>4. Hacer menos:</b> Complicarse con diferentes cuestiones... Postercar y/o cambiar horarios estipulados de reuniones Grupales.</p>
+<p><b>5. Dejar de hacer:</b> Procastinar!!!</p>

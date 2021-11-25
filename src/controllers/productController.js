@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productFilepath, 'utf-8'))
 const controller = {
     index: (req,res) => {
         res.render('productos' , {products})
-   },
+    },
     detalleProducto: (req, res ) => {
 		const product = products.find(elemento =>
             elemento.id == req.params.id)

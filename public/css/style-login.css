@@ -62,7 +62,13 @@ h3{
     transition: all 450ms;
     ;
 }
-
+.botones a {
+    text-decoration: none;
+    color: white;
+}
+.botones a:hover {
+    color: #32ABF0;
+}
 .botones button:hover{
     background-color: white;
     color: #32ABF0;
@@ -105,10 +111,10 @@ p {
         width: 63%;
         border-radius: 5px;
     }
-
     .datos{
         width: 35%;
         float: left;
         margin: 4px;
     }
+
 }

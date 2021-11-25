@@ -12,7 +12,7 @@
     <main>
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="post" action="" class="datos">
+        <form method="POST" action="/user/register" class="datos" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"
@@ -82,6 +82,20 @@
             </div>
           </div>
 
+          <!--Codigo Correspondiente a Grupo Contraseña-->
+          <div class="formulario__grupo">
+            <label for="imagen" class="formulario__label">Imagen de Usuario</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="file"
+                name="imagen"
+                id="imagen"
+                multiple
+                class="formulario__input"
+              />
+            </div>
+          </div>
+
           <!--Codigo Correspondiente a Terminos y Condiciones-->
           <div class="formulario__grupo" id="grupo__tyc">
             <label class="formulario__label">
@@ -105,8 +119,7 @@
 
           <div>
             <button class="formulario__btn">
-              <a href="/login"></a>
-              Ingresar
+              <a href="/user/login">Ingresar</a>
             </button>
           </div>
         </form>

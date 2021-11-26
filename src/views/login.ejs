@@ -25,16 +25,25 @@
 
                   <!--Codigo Correspondiente a formulario  -->
 
-                <form action="" method="get">
+                <form action="/user/login" method="POST"> 
 
                     <div class="nombre-usuario">
-                        <label for="nombre-usuario"></label>
-                        <input class="grande" type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Usuario" required >
+                        <label for="email"></label>
+                        <input class="grande" type="email" name="email" id="email" placeholder="E-Mail" value='' required >
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="feedback"><%= errors.email %></p>
+                        <% } %>
                     </div>
         
                     <div class="password">
                         <label for="password"></label>
                         <input class="grande" type="password" name="password" id="password" placeholder="Contraseña">
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input"name="remember_user">Recordar mi usuario
+                        </label>
                     </div>
         
                     <div class="botones">

@@ -32,14 +32,14 @@
                                 Hasta 12 cuotas sin interes con tarjeta de credito
                             </p>
                             <div class="prod-edit-button">
-                                <a href="/productos/edit/<%= product.id %>">Editar producto</a>
+                                <button class="button-pedido"><a href="/productos/edit/<%= product.id %>">Editar producto</a></button>
                                 <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
                                     <button type="submit" class="button-pedido"> Eliminar producto</button>
                                 </form>
                             </div>
 
 
-                            <a href="/productos/shop"><button class="button-pedido"> HACER PEDIDO </button></a>
+                            <a href="/productos/shop"><button class="button-pedido"> Hacer pedido </button></a>
                             
                         </div>
                     </div>

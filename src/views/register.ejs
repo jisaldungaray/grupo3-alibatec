@@ -21,8 +21,8 @@
           </div>
 
           <h3>Creá tu cuenta</h3>
-
-          <!--Codigo Correspondiente a Grupo Nombre-->
+        
+          <!--Codigo Correspondiente a Grupo NOMBRE-->
           <div class="formulario__grupo" id="grupo__nombre">
             <label for="name" class="formulario__label"></label>
             <div class="formulario__grupo-input">
@@ -32,12 +32,17 @@
                 name="name"
                 id="name"
                 placeholder="Nombre"
-                required
-              />
+                value="<%= locals.old && old.name ? old.name : null %>"
+              >
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                  <%= errors.name.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Grupo Apellido-->
+          <!--Codigo Correspondiente a Grupo APELLIDO-->
           <div class="formulario__grupo" id="grupo__apellido">
             <label for="lastname" class="formulario__label"></label>
             <div class="formulario__grupo-input">
@@ -47,12 +52,17 @@
                 name="lastname"
                 id="lastname"
                 placeholder="Apellido"
-                required
-              />
+                value="<%= locals.old && old.lastname ? old.lastname : null %>"
+              >
+              <% if (locals.errors && errors.lastname) { %>
+                <div class="text-danger">
+                  <%= errors.lastname.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Grupo E-Mail-->
+          <!--Codigo Correspondiente a Grupo E-MAIL-->
           <div class="formulario__grupo" id="grupo__email">
             <label for="email" class="formulario__label"></label>
             <div class="formulario__grupo-input">
@@ -62,12 +72,17 @@
                 name="email"
                 id="email"
                 placeholder="E-Mail"
-                required
-              />
+                value="<%= locals.old && old.email ? old.email : null %>"
+                >
+                <% if (locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg %> 
+                  </div>
+                <% } %>
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Grupo Contraseña-->
+          <!--Codigo Correspondiente a CONTRASEÑA-->
           <div class="formulario__grupo" id="grupo__password">
             <label for="password" class="formulario__label"></label>
             <div class="formulario__grupo-input">
@@ -77,25 +92,34 @@
                 name="password"
                 id="password"
                 placeholder="Contraseña"
-                required
-              />
+              >
+              <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                  <%= errors.password.msg %>
+                </div>
+                <% } %>
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Grupo Contraseña-->
+          <!--Codigo Correspondiente a IMAGEN DE USUARIO-->
           <div class="formulario__grupo">
             <label for="imagen" class="formulario__label">Imagen de Usuario</label>
             <div class="formulario__grupo-input">
               <input
                 type="file"
-                name="imagen"
-                id="imagen"
+                name="image"
+                id="image"
                 multiple
                 class="formulario__input"
-              />
+              >
+              <% if (locals.errors && errors.image) { %>
+                <div class="text-danger">
+                  <%= errors.image.msg %>
+                </div>
+                <% } %>
             </div>
           </div>
-
+          
           <!--Codigo Correspondiente a Terminos y Condiciones-->
           <div class="formulario__grupo" id="grupo__tyc">
             <label class="formulario__label">
@@ -104,7 +128,6 @@
                 type="checkbox"
                 name="tyc"
                 id="tyc"
-                required
               />
               Acepto los Terminos y Condiciones
             </label>

@@ -21,9 +21,10 @@
               <div class="tip">
                 <a href="/productos/detail/<%= products[i].id %>"> <%= products[i].model %> </a>
               </div>
-              <a href="/productos/detail/<%= products[i].id %>" class="descu">
-                <%= products[i].discount %>% OFF
-              </a>
+              <a href="/productos/detail/<%= products[i].id %>" class="descu">$<%= products[i].price%></a>
+              <div>
+                <a href="/productos/detail/<%= products[i].id %>" class="descu"><%= products[i].discount %>% OFF</a>
+              </div>
             </div>
             <div class="buys">
               <a href="/productos/detail/<%= products[i].id %>" class="buys-btn">Comprar Ahora</a>

@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "name": "Rosemary",
+    "lastname": "Calderon",
+    "email": "hola@gmail.com",
+    "password": "$2a$10$2sy/8i1GFwzQ8lQxCTDl/OcrHsVghTvWeim87c5Ql6m2804gd4l8u",
+    "image": "image1638117857399_img.jpg"
+  }
+]

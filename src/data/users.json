@@ -1,9 +1,1 @@
-[
-  {
-    "name": "Rosemary",
-    "lastname": "Calderon",
-    "email": "hola@gmail.com",
-    "password": "$2a$10$2sy/8i1GFwzQ8lQxCTDl/OcrHsVghTvWeim87c5Ql6m2804gd4l8u",
-    "image": "image1638117857399_img.jpg"
-  }
-]
+[{"name":"Esteban","lastname":"Delgado","email":"un@email.com","password":"$2a$10$xG/79GR6Lo0Ml0K/6eCO5.k3hLxrtkizuJ4X2jPemvK2dW0P67x5S","tyc":"on","image":"image1638119381693_img.jpg"}]

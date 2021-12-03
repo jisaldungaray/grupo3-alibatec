@@ -49,21 +49,26 @@
                 </ul>
 
                 <ul class="lista-horizontal">
-                    <li class="horizontal-item"><a href="#">Usuario <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                    <% if (locals.isLogged) { %>
+                    <li class="horizontal-item"><a href="#"><%= locals.userLogged.name %><i id="iconos-header" class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
                             <li><a href="/user/profile">Mi perfil</a></li>
                             <li><a href="/user/logout">Cerrar sesión</a></li>
                         </ul>
                     </li>
+                    <% }else{ %>
                     <li class="horizontal-item"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
                             <li><a href="/user/register">Registrarse</a></li>
                             <li><a href="/user/login">Iniciar sesión</a></li>
                         </ul>
                     </li>
+                    <% } %>
+                    <% if (locals.isLogged) { %>
                     <li class="horizontal-item">
                     <a href="/productos/shop" class="/productCart"><i id="iconos-header" class="fas fa-shopping-cart"></i></a>
                     </li>
+                    <% } %>
                 </ul>
             </nav>
         </div>

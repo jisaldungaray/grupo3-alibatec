@@ -5,7 +5,7 @@ const validateRegister = [
     body('lastname').notEmpty().withMessage('Debe completar este campo'),
     body('email').notEmpty().withMessage('Debe completar este campo').bail().isEmail().withMessage('Debe escribir un email válido'),
     body('password').notEmpty().withMessage('Debe completar este campo').isLength({min: 8}).withMessage('Debe tener mínimo 8 caracteres'),
-    body('imagen').custom((value, { req }) => {
+    body('image').custom((value, { req }) => {
         let file = req.file;
         let extensionesPermitidas = ['.jpg', '.jpeg', '.png', '.gif'];
         if (!file){

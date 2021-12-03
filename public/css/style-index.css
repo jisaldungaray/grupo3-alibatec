@@ -200,7 +200,6 @@ ul {
     border-bottom: solid 1px rgb(0,171,240);
     width: 50%;
     padding: 5px;
-    border-radius: 10px;
 }
 
 /*Estilo de OFERTAS*/
@@ -580,7 +579,7 @@ article.ofertas {
     }
     .ver-todo {
         width: 15%;
-        font-size: 30px;
+        font-size: 20px;
         padding: 10px; 
         transition: all 450ms;
     }
@@ -649,12 +648,8 @@ article.ofertas {
         animation: cambio 20s infinite alternate;
         animation-timing-function: ease-in ;
     }
-    .marcas li {
-        width: 70%;
-    }
     .marcas img {
         width: 50%;
-        height: 300px;
     }
     @keyframes cambio {
       0% { margin-left: 0;}
@@ -702,20 +697,19 @@ article.ofertas {
         margin-top: 35px;
     }
     .suscrib-text {
-        font-size: 40px;
+        font-size: 20px;
     }
     .enterate {
-        font-size: 24px;
+        font-size: 15px;
         color: rgb(54, 52, 52);
     }
     .insert-email {
         font-size: 20px;
         width: 70%;
-        height: 35%;
     }
     .enviar-sus {
         width: 20%;
-        height: 38%;
+        padding: 5px;
     }
     .enviar-sus:hover {
         background-color: rgb(254,100,26);

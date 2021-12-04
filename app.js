@@ -20,8 +20,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-app.use(usuarioapp);
 app.use(cookies());
+app.use(usuarioapp);
+
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');

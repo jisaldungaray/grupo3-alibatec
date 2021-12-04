@@ -9,14 +9,21 @@ const User = {
     getData: function (){ 
         return users;
     },
-    idCreate: function (){
+
+    writeFile(contents){
+        let fileContents = JSON.stringify(contents, null, " ");
+        fs.writeFileSync(userFilepath, fileContents)
+
+
+    },
+    idCreate: function(){
         let allUser = this.getData();
-        let otherUser = allUser.pop();
-        if (otherUser){
-            return otherUser.id + 1;
-        }else{
-            return 1;
+        let newid = allUser.pop();
+
+        if(newid){
+            return ++newid.id;
         }
+        return 1;
     },
     findByPK: function (id) {
         let allUser = this.getData(); 
@@ -35,7 +42,7 @@ const User = {
             ... userData
         }
         allUser.push (newUser) 
-        fs.writeFileSync (userFilepath, JSON.stringify (allUser, null, ' ')); 
+        fs.appendFileSync (userFilepath, JSON.stringify (allUser, null, ' ')); 
         return newUser; 
     },
     delete: function(id){

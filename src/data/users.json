@@ -1,11 +1,11 @@
 [
  {
   "id": 1,
-  "name": "Rosemary",
-  "lastname": "Calderon",
-  "email": "hola@gmail.com",
-  "password": "$2a$10$Q.GE9wDtawro2BGI3b5FHeyucLRusVQwD3e5.Cun4tvLTmrdgL6rG",
+  "name": "Pedro",
+  "lastname": "Soto",
+  "email": "psotofranco@gmail.com",
+  "password": "$2a$10$OwuVyJmVwtPVoTR81fz0x.WwxXnloJAOm/Nob4F/5b7/Sfmdu738K",
   "tyc": "on",
-  "image": "image1638513376262_img.jpg"
+  "image": "image1638591528904_img.png"
  }
 ]

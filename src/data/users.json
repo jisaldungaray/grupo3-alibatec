@@ -8,7 +8,6 @@
   "tyc": "on",
   "image": "image1638591528904_img.png"
  },
-
  {
   "id": 2,
   "name": "Joaquin",
@@ -17,5 +16,14 @@
   "password": "$2a$10$ONnArqLD/0U7LC/1MIwgPeUNDFyO6AcTybvsujTRkyNIh79urLTD6",
   "tyc": "on",
   "image": "image1638739712357_img.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "Rosemary",
+  "lastname": "Calderon",
+  "email": "hola@gmail.com",
+  "password": "$2a$10$njVdT4L7Jwei2PslmPxqv.QwEwNT9K3dmvTPk4JAEVZySsVZ8Gs1e",
+  "tyc": "on",
+  "image": "image1638743286885_img.jpg"
  }
 ]

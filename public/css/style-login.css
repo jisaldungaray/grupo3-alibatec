@@ -81,6 +81,10 @@ p {
     padding-bottom: 30px;
     border-bottom: 1px dashed #b7b7b7;
 }
+.feedback {
+    color: red;
+    font-weight: 500;
+}
 /* ----- Div del banner----*/
 
 .banner{

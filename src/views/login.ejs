@@ -31,7 +31,7 @@
                         <label for="email"></label>
                         <input class="grande" type="email" name="email" id="email" placeholder="E-Mail" value='' required >
                         <% if (locals.errors && errors.email) { %>
-                            <p class="feedback"><%= errors.email %></p>
+                            <h5 class="feedback"><%= errors.email.msg %></h5>
                         <% } %>
                     </div>
         

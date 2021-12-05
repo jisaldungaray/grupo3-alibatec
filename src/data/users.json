@@ -7,5 +7,15 @@
   "password": "$2a$10$OwuVyJmVwtPVoTR81fz0x.WwxXnloJAOm/Nob4F/5b7/Sfmdu738K",
   "tyc": "on",
   "image": "image1638591528904_img.png"
+ },
+
+ {
+  "id": 2,
+  "name": "Joaquin",
+  "lastname": "Barrionuevo",
+  "email": "Jbarrio@alibatec.com",
+  "password": "$2a$10$ONnArqLD/0U7LC/1MIwgPeUNDFyO6AcTybvsujTRkyNIh79urLTD6",
+  "tyc": "on",
+  "image": "image1638739712357_img.jpeg"
  }
 ]

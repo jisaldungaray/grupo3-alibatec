@@ -5,15 +5,17 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <div class="profile-complete">
-            <div class="img-profile">
-                <img src="/img/users/<%=user.image %>" alt="">
+            <div class="profile">
+                <img class="profile-avatar" src="/img/users/<%=user.image %>" alt="">
             </div>
             <div class="info-profile">
+                <h2>Datos Personales:</h2>
                 <h3><%= user.name %></h3>
                 <h3><%= user.email %></h3>
                 <h3>Categoría</h3>
             </div>
         </div>
+        
     </main>
 </body>
 <%- include('./partials/footer.ejs')  %>

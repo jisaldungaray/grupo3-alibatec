@@ -21,7 +21,7 @@ const User = {
         let newid = allUser.pop();
 
         if(newid){
-            return ++newid.id;
+            return newid.id + 1;
         }
         return 1;
     },

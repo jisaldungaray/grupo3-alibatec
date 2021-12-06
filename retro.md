@@ -37,6 +37,7 @@ Grupo #3
 <p><b>3. Continuar haciendo:</b> Mas Meet's para Codear en Equipo, todos juntos...</p>
 <p><b>4. Hacer menos:</b> Codear en forma individual, donde solo uno entiende y comprende lo realizado.</p>
 <p><b>5. Dejar de hacer:</b> Procastinar...</p>
+<hr>
 
 <h3>Sprint 4</h3>
 
@@ -45,3 +46,40 @@ Grupo #3
 <p><b>3. Continuar haciendo:</b> Practicas Grupales y mantener la buena comunicacion en el Grupo.</p>
 <p><b>4. Hacer menos:</b> Complicarse con diferentes cuestiones... Postercar y/o cambiar horarios estipulados de reuniones Grupales.</p>
 <p><b>5. Dejar de hacer:</b> Procastinar!!!</p>
+<hr>
+
+<h3>Sprint 5</h3>
+
+<p><b>1. Comenzar a hacer:</b> Realizar proyectos individuales a la par con el fin de practicar todos los contenidos, ya sean del curso o trabajos que vayan surgiendo... Practicar, Practicar y Practicar...</p>
+<p><b>2. Hacer mas:</b> Dedicar mas tiempo diario a cada tema con el fin de lograr mejores resultados en cada Sprint... Practicar, Practicar y Practicar...</p>
+<p><b>3. Continuar haciendo:</b> Reforar y mejorar las Reuniones Grupales... Explicar al Grupo los avances realziados para que se entienda lo realizado.</p>
+<p><b>4. Hacer menos:</b> Pensar menos, y accionar mas... No individualizar tanto los trabajos y hacerlos junto a los compañeros... Procastinar!!!</p>
+<p><b>5. Dejar de hacer:</b> Procastinar!!!</p>
+<hr>
+
+<h3>Sprint 6</h3>
+
+<p><b>1. Comenzar a hacer:</b></p>
+<p><b>2. Hacer mas:</b></p>
+<p><b>3. Continuar haciendo:</b></p>
+<p><b>4. Hacer menos:</b></p>
+<p><b>5. Dejar de hacer:</b></p>
+<hr>
+
+<h3>Sprint 7</h3>
+
+<p><b>1. Comenzar a hacer:</b></p>
+<p><b>2. Hacer mas:</b></p>
+<p><b>3. Continuar haciendo:</b></p>
+<p><b>4. Hacer menos:</b></p>
+<p><b>5. Dejar de hacer:</b></p>
+<hr>
+
+<h3>Sprint 8</h3>
+
+<p><b>1. Comenzar a hacer:</b></p>
+<p><b>2. Hacer mas:</b></p>
+<p><b>3. Continuar haciendo:</b></p>
+<p><b>4. Hacer menos:</b></p>
+<p><b>5. Dejar de hacer:</b></p>
+<hr>

@@ -1,29 +1,11 @@
 [
  {
-  "id": 1,
-  "name": "Pedro",
-  "lastname": "Soto",
-  "email": "psotofranco@gmail.com",
-  "password": "$2a$10$OwuVyJmVwtPVoTR81fz0x.WwxXnloJAOm/Nob4F/5b7/Sfmdu738K",
+  "id": "eab59c16-1920-4161-be36-2438f58e60be",
+  "name": "pepe",
+  "lastname": "berta",
+  "email": "pepe@alibatec.com",
+  "password": "$2a$10$yY7b/QMaDaU/eRDSlzPNdOCw93ftr0Ym.rEyJTUGnUD.ybNOil/CW",
   "tyc": "on",
-  "image": "image1638591528904_img.png"
- },
- {
-  "id": 2,
-  "name": "Joaquin",
-  "lastname": "Barrionuevo",
-  "email": "Jbarrio@alibatec.com",
-  "password": "$2a$10$ONnArqLD/0U7LC/1MIwgPeUNDFyO6AcTybvsujTRkyNIh79urLTD6",
-  "tyc": "on",
-  "image": "image1638739712357_img.jpeg"
- },
- {
-  "id": 3,
-  "name": "Rosemary",
-  "lastname": "Calderon",
-  "email": "hola@gmail.com",
-  "password": "$2a$10$njVdT4L7Jwei2PslmPxqv.QwEwNT9K3dmvTPk4JAEVZySsVZ8Gs1e",
-  "tyc": "on",
-  "image": "image1638743286885_img.jpg"
+  "image": "image1639704192529_img.jpeg"
  }
 ]

@@ -205,13 +205,17 @@ ul {
 /*Estilo de OFERTAS*/
 article.ofertas {
     display:flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
 }
 .imag {
     width: 90%;
+    height: 26vh;
     margin-left: 15px;
     padding-top: 15px;
+    object-fit: contain;
+    
 }
 .pro-oferta {
     border: solid 1px rgb(124,217,51);
@@ -241,6 +245,7 @@ article.ofertas {
     text-align: left;
     padding: 15px 5px;
     margin-left: 10px;
+    text-align: center;
 }
 .buys-btn {
     border: solid 1px rgb(136, 252, 142);

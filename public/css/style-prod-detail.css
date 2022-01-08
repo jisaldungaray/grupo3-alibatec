@@ -68,9 +68,7 @@ main section.product{
     text-decoration: none;
     color: white;
 }
-hr{
-    margin:20px;
-}
+
 /*-----DETALLES DE COMPRA------*/
 .main-section-details{
     display: flex;
@@ -174,8 +172,11 @@ article div.off{
         width: 100%;
         margin-top: 10px;
         align-self: flex-start;
-    }   
-    
+    } 
+    .prod-edit-button{
+        display: flex;
+        
+    }
     .main-section-details{
         display: flex;
         flex-direction: row;    

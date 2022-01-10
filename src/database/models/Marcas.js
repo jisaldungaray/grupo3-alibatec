@@ -12,7 +12,7 @@ module.exports = function(sequelize, dataTypes){
         } 
     } 
     let config = { 
-        tableName: 'marca', 
+        tableName: 'marcas', 
         timestamps: false 
     } 
     let Marcas = sequelize.define(alias, cols, config) 

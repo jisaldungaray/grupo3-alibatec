@@ -7,7 +7,7 @@
         <section>
             <div class="head-product">
                 <div>
-                    <img src="/img/productos/<%=product.image %>" class="foto">
+                    <img src="<%=product.image %>" class="foto">
                 </div>
                 
                    <!---PRODUCTO---> 
@@ -27,21 +27,20 @@
                             <p>
                                 Hasta 12 cuotas sin interes con tarjeta de credito
                             </p>
+                            <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar producto</button></a>
                             <div class="prod-edit-button">
-                                <button class="button-pedido"><a href="/productos/edit/<%= product.id %>">Editar producto</a></button>
                                 <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="button-pedido"> Eliminar producto</button>
+                                   <button type="submit" class="button-pedido"> Eliminar producto</button>
                                 </form>
                             </div>
-
-
-                            <a href="/productos/shop"><button class="button-pedido"> Hacer pedido </button></a>
                             
+                                <a href="/productos/shop"><button class="button-pedido"> Hacer pedido </button></a>
+            
                         </div>
                     </div>
             </div>
         </section> 
-        <hr>
+       
         <section>
             <!--DETALLES DE COMPRA-->
             <div class="main-section-details">
@@ -69,7 +68,7 @@
                     <h3>
                         Caracteristicas
                     </h3>
-                    <p><%= producto.detail %> </p>
+                    <p><%= product.detail %> </p>
                 
                     
                 </div>

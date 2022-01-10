@@ -14,7 +14,7 @@ const dbController = require('../controllers/dbCreateController');
 router.get('/', dbController.productList);
 
 //RUTA DETALLE DE UN PRODUCTO
-router.get('/detail/:id' , controller.detalleProducto);
+router.get('/detail/:id' , dbController.detalle);
 
 // RUTA CARRITO DE COMPRAS
 router.get('/shop', controller.carritoCompras);

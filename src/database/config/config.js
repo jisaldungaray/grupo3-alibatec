@@ -1,15 +1,15 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Ulises299.",
-    "database": "alibatec",
+    "password": "Ross19280077Gusteban201",
+    "database": "alibatec_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Ulises299.",
-    "database": "alibatec",
+    "password": "Ross19280077Gusteban201",
+    "database": "alibatec_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

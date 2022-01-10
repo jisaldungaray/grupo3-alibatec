@@ -56,7 +56,7 @@ main section.product{
     color: rgba(199 0 143);
 }
 .button-pedido{
-    background-color: rgb(29 65 226);
+    background-color: rgb(0,171,240);
     color: #fafafa;
     width: 100%;
     margin-top: 10px;
@@ -73,6 +73,7 @@ main section.product{
 .main-section-details{
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 10px;
 }
 .desplegable{
     width: 100%;
@@ -172,10 +173,12 @@ article div.off{
         width: 100%;
         margin-top: 10px;
         align-self: flex-start;
-    } 
-    .prod-edit-button{
-        display: flex;
-        
+    }
+    .button-pedido:hover {
+        color: rgb(0,171,240);
+        font-weight: bold;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px rgb(0,171,240);  
     }
     .main-section-details{
         display: flex;
@@ -190,6 +193,9 @@ article div.off{
         flex-direction: row;
         
        
+    }
+    .main-section-info-product p{
+        padding: 10px;
     }
     
     

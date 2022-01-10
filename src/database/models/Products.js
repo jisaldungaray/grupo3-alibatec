@@ -25,7 +25,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING, 
             allowNull: true 
         }, 
-        image_product: { 
+        image: { 
             type: dataTypes.BLOB, 
             allowNull: true 
         }, 
@@ -56,10 +56,6 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: "product_id", 
             otherKey:"marca_id", 
             timestamps:false 
-        }) 
-        Productos.hasMany(models.ImageProducto, { 
-            as: "imageProduct", 
-            foreignKey: "image_product" 
         }) 
         Productos.belongsTo(models.Category, { 
             as: "category", 

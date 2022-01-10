@@ -31,7 +31,7 @@ const dbController = {
         })
     },
     productList: function(req, res) {
-         db.Productos.findAll({
+        db.Productos.findAll({
             include: ['marcas']
         })
              .then((product) => {

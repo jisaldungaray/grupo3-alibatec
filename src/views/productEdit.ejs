@@ -12,13 +12,13 @@
     <main>
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="POST" action="/productos/edit/<%=product.id%>?_method=PUT" class="datos" enctype="multipart/form-data">
+        <form method="POST" action="/productos/edit/<%=producto.id%>?_method=PUT" class="datos" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
           <h3>Edita tu Producto</h3>
-          <h3><%=product.name%></h3>
+          <h3><%=producto.name%></h3>
 
           <!--Codigo Correspondiente a Nombre de Producto-->
           <div class="formulario__grupo">
@@ -29,7 +29,7 @@
                 class="formulario__input"
                 name="name"
                 id="name"
-                placeholder="<%=product.name%>"
+                placeholder="<%=producto.name%>"
               />
             </div>
           </div>
@@ -43,7 +43,7 @@
                 class="formulario__input"
                 name="model"
                 id="model"
-                placeholder="<%=product.model%>"
+                placeholder="<%=producto.model%>"
               />
             </div>
           </div>
@@ -102,26 +102,6 @@
             </div>
           </div>
 
-          <!--Codigo Correspondiente a Colores-->
-          <div class="formulario__grupo">
-            <label for="color" class="formulario__label"
-              >Seleccione un color</label
-            >
-            <div class="formulario__color">
-              <select name="color">
-                <option>Negro</option>
-                <option>Gris</option>
-                <option>Rojo</option>
-                <option>Verde</option>
-                <option>Azul</option>
-                <option>Amarillo</option>
-                <option>Naranja</option>
-                <option>Violeta</option>
-                <option>Marron</option>
-              </select>
-            </div>
-          </div>
-
           <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
             <label for="price" class="formulario__label"></label>
@@ -131,7 +111,7 @@
                 class="formulario__input"
                 name="price"
                 id="price"
-                placeholder="<%=product.price%>"
+                placeholder="<%=producto.price%>"
               />
             </div>
           </div>

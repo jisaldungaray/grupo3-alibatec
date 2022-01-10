@@ -1,6 +1,5 @@
 fs = require('fs');
 const path = require ('path');
-const { uuid } = require('uuidv4');
 
 const userFilepath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(userFilepath, 'utf-8'))
@@ -14,6 +13,15 @@ const User = {
     writeFile(contents){
         let fileContents = JSON.stringify(contents, null, " ");
         fs.writeFileSync(userFilepath, fileContents)
+    },
+    idCreate: function (){
+        let allUser = this.getData();
+        let otherUser = allUser.pop();
+        if (otherUser){
+            return otherUser.id + 1;
+        }else{
+            return 1;
+        }
     },
     
     
@@ -30,7 +38,7 @@ const User = {
     create: function (userData) {
         let allUser = this.getData(); 
         let newUser = {
-            id: uuid(),
+            id: this.idCreate(),
             ... userData
         }
         allUser.push (newUser) 

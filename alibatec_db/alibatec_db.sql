@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categoria_producto`
+-- Table structure for table `categoria`
 --
 
-DROP TABLE IF EXISTS `categoria_producto`;
+DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categoria_producto` (
+CREATE TABLE `categoria` (
   `id` int unsigned NOT NULL,
   `category` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
@@ -30,42 +30,37 @@ CREATE TABLE `categoria_producto` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categoria_producto`
+-- Dumping data for table `categoria`
 --
 
-LOCK TABLES `categoria_producto` WRITE;
-/*!40000 ALTER TABLE `categoria_producto` DISABLE KEYS */;
-INSERT INTO `categoria_producto` VALUES (1,'portatiles'),(2,'computadoras'),(3,'accesorios');
-/*!40000 ALTER TABLE `categoria_producto` ENABLE KEYS */;
+LOCK TABLES `categoria` WRITE;
+/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` VALUES (1,'portatiles'),(2,'computadoras'),(3,'accesorios');
+/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `marca_producto`
+-- Table structure for table `image_product`
 --
 
-DROP TABLE IF EXISTS `marca_producto`;
+DROP TABLE IF EXISTS `image_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `marca_producto` (
-  `id` int NOT NULL,
-  `marca_id` int NOT NULL,
-  `product_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `product_id_idx` (`product_id`),
-  KEY `marca_id_idx` (`marca_id`),
-  CONSTRAINT `marca_id` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`),
-  CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `image_product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `url` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `marca_producto`
+-- Dumping data for table `image_product`
 --
 
-LOCK TABLES `marca_producto` WRITE;
-/*!40000 ALTER TABLE `marca_producto` DISABLE KEYS */;
-INSERT INTO `marca_producto` VALUES (1,1,1),(2,1,2),(3,1,3),(4,3,4),(5,1,5),(6,2,6),(7,1,7);
-/*!40000 ALTER TABLE `marca_producto` ENABLE KEYS */;
+LOCK TABLES `image_product` WRITE;
+/*!40000 ALTER TABLE `image_product` DISABLE KEYS */;
+INSERT INTO `image_product` VALUES (1,'/img/productos/imagen1636920577766_img.jpg'),(2,'/img/productos/imagen1636925000926_img.jpg'),(3,'/img/productos/imagen1636921601096_img.jpg'),(4,'/img/productos/imagen1636925150149_img.jpg'),(5,'/img/productos/imagen1636925272677_img.jpg'),(6,'/img/productos/imagen1636925348920_img.jpg'),(7,'/img/productos/imagen1636925425221_img.jpg');
+/*!40000 ALTER TABLE `image_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -101,17 +96,21 @@ DROP TABLE IF EXISTS `products`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `marca_id` int NOT NULL,
   `model` varchar(45) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `discount` decimal(10,0) NOT NULL,
   `detail` longtext NOT NULL,
   `estado` varchar(45) NOT NULL,
-  `categoria_producto` int unsigned NOT NULL,
-  `image` blob NOT NULL,
+  `categoria_id` int unsigned NOT NULL,
+  `image_id` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `categoria_producto_idx` (`categoria_producto`),
-  CONSTRAINT `categoria_producto` FOREIGN KEY (`categoria_producto`) REFERENCES `categoria_producto` (`id`)
+  KEY `categoria_producto_idx` (`categoria_id`),
+  KEY `marca_id_idx` (`marca_id`),
+  KEY `image_id_idx` (`image_id`),
+  CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`),
+  CONSTRAINT `image_id` FOREIGN KEY (`image_id`) REFERENCES `image_product` (`id`),
+  CONSTRAINT `marca_id` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -121,7 +120,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Apple','Watch',60000,0,'Sensor cardíaco eléctrico, detección automática de ejercicios','Destacado',3,_binary '/img/productos/imagen1636920577766_img.jpg'),(2,'Apple','Ipad mini',100000,0,'64GB, 10.9 pulgadas, camara de 12MP y la frontal de 7MP, Bateria por hasta 10hrs','Destacado',1,_binary '/img/productos/imagen1636925000926_img.jpg'),(3,'Apple','Iphone 8',94000,0,'64GB, 4,7 pulgadas, camara de 12MP y la frontal de 7MP, color rosa','Destacado',1,_binary '/img/productos/imagen1636921601096_img.jpg'),(4,'Lenovo','Tablet Yoga',50000,20,'64GB, 4GB RAM, 10.1 pulgadas camaras de 8MP y 5 MP','en Oferta',1,_binary '/img/productos/imagen1636925150149_img.jpg'),(5,'Apple','Iphone 12 PRO',350000,25,'256GB, 6.1 pulgadas camaras de 12MP','en Oferta',1,_binary '/img/productos/imagen1636925272677_img.png'),(6,'Samsung','Auriculares Buds',18000,10,'Bateria de hasta 5hrs, tecnología true wirless, sonido superior','en Oferta',3,_binary '/img/productos/imagen1636925348920_img.jpg'),(7,'Apple','Imac 21.5\"',250000,10,'Intel Core i5, doble nucleo, RAM de 8GB y SSD 256GB ','en Oferta',2,_binary '/img//productos/imagen1636925425221_img.jpg');
+INSERT INTO `products` VALUES (1,1,'Watch',60000,0,'Sensor cardíaco eléctrico, detección automática de ejercicios','Destacado',3,1),(2,1,'Ipad mini',100000,0,'64GB, 10.9 pulgadas, camara de 12MP y la frontal de 7MP, Bateria por hasta 10hrs','Destacado',1,2),(3,1,'Iphone 8',94000,0,'64GB, 4,7 pulgadas, camara de 12MP y la frontal de 7MP, color rosa','Destacado',1,3),(4,3,'Tablet Yoga',50000,20,'64GB, 4GB RAM, 10.1 pulgadas camaras de 8MP y 5 MP','en Oferta',1,4),(5,1,'Iphone 12 PRO',350000,25,'256GB, 6.1 pulgadas camaras de 12MP','en Oferta',1,5),(6,2,'Auriculares Buds',18000,10,'Bateria de hasta 5hrs, tecnología true wirless, sonido superior','en Oferta',3,6),(7,1,'Imac 21.5\"',250000,10,'Intel Core i5, doble nucleo, RAM de 8GB y SSD 256GB ','en Oferta',2,7);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +132,7 @@ DROP TABLE IF EXISTS `user_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_product` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
   `product_id` int NOT NULL,
   PRIMARY KEY (`id`),
@@ -191,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-10 16:51:03
+-- Dump completed on 2022-01-12  1:13:35

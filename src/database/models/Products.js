@@ -1,14 +1,14 @@
 module.exports = function (sequelize, dataTypes){ 
-    let alias = 'Productos'; 
+    let alias = 'Producto'; 
     let cols = { 
         id: { 
             type: dataTypes.INTEGER, 
             primaryKey: true, 
             autoincrement: true 
         }, 
-        name: { 
-            type: dataTypes.STRING, 
-            allowNull: true 
+        marca_id: { 
+            type: dataTypes.INTEGER, 
+            allowNull: false
         }, 
         model: { 
             type: dataTypes.STRING, 
@@ -25,14 +25,13 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING, 
             allowNull: true 
         }, 
-        image: { 
-            type: dataTypes.BLOB, 
-            allowNull: true 
-        }, 
         estado: { 
             type: dataTypes.STRING, 
         }, 
-        categoria_producto: {
+        categoria_id: {
+            type: dataTypes.STRING
+        },
+        image_id: {
             type: dataTypes.STRING
         }
     }  
@@ -50,18 +49,18 @@ module.exports = function (sequelize, dataTypes){
             otherKey:"user_id", 
             timestamps:false 
         }) 
-        Productos.belongsToMany(models.Marcas,{ 
-            as: "marcas", 
-            through: "marca_producto", 
-            foreignKey: "product_id", 
-            otherKey:"marca_id", 
-            timestamps:false 
+        Productos.belongsTo(models.Marca,{ 
+            as: "marca", 
+            foreignKey: "marca_id",  
         }) 
         Productos.belongsTo(models.Category, { 
             as: "category", 
-            foreignKey:"categoria_producto" 
+            foreignKey:"categoria_id" 
         }) 
-         
+        Productos.belongsTo(models.Image, {
+            as: "image",
+            foreignKey: "image_id"
+        })
     } 
  
     return Productos;  

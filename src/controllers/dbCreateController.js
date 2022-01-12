@@ -31,8 +31,8 @@ const dbController = {
         })
     },
     productList: function(req, res) {
-        db.Productos.findAll({
-            include: ['marcas']
+        db.Producto.findAll({
+            include: ["marca"]
         })
              .then((product) => {
                  res.render('productos', {product})
@@ -40,9 +40,9 @@ const dbController = {
             .catch (err=> console.log (err))
     }, 
     edit: function(req, res) {
-        let productos = db.Productos.findByPk(req.params.id)
+        let productos = db.Producto.findByPk(req.params.id)
         let marca = db.Marca.findAll()
-        let image = db.ImageProducto.findByPk(req.paramas.id)
+        let image = db.Image.findByPk(req.paramas.id)
 
         Promise.all([productos, marca, image])
             .then(function(producto, marca, image){

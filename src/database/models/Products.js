@@ -23,45 +23,44 @@ module.exports = function (sequelize, dataTypes){
         }, 
         detail: { 
             type: dataTypes.STRING, 
-            allowNull: true 
         }, 
         estado: { 
             type: dataTypes.STRING, 
         }, 
         categoria_id: {
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         },
         image_id: {
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         }
     }  
     let config = { 
         tableName: 'products', 
         timestamps: false 
     } 
-    let Productos = sequelize.define(alias, cols, config) 
+    let Producto = sequelize.define(alias, cols, config) 
  
-    Productos.associate = function(models) { 
-        Productos.belongsToMany(models.Usuarios,{ 
+    Producto.associate = function(models) { 
+        Producto.belongsToMany(models.Usuarios,{ 
             as: "usuarios", 
             through: "user_product", 
             foreignKey: "product_id", 
             otherKey:"user_id", 
             timestamps:false 
         }) 
-        Productos.belongsTo(models.Marca,{ 
+        Producto.belongsTo(models.Marca,{ 
             as: "marca", 
             foreignKey: "marca_id",  
         }) 
-        Productos.belongsTo(models.Category, { 
+        Producto.belongsTo(models.Category, { 
             as: "category", 
             foreignKey:"categoria_id" 
         }) 
-        Productos.belongsTo(models.Image, {
+        Producto.hasMany(models.Image, {
             as: "image",
             foreignKey: "image_id"
         })
     } 
  
-    return Productos;  
+    return Producto;  
 }

@@ -7,14 +7,18 @@
         <section>
             <div class="head-product">
                 <div>
-                    <img src="<%=product.image %>" class="foto">
+                    <% for (let i= 0; product.image.length; i++) { %>
+                        
+                        <img src="<%=product.image[i].url %>" class="foto">
+                    
+                        <% } %>
                 </div>
                 
                    <!---PRODUCTO---> 
                     <div class="product">
                         <div class="main-product">
                             <h2>
-                                <%= product.name %>
+                                <%= product.marca.tipo %>
                             </h2>
                             <h3>
                                 <%= product.model %>

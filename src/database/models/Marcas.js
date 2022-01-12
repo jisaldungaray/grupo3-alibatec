@@ -15,14 +15,14 @@ module.exports = function(sequelize, dataTypes){
         tableName: 'marcas', 
         timestamps: false 
     } 
-    let Marcas = sequelize.define(alias, cols, config) 
+    let Marca = sequelize.define(alias, cols, config) 
      
-    Marcas.associate = function(models) {  
-        Marcas.hasMany(models.Producto,{ 
+    Marca.associate = function(models) {  
+        Marca.hasMany(models.Producto,{ 
             as: "products", 
             foreignKey: "marca_id", 
         }) 
     } 
  
-    return Marcas; 
+    return Marca; 
 }

@@ -4,12 +4,14 @@ const db = require('../database/models')
 const dbController = {
     productList: function(req, res) {
         db.Producto.findAll({
-            include: [{association: "marca"},{association: "image"}]
+            include: ["marca","image"]
         })
-             .then((product) => {
-                 res.render('productos', {product})
+        .then((product) => {
+            res.render('productos', {product})
+            console.log (product[0].marca)
             })
             .catch (err=> console.log (err))
+            
     },
     detalle: (req, res ) => {
         let id = req.params.id

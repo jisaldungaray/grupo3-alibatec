@@ -4,7 +4,7 @@ const db = require('../database/models')
 const dbController = {
     productList: function(req, res) {
         db.Producto.findAll({
-            include: [{association: "marca"}]
+            include: [{association: "marca"},{association: "image"}]
         })
              .then((product) => {
                  res.render('productos', {product})
@@ -39,7 +39,7 @@ const dbController = {
             name: req.body.name,
             model: req.body.model,
             detail: req.body.detail,
-            image: req.file.imagen,
+            image: req.file.filename,
             category: req.body.category,
             price: req.body.price,
             discount: req.body.discount,

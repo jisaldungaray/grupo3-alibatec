@@ -13,7 +13,7 @@
             <div class="imagen-prod">
               <img
                 class="imag"
-                src="<%= product[i].image.url %>"
+                src="<%= product[i].image %>"
               />
             </div>       
           <div class="ofer-detalle">
@@ -23,7 +23,7 @@
               </div>
               <div class="tip">
                   
-                  <a href="/productos/detail/<%= product.marca.id %>"><%= product.marca.tipo %></a>
+                  <a href="/productos/detail/<%= product.id %>"><%= product.marca %></a>
               </div>
               <a href="/productos/detail/<%= product[i].id %>" class="descu">$<%= product[i].price%></a>
               <div>

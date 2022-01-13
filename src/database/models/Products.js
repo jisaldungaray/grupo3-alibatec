@@ -30,9 +30,6 @@ module.exports = function (sequelize, dataTypes){
         categoria_id: {
             type: dataTypes.INTEGER
         },
-        image_id: {
-            type: dataTypes.INTEGER
-        }
     }  
     let config = { 
         tableName: 'products', 
@@ -56,10 +53,13 @@ module.exports = function (sequelize, dataTypes){
             as: "category", 
             foreignKey:"categoria_id" 
         }) 
-        Producto.hasMany(models.Image, {
-            as: "image",
-            foreignKey: "image_id"
-        })
+        Producto.belongsToMany(models.Image,{ 
+            as: "image", 
+            through: "image_product",
+            foreignkey: "product_id", 
+            otherKey: "image_id",
+            timestamps: false
+        }) 
     } 
  
     return Producto;  

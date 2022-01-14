@@ -1,5 +1,6 @@
 
-const db = require('../database/models')
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const dbController = {
     productList: function(req, res) {
@@ -11,7 +12,6 @@ const dbController = {
             console.log (product[0].marca)
             })
             .catch (err=> console.log (err))
-            
     },
     detalle: (req, res ) => {
         let id = req.params.id
@@ -20,45 +20,55 @@ const dbController = {
         })
         .then(product => {
             res.render('productDetail', { product })
+          //  console.log(product.image[0])
         })
         .catch (err => console.log (err))
     },
     create: function(req, res){
-        /*    db.Producto.findAll({
-                include: [{association: "marca"}, {association: "category"}]
+       db.Producto.findAll({
+            include: [{association: "marca"}, {association: "category"}],
+            attributes: ['estado'],
+            group: 'estado',
+        })
+            .then((product) => {
+            //    console.log(product[0].category.dataValues.category)
+                res.render('productAdd', {product})
             })
-                .then((product) => {
-                    res.render('productAdd', {product})
-                })*/
-            db.Category.findAll()
-                .then((category) => {
-                    res.render('productAdd', {category})
-               })
-    
     },   
     store: function(req, res) {
+        db.Image.create({})// para guardar la imagen
         db.Producto.create({
-            name: req.body.name,
+            marca_id: req.body.marca,
             model: req.body.model,
             detail: req.body.detail,
-            image: req.file.filename,
-            category: req.body.category,
+            categoria_id: req.body.category,
             price: req.body.price,
             discount: req.body.discount,
         })
             .then((product) => {
-                res.redirect('/productos', {product})
-            })
+               res.redirect('/productos', {product})
+        })
+            .catch(err => console.log (err))
     },
     edit: function(req, res) {
-        let productos = db.Producto.findByPk(req.params.id)
-        let marca = db.Marca.findAll()
-        let image = db.Image.findByPk(req.paramas.id)
+        db.Producto.findByPk(req.params.id,{
+            include: ["marca", "category", "image"]
+        })
+        .then((producto)=>{
+            res.render('productEdit', {producto})
+            console.log(producto)
+        })
+        .catch(err => console.log (err))
+    /*    let producto = db.Producto.findByPk(req.params.id)
+        let marca = db.Marca.findByPk(req.params.id)
+        let image = db.Image.findByPk(req.params.id)
+        let category = db.Category.findByPk(req.params.id)
 
-        Promise.all([productos, marca, image])
-            .then(function(producto, marca, image){
-                res.render('productEdit', {producto, marca, image})
-            })
+        Promise.all([producto, marca, image, category])
+            .then(function([producto, marca, image, category]){
+                res.render('productEdit', {producto, marca, image, category})
+                console.log(producto)
+            })*/
     },
     update: function(req, res) {
         db.Producto.update({

@@ -8,15 +8,12 @@ module.exports = function (sequelize, dataTypes){
         }, 
         marca_id: { 
             type: dataTypes.INTEGER, 
-            allowNull: false
         }, 
         model: { 
             type: dataTypes.STRING, 
-            allowNull: true 
         }, 
         price: { 
             type: dataTypes.DECIMAL, 
-            allowNull: true 
         }, 
         discount: { 
             type: dataTypes.DECIMAL 

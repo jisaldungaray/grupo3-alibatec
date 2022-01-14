@@ -18,7 +18,8 @@
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
           <h3>Edita tu Producto</h3>
-          <h3><%=producto.name%></h3>
+          <h3><%=producto.marca.tipo%></h3>
+          
 
           <!--Codigo Correspondiente a Nombre de Producto-->
           <div class="formulario__grupo">
@@ -27,9 +28,8 @@
               <input
                 type="text"
                 class="formulario__input"
-                name="name"
-                id="name"
-                placeholder="<%=producto.name%>"
+                name="marca"
+                placeholder="<%=producto.marca.tipo%>"
               />
             </div>
           </div>
@@ -42,7 +42,6 @@
                 type="text"
                 class="formulario__input"
                 name="model"
-                id="model"
                 placeholder="<%=producto.model%>"
               />
             </div>
@@ -56,8 +55,7 @@
                   type="text"
                   class="formulario__input"
                   name="detail"
-                  id="detail"
-                  placeholder="Caracteristicas"
+                  placeholder="<%=producto.detail%>"
                 />
             </div>
           </div>
@@ -69,7 +67,6 @@
               <input
                 type="file"
                 name="imagen"
-                id="imagen"
                 multiple
                 class="formulario__input"
               />
@@ -78,28 +75,18 @@
 
           <!--Codigo Correspondiente a Categoria-->
           <div class="formulario__grupo">
-            <label for="categoria" class="formulario__label"
-              >Selecciona su Categoria</label
-            >
+            <label for="categoria" class="formulario__label">
+              Selecciona su Categoria</label>
             <div class="formulario__categoria">
               <label class="category-text">Categoria</label> 
-              <br>
-                <label for="category">Celulares</label>
-                <input type="checkbox" name="category" value="Portatiles" />
-                <br />
-                <label for="category">Tablets</label>
-                <input type="checkbox" name="category" value="Portatiles" />
-                <br />
-                <label for="category"></label>Notebook</label>
-                <input type="checkbox" name="category" value="Portatiles" />
-                <br />
-                <label for="category">PC</label>
-                <input type="checkbox" name="category" value="Computadoras" />
-                <br />
-                <label for="category">Accesorios</label>
-                <input type="checkbox" name="category" value="Accesorios"/>
-                <br />
-            </div>
+              <select name="category">
+                    <option value="<%= producto.category.id %>" selected>
+                      <%= producto.category.category %> 
+                    </option>
+                      <option value="<%= producto.category.id %>">
+                        <%= producto.category.category %> 
+                      </option>
+              </select>
           </div>
 
           <!--Codigo Correspondiente a price-->
@@ -110,7 +97,6 @@
                 type="number"
                 class="formulario__input"
                 name="price"
-                id="price"
                 placeholder="<%=producto.price%>"
               />
             </div>
@@ -124,7 +110,6 @@
                   type="number"
                   class="formulario__input"
                   name="discount"
-                  id="discount"
                   placeholder="Descuento"
                 />
             </div>

@@ -16,18 +16,6 @@
           </div>
           <h3>Carga tus productos</h3>
 
-          <!--Codigo Correspondiente a Nombre de Producto-->
-          <div class="formulario__grupo">
-            <label for="name" class="formulario__label"></label>
-            <div class="formulario__grupo-input">
-              <input
-                type="text"
-                class="formulario__input"
-                name="name"
-                placeholder="Marca"
-              />
-            </div>
-          </div>
 
           <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
@@ -79,18 +67,41 @@
             </div>
           </div>
           
+          <!--Codigo Correspondiente a marca-->
+        <div class="formulario__categoria">
+          <label>Marca</label> 
+          <select name="marca">
+           <% for (let i = 0; i < product.length; i++) { %>
+              <option value="<%= product[i].marca.id %>">
+                <%= product[i].marca.dataValues.tipo %> 
+              </option>
+            <% } %>
+          </select>
+      </div>
           <!--Codigo Correspondiente a Categoria-->         
           
           <div class="formulario__categoria">
             <label class="category-text">Categoria</label> 
             <select name="category">
-             <% for (let i = 0; i < category.length; i++) { %>
-                <option value="<%= category[i].id %>">
-                  <%= category[i].category %> 
+             <% for (let i = 0; i < product.length; i++) { %>
+                <option value="<%= product[i].category.dataValues.id %>">
+                  <%= product[i].category.dataValues.category %> 
                 </option>
               <% } %>
             </select>
         </div>
+        
+        <!--Codigo Correspondiente al estado-->
+        <div class="formulario__grupo">
+          <label class="category-text">Estado</label> 
+          <select name="estado">
+           <% for (let i = 0; i < product.length; i++) { %>
+              <option value="<%= product[i].estado %>">
+                <%= product[i].estado %> 
+              </option>
+            <% } %>
+          </select>
+      </div>
 
           <!--Codigo Correspondiente a Imagen-->
           <div class="formulario__grupo">
@@ -105,16 +116,7 @@
             </div>
           </div>
 
-          <!--Codigo Correspondiente al estado-->
-          <div class="formulario__grupo">
-						<label for="estado" class="formulario__label">Estado:</label>
-						<select name="estado" id="estado" class="fformulario__grupo-input">
-							<option value="">Elegí</option>
-							<option value="en-oferta">En oferta</option>
-							<option value="destacado">Destacado</option>
-              <option value="ninguno">Ninguno</option>
-						</select>
-					</div>
+          
 
           <!--Codigo Correspondiente a Boton de Carga-->
           <div class="formulario__grupo formulario__grupo-btn-enviar">

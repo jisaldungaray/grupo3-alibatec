@@ -23,8 +23,6 @@ const User = {
             return 1;
         }
     },
-    
-    
     findByPK: function (id) {
         let allUser = this.getData(); 
         let userFound = allUser.find (oneUser => oneUser.id=== id); 

@@ -7,11 +7,7 @@
         <section>
             <div class="head-product">
                 <div>
-                    <% for (let i= 0; product.image.length; i++) { %>
-                        
-                        <img src="<%=product.image[i].url %>" class="foto">
-                    
-                        <% } %>
+                        <img src="<%=product.image[0].dataValues.url %>" class="foto">
                 </div>
                 
                    <!---PRODUCTO---> 

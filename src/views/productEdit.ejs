@@ -18,22 +18,15 @@
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
           <h3>Edita tu Producto</h3>
-          <h3><%=producto.marca.tipo%></h3>
+          <% for (let i = 0; i < marca.length; i++) { %>
+            <% if (marca[i].id == producto.marca_id){ %>
+
+              <h3><%= marca[i].tipo %></h3>
+
+           <% } %>
+
+         <% } %>
           
-
-          <!--Codigo Correspondiente a Nombre de Producto-->
-          <div class="formulario__grupo">
-            <label for="name" class="formulario__label"></label>
-            <div class="formulario__grupo-input">
-              <input
-                type="text"
-                class="formulario__input"
-                name="marca"
-                placeholder="<%=producto.marca.tipo%>"
-              />
-            </div>
-          </div>
-
           <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
             <label for="model" class="formulario__label"></label>
@@ -78,15 +71,45 @@
             <label for="categoria" class="formulario__label">
               Selecciona su Categoria</label>
             <div class="formulario__categoria">
-              <label class="category-text">Categoria</label> 
+              <label class="formulario__label">Categoria</label> 
               <select name="category">
-                    <option value="<%= producto.category.id %>" selected>
-                      <%= producto.category.category %> 
+                <% for (let i = 0; i < category.length; i++) { %>
+                  <% if (category[i].id == producto.categoria_id){ %>
+      
+                    <option value="<%= category.id %>" selected>
+                      <%= category[i].category %> 
                     </option>
-                      <option value="<%= producto.category.id %>">
-                        <%= producto.category.category %> 
+      
+                    <% } else { %>
+                      <option value="<%= category.id %>">
+                        <%= category[i].category %> 
                       </option>
+      
+                    <% } %>
+               <% } %>
               </select>
+            </div>
+
+          <!--Codigo Correspondiente a Marca de Producto-->
+          <div class="formulario__grupo">
+            <label for="marca" class="formulario__label">Marca</label>
+            <select name="category">
+              <% for (let i = 0; i < marca.length; i++) { %>
+                <% if (marca[i].id == producto.mcarca_id){ %>
+    
+                  <option value="<%= marca.id %>" selected>
+                    <%= marca[i].tipo %> 
+                  </option>
+    
+               <% } else { %>
+                <option value="<%= marca.id %>">
+                  <%= marca[i].tipo %> 
+                </option>
+
+              <% } %>
+    
+             <% } %>
+            </select>
           </div>
 
           <!--Codigo Correspondiente a price-->

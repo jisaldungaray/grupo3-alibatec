@@ -11,20 +11,22 @@
         <% for (let i = 0; i < product.length; i++) { %>
           <div class="pro-oferta">
             <div class="imagen-prod">
-              <img
-                class="imag"
-                src="<%= product[i].image[0].dataValues.url %>"
-              />
+                <img
+                  class="imag"
+                  src="<%= image[i].url %>"
+                />
             </div>       
           <div class="ofer-detalle">
             <div class="pro-deta">
               <div class="tip">
                 <a href="/productos/detail/<%= product[i].id %>"> <%= product[i].model %> </a>
               </div>
+              
               <div class="tip">
-                  
-                  <a href="/productos/detail/<%= product.id %>"><%= product[i].marca.dataValues.tipo %></a>
-              </div>
+                  <a href="/productos/detail/<%= product[i].id %>"><%= marca.tipo %></a>
+                </div>
+                 
+               
               <a href="/productos/detail/<%= product[i].id %>" class="descu">$<%= product[i].price%></a>
               <div>
                 <a href="/productos/detail/<%= product[i].id %>" class="descu"><%= product[i].discount %>% OFF</a>

@@ -7,12 +7,11 @@ const dbController = {
         let producto = db.Producto.findAll()
         let marcas = db.Marca.findAll()
         let image = db.Image.findAll()
-        let categorys = db.Category.findAll()
 
-        Promise.all([producto, marcas, image, categorys])
-            .then(function([product, marca, image, category]){
-                res.render('productos', {product, marca, image, category})
-                console.log(marca)
+        Promise.all([producto, marcas, image])
+            .then(function([product, marca, image]){
+                res.render('productos', {product, marca, image})
+             //   console.log(marca[0])
             })
        /* db.Producto.findAll({
             include: ["marca","image"]
@@ -30,19 +29,28 @@ const dbController = {
         })
         .then(product => {
             res.render('productDetail', { product })
-            console.log(product.image)
+        //    console.log(product.image)
         })
         .catch (err => console.log (err))
     },
     create: function(req, res){
-       db.Producto.findAll({
-            include: [{association: "marca"}, {association: "category"}],
-            group: 'estado'
+        let producto = db.Producto.findAll()
+        let marcas = db.Marca.findAll()
+        let categorys = db.Category.findAll()
+        let estado = db.Estado.findAll()
+
+        Promise.all([producto, marcas, categorys, estado])
+        .then(function([product, marca, category, estado]){
+            res.render('productadd', {product, marca, category, estado})
+        })
+    /*   db.Producto.findAll({
+            include: ["marca","category", "estado"],
+            
         })
             .then((product) => {
-            //    console.log(product[0].category.dataValues.category)
+                console.log(product[0].estado)
                 res.render('productAdd', {product})
-            })
+            })*/
     },   
     store: function(req, res) {
         // para guardar la imagen
@@ -53,17 +61,16 @@ const dbController = {
             categoria_id: req.body.category,
             price: req.body.price,
             discount: req.body.discount,
-            estado: req.body.estado
+            estado_id: req.body.estado
         })
         let image = db.Image.create({
             url: "/img/productos/"  + req.file.filename 
         })
         Promise.all([producto, image])
-        //    .then(([product, image]) => {
+            .then(([product, image]) => {
                res.redirect('/productos')
-        //       console.log(product, image)
-       // })
-           // .catch(err => console.log (err))
+            })
+            .catch(err => console.log (err))
     },
     edit: function(req, res) {
     /*    db.Producto.findByPk(req.params.id,{
@@ -83,6 +90,7 @@ const dbController = {
             .then(function([producto, marca, image, category]){
                 res.render('productEdit', {producto, marca, image, category})
             })
+            .catch(err => console.log (err))
     },
     update: function(req, res) {
         let producto = db.Producto.update({
@@ -91,8 +99,7 @@ const dbController = {
             detail: req.body.detail,
             categoria_id: req.body.category,
             price: req.body.price,
-            discount: req.body.discount,
-            estado: req.body.estado
+            discount: req.body.discount
         }, {
             where: {id: req.params.id}
         })
@@ -102,8 +109,9 @@ const dbController = {
             where: {id: req.params.id}
         })
         Promise.all([producto, image])
-               res.redirect('/productos')
-
+            .then (() =>{
+                res.redirect('/productos')
+            })
     },
     delete: function(req, res) {
         db.Producto.destroy({

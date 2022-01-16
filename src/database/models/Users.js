@@ -23,10 +23,10 @@ module.exports = function (sequelize, dataTypes){
             allowNull: true 
         }, 
         image: { 
-            type: dataTypes.BLOB 
+            type: dataTypes.STRING 
         }, 
         category: { 
-            type: dataTypes.INTEGER 
+            type: dataTypes.STRING 
         } 
     }  
     let config = { 
@@ -40,7 +40,7 @@ module.exports = function (sequelize, dataTypes){
             as: "productos", 
             through: "user_product", 
             foreignKey: "user_id", 
-            otherKey:"products_id", 
+            otherKey:"product_id", 
             timestamps:false 
         }) 
     } 

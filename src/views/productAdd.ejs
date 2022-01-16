@@ -71,9 +71,9 @@
         <div class="formulario__categoria">
           <label>Marca</label> 
           <select name="marca">
-           <% for (let i = 0; i < product.length; i++) { %>
-              <option value="<%= product[i].marca.id %>">
-                <%= product[i].marca.dataValues.tipo %> 
+           <% for (let i = 0; i < marca.length; i++) { %>
+              <option value="<%= marca[i].id %>">
+                <%= marca[i].tipo %> 
               </option>
             <% } %>
           </select>
@@ -81,11 +81,11 @@
           <!--Codigo Correspondiente a Categoria-->         
           
           <div class="formulario__categoria">
-            <label class="category-text">Categoria</label> 
+            <label>Categoria</label> 
             <select name="category">
-             <% for (let i = 0; i < product.length; i++) { %>
-                <option value="<%= product[i].category.dataValues.id %>">
-                  <%= product[i].category.dataValues.category %> 
+             <% for (let i = 0; i < category.length; i++) { %>
+                <option value="<%= category[i].id %>">
+                  <%= category[i].category %> 
                 </option>
               <% } %>
             </select>
@@ -93,11 +93,11 @@
         
         <!--Codigo Correspondiente al estado-->
         <div class="formulario__grupo">
-          <label class="category-text">Estado</label> 
+          <label>Estado</label> 
           <select name="estado">
-           <% for (let i = 0; i < product.length; i++) { %>
-              <option value="<%= product[i].estado %>">
-                <%= product[i].estado %> 
+           <% for (let i = 0; i < estado.length; i++) { %>
+              <option value="<%= estado[i].id %>">
+                <%= estado[i].estado %> 
               </option>
             <% } %>
           </select>

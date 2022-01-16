@@ -21,12 +21,12 @@ module.exports = function (sequelize, dataTypes){
         detail: { 
             type: dataTypes.STRING, 
         }, 
-        estado: { 
-            type: dataTypes.STRING, 
-        }, 
         categoria_id: {
             type: dataTypes.INTEGER
         },
+        estado_id: { 
+            type: dataTypes.INTEGER, 
+        }, 
     }  
     let config = { 
         tableName: 'products', 
@@ -50,10 +50,14 @@ module.exports = function (sequelize, dataTypes){
             as: "category", 
             foreignKey:"categoria_id" 
         }) 
+        Producto.belongsTo(models.Estado, { 
+            as: "estado", 
+            foreignKey:"estado_id" 
+        }) 
         Producto.belongsToMany(models.Image,{ 
             as: "image", 
             through: "image_product",
-            foreignKey: "id", 
+            foreignKey: "product_id", 
             otherKey: "image_id",
             timestamps: false
         }) 

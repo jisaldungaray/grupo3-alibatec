@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require ('path');
 const bcryptjs = require('bcryptjs');
 const User = require ('../models/User');
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const { validationResult } = require('express-validator');
 
@@ -13,7 +15,7 @@ const controller = {
         res.render('register');
     },
     processRegister: (req, res)=>{
-        let resultValidation = validationResult(req);
+/*        let resultValidation = validationResult(req);
 
         if (resultValidation.errors.length >0) {
 			return res.render('register', {
@@ -40,7 +42,10 @@ const controller = {
         }
         let userCreated = User.create(usuario);
         
-        res.redirect('/user/login');
+        res.redirect('/user/login');*/
+		db.Usuarios.create({
+			
+		})
     },
     login: (req, res ) => { 
         res.render('login')

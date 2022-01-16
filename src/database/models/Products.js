@@ -27,6 +27,9 @@ module.exports = function (sequelize, dataTypes){
         estado_id: { 
             type: dataTypes.INTEGER, 
         }, 
+        image: {
+            type: dataTypes.STRING
+        }
     }  
     let config = { 
         tableName: 'products', 
@@ -54,13 +57,13 @@ module.exports = function (sequelize, dataTypes){
             as: "estado", 
             foreignKey:"estado_id" 
         }) 
-        Producto.belongsToMany(models.Image,{ 
+    /*    Producto.belongsToMany(models.Image,{ 
             as: "image", 
             through: "image_product",
             foreignKey: "product_id", 
             otherKey: "image_id",
             timestamps: false
-        }) 
+        })*/
     } 
  
     return Producto;  

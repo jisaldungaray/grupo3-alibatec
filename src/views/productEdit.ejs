@@ -35,7 +35,7 @@
                 type="text"
                 class="formulario__input"
                 name="model"
-                placeholder="<%=producto.model%>"
+                value="<%=producto.model%>"
               />
             </div>
           </div>
@@ -48,7 +48,7 @@
                   type="text"
                   class="formulario__input"
                   name="detail"
-                  placeholder="<%=producto.detail%>"
+                  value="<%=producto.detail%>"
                 />
             </div>
           </div>
@@ -57,8 +57,7 @@
           <div class="formulario__grupo">
             <img
             class="imag"
-            src="<%= image.url %>"
-          />
+            src="<%= producto.image %>"/>
             <label for="imagen" class="formulario__label">Imagen de Producto</label>
             <div class="formulario__grupo-input">
               <input
@@ -75,17 +74,17 @@
             <label for="categoria" class="formulario__label">
               Selecciona su Categoria</label>
             <div class="formulario__categoria">
-              <label class="formulario__label">Categoria</label> 
+              <label for="category" class="formulario__label">Categoria</label> 
               <select name="category">
                 <% for (let i = 0; i < category.length; i++) { %>
                   <% if (category[i].id == producto.categoria_id){ %>
       
-                    <option value="<%= category.id %>" selected>
+                    <option value="<%= category[i].id %>" selected>
                       <%= category[i].category %> 
                     </option>
       
                     <% } else { %>
-                      <option value="<%= category.id %>">
+                      <option value="<%= category[i].id %>">
                         <%= category[i].category %> 
                       </option>
       
@@ -97,16 +96,16 @@
           <!--Codigo Correspondiente a Marca de Producto-->
           <div class="formulario__grupo">
             <label for="marca" class="formulario__label">Marca</label>
-            <select name="category">
+            <select name="marca">
               <% for (let i = 0; i < marca.length; i++) { %>
-                <% if (marca[i].id == producto.mcarca_id){ %>
+                <% if (marca[i].id == producto.marca_id){ %>
     
-                  <option value="<%= marca.id %>" selected>
+                  <option value="<%= marca[i].id %>" selected>
                     <%= marca[i].tipo %> 
                   </option>
     
                <% } else { %>
-                <option value="<%= marca.id %>">
+                <option value="<%= marca[i].id %>">
                   <%= marca[i].tipo %> 
                 </option>
 
@@ -124,7 +123,7 @@
                 type="number"
                 class="formulario__input"
                 name="price"
-                placeholder="<%=producto.price%>"
+                value="<%=producto.price%>"
               />
             </div>
           </div>
@@ -137,7 +136,7 @@
                   type="number"
                   class="formulario__input"
                   name="discount"
-                  placeholder="Descuento"
+                  value="<%=producto.discount%>"
                 />
             </div>
           </div>

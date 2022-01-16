@@ -15,7 +15,7 @@ const controller = {
         res.render('register');
     },
     processRegister: (req, res)=>{
-/*        let resultValidation = validationResult(req);
+        let resultValidation = validationResult(req);
 
         if (resultValidation.errors.length >0) {
 			return res.render('register', {
@@ -42,7 +42,7 @@ const controller = {
         }
         let userCreated = User.create(usuario);
         
-        res.redirect('/user/login');*/
+        res.redirect('/user/login');
 		db.Usuarios.create({
 			
 		})

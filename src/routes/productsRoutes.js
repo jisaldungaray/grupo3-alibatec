@@ -28,7 +28,7 @@ router.get('/edit/:id', dbController.edit);
 router.put('/edit/:id', upload.single('imagen'), dbController.update);
 
 //RUTA ELIMINAR PRODUCTO
-//router.delete('/delete/:id', controller.delete);
+router.delete('/delete/:id', dbController.delete);
 
 
 

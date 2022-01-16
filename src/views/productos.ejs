@@ -13,7 +13,7 @@
             <div class="imagen-prod">
                 <img
                   class="imag"
-                  src="<%= image[i].url %>"
+                  src="<%= product[i].image %>"
                 />
             </div>       
           <div class="ofer-detalle">
@@ -23,7 +23,11 @@
               </div>
               
               <div class="tip">
-                  <a href="/productos/detail/<%= product[i].id %>"><%= marca[i] %></a>
+                <% for (let j = 0; j < marca.length; j++){ %>
+                  <% if(marca[j].id === product[i].marca_id) { %>
+                    <a href="/productos/detail/<%= product[i].id %>"><%= marca[j].tipo %></a>
+                 <% } %>
+                <% } %>
                 </div>
                  
                

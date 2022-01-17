@@ -2,33 +2,33 @@ const express = require('express');
 const router = express.Router();
 
 /*middlewares*/
-const validateLogin = require('../../middlewares/validationLogin');
-const validateRegister = require('../../middlewares/validationRegister');
-const usuarioLogeado= require('../../middlewares/usuarioLogeado');
-const autenticacion= require('../../middlewares/autenticacion')
+const validationLogin = require('../../middlewares/validationLogin');
+const validationRegister = require('../../middlewares/validationRegister');
+const usuarioLogeado = require('../../middlewares/usuarioLogeado');
+const autenticacion = require('../../middlewares/autenticacion')
 const upload = require('../../middlewares/multerRegister');
 
 /* controller */
-const controller = require ('../controllers/usersController');
+const dbUserController = require ('../controllers/dbUserController');
 
 /*Rutas*/
 //Formulario de Login
-router.get('/login', usuarioLogeado ,controller.login);
+router.get('/login', usuarioLogeado ,dbUserController.login);
 
 //Proceso de login
-router.post('/login',validateLogin, controller.processlogin);
+router.post('/login',validationLogin, dbUserController.processlogin);
 
 //Formulario de registro
-router.get('/register', usuarioLogeado, controller.register);
+router.get('/register', usuarioLogeado, dbUserController.register);
 
 //Proceso de registro
-router.post('/register', upload.single('image'),validateRegister, controller.processRegister);
+router.post('/register', upload.single('image'),validationRegister, dbUserController.processRegister);
 
 //Perfil
-router.get('/profile', autenticacion , controller.profile);
+//router.get('/profile', autenticacion , dbUserController.profile);
 
 //Logout
-router.get('/logout', controller.logout);
+//router.get('/logout', dbUserController.logout);
 
 
 module.exports = router;

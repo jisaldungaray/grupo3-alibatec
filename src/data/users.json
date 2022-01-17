@@ -16,14 +16,5 @@
   "password": "$2a$10$3BNtpE6ujRBbCBDAfJIlyuiP29I.12Tj5hMLTqgT8Gsp81DkN.SVu",
   "tyc": "on",
   "image": "image1639792417489_img.jpg"
- },
- {
-  "id": "dc4149f9-9085-45e7-9e8b-f93b77b457cf",
-  "name": "Hillary",
-  "lastname": "Paz",
-  "email": "paz@mail.com",
-  "password": "$2a$10$M.jK8QtuNv/Ulhftt3JHnOBXd4hXQV1p0FAC9ExFESXlrFNjNHnh.",
-  "tyc": "on",
-  "image": "image1640121593826_img.png"
  }
 ]

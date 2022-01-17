@@ -8,24 +8,24 @@ module.exports = function (sequelize, dataTypes){
         }, 
         name: { 
             type: dataTypes.STRING, 
-            allowNull: true 
+            allowNull: false 
         }, 
         last_name: { 
             type: dataTypes.STRING, 
-            allowNull: true 
+            allowNull: false 
         }, 
         email: { 
             type: dataTypes.STRING, 
-            allowNull: true 
+            allowNull: false
         }, 
         password: { 
             type: dataTypes.STRING, 
-            allowNull: true 
+            allowNull: false
         }, 
         image: { 
             type: dataTypes.STRING 
         }, 
-        category: { 
+        categoria: { 
             type: dataTypes.STRING 
         } 
     }  

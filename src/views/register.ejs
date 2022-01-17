@@ -106,9 +106,11 @@
             <label for="category" class="formulario__label">Quieres comprar o vender?</label>
             <br>
             <select name="category">
-              <option value="vendedor">Vendedor</option>
-              <option value="comprador">Comprador</option>
-
+              <% for (let i = 0; i < categoria.length; i++) { %>
+                <option value="<%= categoria[i].id %>">
+                  <%= categoria[i].categoria %> 
+                </option>
+              <% } %>            
             </select>
           </div>
    
@@ -154,7 +156,7 @@
 
           <div>
             <button class="formulario__btn">
-              <a href="/user/login">Ingresar</a>
+              <a href="/user/profile">Ingresar</a>
             </button>
           </div>
         </form>

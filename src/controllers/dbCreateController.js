@@ -28,7 +28,7 @@ const dbController = {
         })
         .then(product => {
             res.render('productDetail', { product })
-        //    console.log(product.image)
+            console.log(product)
         })
         .catch (err => console.log (err))
     },

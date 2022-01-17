@@ -25,7 +25,7 @@ router.get('/register', usuarioLogeado, dbUserController.register);
 router.post('/register', upload.single('image'),validationRegister, dbUserController.processRegister);
 
 //Perfil
-//router.get('/profile', autenticacion , dbUserController.profile);
+router.get('/profile', autenticacion , dbUserController.profile);
 
 //Logout
 //router.get('/logout', dbUserController.logout);

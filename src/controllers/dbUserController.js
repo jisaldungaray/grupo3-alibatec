@@ -7,7 +7,12 @@ const sequelize = db.Sequelize;
 const dbUserController = {
     
     register: (req, res) => {
-        res.render('register')
+        db.CategoriaUsuario.findAll()
+        .then((categoria) => {
+            res.render('register', {categoria})
+           // console.log (categoria)
+        })
+        .catch(err => console.log(err))
     },
     processRegister:async (req, res) => {
         const userValidation = validationResult(req);
@@ -26,14 +31,14 @@ const dbUserController = {
                 last_name: req.body.lastname,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 12),
-                image: req.file.filename,
-                categoria: req.body.category 
+                image: "/img/users/"  + req.file.filename,
+                categoriaUser_id: req.body.category 
             })
             .then((user) => {
                 req.session.userLogged = user;
-                res.redirect("/")
+                res.redirect("/profile")
             })
-        } else {
+        }/* else {
             if(userSearch){
                 return res.render('register', {
                     errors: {
@@ -48,7 +53,7 @@ const dbUserController = {
                         oldData: req.body
                     });
                 }
-        }
+        }*/
 
     },
     login: (req, res) => {
@@ -91,6 +96,12 @@ const dbUserController = {
 			}
 		});
 	},
+    profile: (req, res) => {
+        db.Usuarios.findByPk({
+            where: {id: req.params.id}
+        })
+        res.render('profile', {user: req.session.userLogged});
+    },
 
 }
 

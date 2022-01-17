@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <form action="/user/userEdit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="profile-complete">
+            <div class="profile">
+                <img class="profile-avatar" src="<%=user.image %>" alt="">
+            </div>
+            <div class="info-profile">
+                <h2>Datos Personales:</h2>
+                <div class="formulario__grupo-input">
+                    <label for="">Nombre:</label>
+                    <input
+                    type="text"
+                    class="formulario__input"
+                    name="name"
+                    value="<%= user.name %>">
+                    <br>
+                    <label for="">Apellido:</label>
+                    <input
+                    type="text"
+                    class="formulario__input"
+                    name="lastname"
+                    value="<%= user.last_name %>">
+                    <br>
+                    <label for="">Email:</label>
+                    <input
+                    type="text"
+                    class="formulario__input"
+                    name="email"
+                    value="<%= user.email%>">
+                    <br>
+                    <label for="">Imagen</label>
+                    <br>
+                    <input type="file" name="image"
+                    >
+                    
+                </div>
+                    <button class="button-pedido" type="submit">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </form>
+        
+    </main>
+</body>
+<%- include('./partials/footer.ejs')  %>
+</html>

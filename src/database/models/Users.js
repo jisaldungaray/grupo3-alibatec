@@ -25,8 +25,8 @@ module.exports = function (sequelize, dataTypes){
         image: { 
             type: dataTypes.STRING 
         }, 
-        categoriaUser_id: { 
-            type: dataTypes.INTEGER 
+        categoria: { 
+            type: dataTypes.STRING 
         } 
     }  
     let config = { 
@@ -42,11 +42,7 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: "user_id", 
             otherKey:"product_id", 
             timestamps:false 
-        }) 
-        Usuarios.belongsTo(models.CategoriaUsuario,{ 
-            as:"categoriausuario", 
-            foreignKey:"categoriaUser_id" 
-        })    
+        })   
     } 
  
     return Usuarios;  

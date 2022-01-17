@@ -6,16 +6,22 @@
     <main>
         <div class="profile-complete">
             <div class="profile">
-                <img class="profile-avatar" src="/img/users/<%=user.image %>" alt="">
+                <img class="profile-avatar" src="<%= user.image %>" alt="">
             </div>
             <div class="info-profile">
                 <h2>Datos Personales:</h2>
                 <h3><%= user.name %></h3>
                 <h3><%= user.email %></h3>
-                <h3>Categoría</h3>
+                <h3>Categoria</h3>
+                <p><%= user.categoria %> </p>
                 <div class="prod-edit-button">
                 
-                <button class="button-pedido"><a href="/productos/add">Publica tu producto</a></button>
+                <a href="/productos/add"><button class="button-pedido">Publica tu producto</button></a>
+                <a href="/user/userEdit/<%= user.id %> "><button class="button-pedido">Editar usuario</button></a>
+                <form action="/user/delete/<%= user.id %>?_method=DELETE" method="POST">
+                    <button class="button-pedido">Eliminar Perfil</button>
+                </form>
+
                 </div>
             </div>
         </div>

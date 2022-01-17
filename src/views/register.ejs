@@ -106,11 +106,9 @@
             <label for="category" class="formulario__label">Quieres comprar o vender?</label>
             <br>
             <select name="category">
-              <% for (let i = 0; i < categoria.length; i++) { %>
-                <option value="<%= categoria[i].id %>">
-                  <%= categoria[i].categoria %> 
-                </option>
-              <% } %>            
+                <option value="comprador">Comprador</option>
+                <option value="vendedor">Vendedor</option>
+              
             </select>
           </div>
    

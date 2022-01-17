@@ -1,5 +1,5 @@
 const db = require('../database/models');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const {Op} = require('sequelize'); 
 const sequelize = db.Sequelize; 
@@ -7,78 +7,64 @@ const sequelize = db.Sequelize;
 const dbUserController = {
     
     register: (req, res) => {
-        db.CategoriaUsuario.findAll()
-        .then((categoria) => {
-            res.render('register', {categoria})
-           // console.log (categoria)
-        })
-        .catch(err => console.log(err))
+            res.render('register')
     },
-    processRegister:async (req, res) => {
-        const userValidation = validationResult(req);
+    processRegister: (req, res) => {
+        let resultValidation = validationResult(req);
 
-        const userSearch = await db.Usuarios.findAll({
-            where: {
-                email:{
-                    [Op.like]: req.body.email 
-                }
-            }
-        })
-        if(!userValidation.errors.length && !userSearch){
-
+        if(resultValidation.errors.length > 0)
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                old: req.body
+            });
+        
+            let userInDB = db.Usuarios.findOne({
+                where: {email: req.body.email}
+            })
+            if(!userInDB == 'undefined' ) {
+                return res.render('register', {
+                    errors:{
+                        email:{
+                            msg: 'Este email ya fue registrado'
+                        }
+                    },
+                    oldData: req.body
+                })
+            }else {
             db.Usuarios.create({
                 name: req.body.name,
                 last_name: req.body.lastname,
                 email: req.body.email,
-                password: bcryptjs.hashSync(req.body.password, 12),
-                image: "/img/users/"  + req.file.filename,
-                categoriaUser_id: req.body.category 
-            })
-            .then((user) => {
+                password: bcrypt.hashSync(req.body.password, 12),
+                image: "/img/users/" + req.file.filename,
+                categoria: req.body.category
+            }).then((user) => {
                 req.session.userLogged = user;
-                res.redirect("/profile")
-            })
-        }/* else {
-            if(userSearch){
-                return res.render('register', {
-                    errors: {
-                        email: {
-                            msg: 'Este email ya está registrado' 
-                        }
-                    },
-                    oldData: req.body
-                })} else {
-                    res.render('register', {
-                        errors: resultValidation.mapped(),
-                        oldData: req.body
-                    });
-                }
-        }*/
-
+                res.redirect('/user/profile')
+            })}
+            
     },
+
     login: (req, res) => {
         res.render('login')
     },
     processlogin: async (req, res) => {
         
-        const usertoLogIn = await db.Usuarios.findAll({
-            where: {
-                email:{
-                    [Op.like]: req.body.email 
-                }
-            }
+        const userToLogIn = await db.Usuarios.findOne({
+            where: {email: req.body.email}
         })
 
-        if(usertoLogIn) {
-			let checkPassword = bcryptjs.compareSync(req.body.password, usertoLogIn.password);
+        console.log(userToLogIn)
+        if(userToLogIn) {
+			let checkPassword = bcrypt.compareSync(req.body.password, userToLogIn.password);
 			if (checkPassword) {
-				delete usertoLogIn.password;
-				req.session.userLogged = usertoLogIn;
+				delete userToLogIn.password;
+				req.session.userLogged = userToLogIn;
 
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
-				return res.redirect('/profile');
+				return res.redirect('profile');
 			} 
 			return res.render('login', {
 				errors: {
@@ -97,12 +83,47 @@ const dbUserController = {
 		});
 	},
     profile: (req, res) => {
-        db.Usuarios.findByPk({
-            where: {id: req.params.id}
-        })
-        res.render('profile', {user: req.session.userLogged});
+        db.Usuarios.findByPk(req.params.id)
+            .then((user)=>{
+                req.session.userLogged = user;
+                res.render('profile', {user})
+            });
     },
-
+    userEdit: (req, res) => {
+        db.Usuarios.findByPk(req.params.id)
+        .then((user)=> {
+            req.session.userLogged = user;
+            res.render('userEdit', {user})
+        })
+    },
+    update: (req, res) => {
+        db.Usuarios.findByPk(req.params.id)
+            .then((user)=>{
+                user.update({
+                    name:req.body.name,
+                    last_name: req.body.lastname,
+                    email: req.body.email,
+                    image:"/img/users/" + req.file.filename,
+                }).then((user) => {
+                    req.session.userLogged = user;
+                    res.redirect('/user/profile')
+                })
+        })
+    },
+    delete: (req, res) => {
+        db.Usuarios.destroy({
+            where: {id: req.params.id}  
+        }).then(()=> {
+            res.clearCookie('userEmail');
+		    req.session.destroy();
+            res.redirect('/')
+        })
+    },
+    logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 }
 
 

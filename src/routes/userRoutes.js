@@ -27,8 +27,15 @@ router.post('/register', upload.single('image'),validationRegister, dbUserContro
 //Perfil
 router.get('/profile', autenticacion , dbUserController.profile);
 
+//Edicion Usuario
+router.get('/userEdit/:id', dbUserController.userEdit);
+router.put('/userEdit/:id', dbUserController.update);
+
+//Eliminar Usuario
+router.delete('/delete/:id', dbUserController.delete);
+
 //Logout
-//router.get('/logout', dbUserController.logout);
+router.get('/logout', dbUserController.logout);
 
 
 module.exports = router;

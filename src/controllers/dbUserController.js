@@ -18,10 +18,12 @@ const dbUserController = {
                 old: req.body
             });
         
-            let userInDB = db.Usuarios.findOne({
+            db.Usuarios.findOne({
                 where: {email: req.body.email}
-            })
-            if(!userInDB == 'undefined' ) {
+            }).then((userInDB)=>{
+
+            
+            if(userInDB ) {
                 return res.render('register', {
                     errors:{
                         email:{
@@ -39,9 +41,11 @@ const dbUserController = {
                 image: "/img/users/" + req.file.filename,
                 categoria: req.body.category
             }).then((user) => {
-                req.session.userLogged = user;
-                res.redirect('/user/profile')
+                console.log(user)
+                req.session.userLogged = user
+                res.redirect('/user/profile/' + user.id )
             })}
+        })
             
     },
 
@@ -54,7 +58,7 @@ const dbUserController = {
             where: {email: req.body.email}
         })
 
-        console.log(userToLogIn)
+        
         if(userToLogIn) {
 			let checkPassword = bcrypt.compareSync(req.body.password, userToLogIn.password);
 			if (checkPassword) {
@@ -64,7 +68,7 @@ const dbUserController = {
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
-				return res.redirect('profile');
+				return res.redirect('/user/profile/' + userToLogIn.id);
 			} 
 			return res.render('login', {
 				errors: {
@@ -72,7 +76,7 @@ const dbUserController = {
 						msg: 'Las credenciales son inválidas'
 					}
 				}
-			});
+			})
 		}
 		return res.render('login', {
 			errors: {
@@ -80,7 +84,8 @@ const dbUserController = {
 					msg: 'No se encuentra este email en nuestra base de datos'
 				}
 			}
-		});
+		})
+        
 	},
     profile: (req, res) => {
         db.Usuarios.findByPk(req.params.id)
@@ -93,7 +98,7 @@ const dbUserController = {
         db.Usuarios.findByPk(req.params.id)
         .then((user)=> {
             req.session.userLogged = user;
-            res.render('userEdit', {user})
+            res.render('userEdit')
         })
     },
     update: (req, res) => {
@@ -106,7 +111,7 @@ const dbUserController = {
                     image:"/img/users/" + req.file.filename,
                 }).then((user) => {
                     req.session.userLogged = user;
-                    res.redirect('/user/profile')
+                    res.redirect('/user/profile/' + user.id)
                 })
         })
     },

@@ -10,16 +10,8 @@ const dbController = {
         Promise.all([producto, marcas])
             .then(function([product, marca]){
                 res.render('productos', {product, marca})
-              //  console.log(product)
+              
             })
-       /* db.Producto.findAll({
-            include: ["marca","image"]
-        })
-        .then((product) => {
-            res.render('productos', {product})
-            console.log (product)
-            })
-            .catch (err=> console.log (err))*/
     },
     detalle: (req, res ) => {
         let id = req.params.id
@@ -42,19 +34,8 @@ const dbController = {
         .then(function([product, marca, category, estado]){
             res.render('productadd', {product, marca, category, estado})
         })
-    /*   db.Producto.findAll({
-            include: ["marca","category", "estado"],
-            
-        })
-            .then((product) => {
-                console.log(product[0].estado)
-                res.render('productAdd', {product})
-            })*/
     },   
     store: function(req, res) {
-       /* let image = db.Image.create({
-            url: "/img/productos/"  + req.file.filename 
-        })*/
         db.Producto.create({
             marca_id: req.body.marca,
             model: req.body.model,
@@ -71,14 +52,6 @@ const dbController = {
             .catch(err => console.log (err))
     },
     edit: function(req, res) {
-    /*    db.Producto.findByPk(req.params.id,{
-            include: ["marca", "category", "image"]
-        })
-        .then((producto)=>{
-            res.render('productEdit', {producto})
-            console.log(producto)
-        })
-        .catch(err => console.log (err))*/
         let producto = db.Producto.findByPk(req.params.id)
         let marcas = db.Marca.findAll()
         let categorys = db.Category.findAll()
@@ -101,11 +74,6 @@ const dbController = {
         }, {
             where: {id: req.params.id}
         })
-    /*    let image = db.Image.update({
-        url: "/img/productos/"  + req.file.filename 
-        }, {
-            where: {id: req.params.id}
-        })*/
             .then (() =>{
                 res.redirect('/productos')
             })

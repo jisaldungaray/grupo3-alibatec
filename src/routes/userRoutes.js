@@ -5,7 +5,7 @@ const router = express.Router();
 const validationLogin = require('../../middlewares/validationLogin');
 const validationRegister = require('../../middlewares/validationRegister');
 const usuarioLogeado = require('../../middlewares/usuarioLogeado');
-const autenticacion = require('../../middlewares/autenticacion')
+const autenticacion = require('../../middlewares/autenticacion');
 const upload = require('../../middlewares/multerRegister');
 
 /* controller */
@@ -25,11 +25,11 @@ router.get('/register', usuarioLogeado, dbUserController.register);
 router.post('/register', upload.single('image'),validationRegister, dbUserController.processRegister);
 
 //Perfil
-router.get('/profile', autenticacion , dbUserController.profile);
+router.get('/profile/:id', autenticacion , dbUserController.profile);
 
 //Edicion Usuario
 router.get('/userEdit/:id', dbUserController.userEdit);
-router.put('/userEdit/:id', dbUserController.update);
+router.put('/userEdit/:id', upload.single('image'), dbUserController.update);
 
 //Eliminar Usuario
 router.delete('/delete/:id', dbUserController.delete);

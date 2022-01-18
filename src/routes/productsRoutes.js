@@ -7,7 +7,7 @@ const router = express.Router();
 
 const controller = require ('../controllers/productController');
 const upload = require('../../middlewares/multerProduct');
-const dbController = require('../controllers/dbCreateController');
+const dbController = require('../controllers/dbProductsController');
 
 
 // Ruta TODOS LOS PRODUCTOS

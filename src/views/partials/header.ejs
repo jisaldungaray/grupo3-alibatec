@@ -52,7 +52,7 @@
                     <% if (locals.isLogged) { %>
                     <li class="horizontal-item"><a href="#"><%= locals.userLogged.name %><i id="iconos-header" class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
-                            <li><a href="/user/profile">Mi perfil</a></li>
+                            <li><a href="/user/profile/<%= locals.userLogged.id %> ">Mi perfil</a></li>
                             <li><a href="/user/logout">Cerrar sesión</a></li>
                         </ul>
                     </li>

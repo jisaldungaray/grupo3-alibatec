@@ -59,11 +59,11 @@ Grupo #3
 
 <h3>Sprint 6</h3>
 
-<p><b>1. Comenzar a hacer:</b></p>
-<p><b>2. Hacer mas:</b></p>
-<p><b>3. Continuar haciendo:</b></p>
-<p><b>4. Hacer menos:</b></p>
-<p><b>5. Dejar de hacer:</b></p>
+<p><b>1. Comenzar a hacer:</b>tener las clases al dia para tener mejor rendimiento en cada sprint</p>
+<p><b>2. Hacer mas:</b>mas reuniones durante la semana</p>
+<p><b>3. Continuar haciendo:</b>los sprint grupales</p>
+<p><b>4. Hacer menos:</b>No subestimar los tiempos</p>
+<p><b>5. Dejar de hacer:</b>Procastinar las primeras semanas del sprint e ir volando apurados los ultimos tres dias.</p>
 <hr>
 
 <h3>Sprint 7</h3>

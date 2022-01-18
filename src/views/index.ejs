@@ -46,23 +46,25 @@
       
       <!--productos destacados-->
       <article class="destacados">
-        <% for (let i = 0; i < destacado.length; i++) { %>
-        <div class="producto">
-          <div class="img-product">
-              <img class="images" src="/img/productos/<%=destacado[i].image %> " alt="a-watch">
-          </div>
-          <div class="precio-detalle">
-              <div class="detalle-producto">
-                  <div class="tipo">
-                      <a href="/productos/detail/<%= destacado[i].id %>"><%= destacado[i].model%></a>
+        <% for (let i = 0; i < product.length; i++) { %>  
+            <% if (product[i].estado_id === 2) { %>
+            <div class="producto">
+              <div class="img-product">
+                  <img class="images" src="<%=product[i].image %> " alt="a-watch">
+              </div>
+              <div class="precio-detalle">
+                  <div class="detalle-producto">
+                      <div class="tipo">
+                          <a href="/productos/detail/<%= product[i].id %>"><%= product[i].model%></a>
+                      </div>
+                   <a href="/productos/detail/<%= product[i].id %>" class="precio">$<%= product[i].price%></a>
                   </div>
-               <a href="/productos/detail/<%= destacado[i].id %>" class="precio">$<%= destacado[i].price%></a>
+                  <div class="buy">
+                      <a href="/productos/detail/<%= product[i].id %>" class="buy-btn">Comprar</a>
+                  </div>
               </div>
-              <div class="buy">
-                  <a href="/productos/detail/<%= destacado[i].id %>" class="buy-btn">Comprar</a>
-              </div>
-          </div>
-        </div>
+            </div>
+          <% } %>
         <% } %>
       </article>
       
@@ -118,28 +120,30 @@
       
       <!--OFERTAS-->
       <article class="ofertas">
-        <% for (let i = 0; i < 4; i++) { %>
-        <div class="pro-oferta">
-          <div class="imagen-prod">
-            <img
-              class="imag"
-              src="/img/productos/<%=oferta[i].image %>"
-            />
-          </div>
-          <div class="ofer-detalle">
-            <div class="pro-deta">
-              <div class="tip">
-                <a href="/productos/detail/<%= oferta[i].id %>"> <%= oferta[i].model %> </a>
+        <% for (let i = 0; i < product.length; i++) { %>
+            <% if (product[i].estado_id === 1) { %>
+              <div class="pro-oferta">
+                <div class="imagen-prod">
+                  <img
+                    class="imag"
+                    src="<%=product[i].image %>"
+                  />
+                </div>
+                <div class="ofer-detalle">
+                  <div class="pro-deta">
+                    <div class="tip">
+                      <a href="/productos/detail/<%= product[i].id %>"> <%= product[i].model %> </a>
+                    </div>
+                    <a href="/productos/detail/<%= product[i].id %>" class="descu">
+                      <%= product[i].discount %>% OFF
+                    </a>
+                  </div>
+                  <div class="buys">
+                    <a href="/productos/detail/<%= product[i].id %>" class="buys-btn">Comprar Ahora</a>
+                  </div>
+                </div>
               </div>
-              <a href="/productos/detail/<%= oferta[i].id %>" class="descu">
-                <%= oferta[i].discount %>% OFF
-              </a>
-            </div>
-            <div class="buys">
-              <a href="/productos/detail/<%= oferta[i].id %>" class="buys-btn">Comprar Ahora</a>
-            </div>
-          </div>
-        </div>
+          <% } %>
         <% } %>
       </article>
     </main>

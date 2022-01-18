@@ -40,27 +40,27 @@ INSERT INTO `categoria` VALUES (1,'portatiles'),(2,'computadoras'),(3,'accesorio
 UNLOCK TABLES;
 
 --
--- Table structure for table `image_product`
+-- Table structure for table `estado`
 --
 
-DROP TABLE IF EXISTS `image_product`;
+DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `image_product` (
+CREATE TABLE `estado` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `url` varchar(45) NOT NULL,
+  `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `image_product`
+-- Dumping data for table `estado`
 --
 
-LOCK TABLES `image_product` WRITE;
-/*!40000 ALTER TABLE `image_product` DISABLE KEYS */;
-INSERT INTO `image_product` VALUES (1,'/img/productos/imagen1636920577766_img.jpg'),(2,'/img/productos/imagen1636925000926_img.jpg'),(3,'/img/productos/imagen1636921601096_img.jpg'),(4,'/img/productos/imagen1636925150149_img.jpg'),(5,'/img/productos/imagen1636925272677_img.jpg'),(6,'/img/productos/imagen1636925348920_img.jpg'),(7,'/img/productos/imagen1636925425221_img.jpg');
-/*!40000 ALTER TABLE `image_product` ENABLE KEYS */;
+LOCK TABLES `estado` WRITE;
+/*!40000 ALTER TABLE `estado` DISABLE KEYS */;
+INSERT INTO `estado` VALUES (1,'en Oferta'),(2,'Destacado'),(3,'Ninguno');
+/*!40000 ALTER TABLE `estado` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -101,17 +101,17 @@ CREATE TABLE `products` (
   `price` decimal(10,0) NOT NULL,
   `discount` decimal(10,0) NOT NULL,
   `detail` longtext NOT NULL,
-  `estado` varchar(45) NOT NULL,
   `categoria_id` int unsigned NOT NULL,
-  `image_id` int NOT NULL,
+  `estado_id` int NOT NULL,
+  `image` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `categoria_producto_idx` (`categoria_id`),
   KEY `marca_id_idx` (`marca_id`),
-  KEY `image_id_idx` (`image_id`),
+  KEY `estado_id_idx` (`estado_id`),
   CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`),
-  CONSTRAINT `image_id` FOREIGN KEY (`image_id`) REFERENCES `image_product` (`id`),
+  CONSTRAINT `estado_id` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`),
   CONSTRAINT `marca_id` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,7 +120,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,1,'Watch',60000,0,'Sensor cardíaco eléctrico, detección automática de ejercicios','Destacado',3,1),(2,1,'Ipad mini',100000,0,'64GB, 10.9 pulgadas, camara de 12MP y la frontal de 7MP, Bateria por hasta 10hrs','Destacado',1,2),(3,1,'Iphone 8',94000,0,'64GB, 4,7 pulgadas, camara de 12MP y la frontal de 7MP, color rosa','Destacado',1,3),(4,3,'Tablet Yoga',50000,20,'64GB, 4GB RAM, 10.1 pulgadas camaras de 8MP y 5 MP','en Oferta',1,4),(5,1,'Iphone 12 PRO',350000,25,'256GB, 6.1 pulgadas camaras de 12MP','en Oferta',1,5),(6,2,'Auriculares Buds',18000,10,'Bateria de hasta 5hrs, tecnología true wirless, sonido superior','en Oferta',3,6),(7,1,'Imac 21.5\"',250000,10,'Intel Core i5, doble nucleo, RAM de 8GB y SSD 256GB ','en Oferta',2,7);
+INSERT INTO `products` VALUES (1,1,'Watch',60000,0,'Sensor cardíaco eléctrico, detección automática de ejercicios',3,2,'/img/productos/imagen1636920577766_img.jpg'),(2,1,'Ipad mini',100000,0,'64GB, 10.9 pulgadas, camara de 12MP y la frontal de 7MP, Bateria por hasta 10hrs',1,2,'/img/productos/imagen1636925000926_img.jpg'),(3,1,'Iphone 8',94000,0,'64GB, 4,7 pulgadas, camara de 12MP y la frontal de 7MP, color rosa',1,2,'/img/productos/imagen1636921601096_img.jpg'),(4,3,'Tablet Yoga',50000,20,'64GB, 4GB RAM, 10.1 pulgadas camaras de 8MP y 5 MP',1,1,'/img/productos/imagen1636925150149_img.jpg'),(5,1,'Iphone 12 PRO',350000,25,'256GB, 6.1 pulgadas camaras de 12MP',1,1,'/img/productos/imagen1636925272677_img.png'),(6,2,'Auriculares Buds',18000,10,'Bateria de hasta 5hrs, tecnología true wirless, sonido superior',3,1,'/img/productos/imagen1636925348920_img.jpg'),(7,1,'Imac 21.5\"',250000,10,'Intel Core i5, doble nucleo, RAM de 8GB y SSD 256GB ',2,1,'/img/productos/imagen1636925425221_img.jpg'),(14,2,'Galaxy Tab s7',114000,0,'wifi pantalla 10.1\"\r\n                ',1,2,'/img/productos/imagen1642370649615_img.png');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,14 +162,14 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `last name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `image` longblob NOT NULL,
-  `categoria` varchar(45) NOT NULL,
+  `image` varchar(45) NOT NULL,
+  `categoria` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,6 +178,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'pepe','martinez','pepe@email.com','$2a$12$P2U1Zt0/0uhhQFtNV1quKuAS7lvVW4Slr875YUO2P9WByMvHWRRFu','/img/users/image1642451987200_img.jpeg','comprador'),(7,'luis','mas','luis@email.com','$2a$12$PqraDGnxTJwNmlpD6p3qDed.w2JkwjW/akgXZxXhKKECwdDEm4f3W','/img/users/image1642462322481_img.jpeg','comprador');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -190,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-12  1:13:35
+-- Dump completed on 2022-01-18 19:56:53

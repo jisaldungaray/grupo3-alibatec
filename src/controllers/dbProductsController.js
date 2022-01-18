@@ -10,7 +10,6 @@ const dbController = {
         Promise.all([producto, marcas])
             .then(function([product, marca]){
                 res.render('productos', {product, marca})
-              
             })
     },
     detalle: (req, res ) => {

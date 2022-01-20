@@ -8,7 +8,7 @@ const router = express.Router();
 const controller = require ('../controllers/productController');
 const upload = require('../../middlewares/multerProduct');
 const dbController = require('../controllers/dbProductsController');
-
+const validateProducts = require('../../middlewares/validationProducts');
 
 // Ruta TODOS LOS PRODUCTOS
 router.get('/', dbController.productList);
@@ -21,7 +21,7 @@ router.get('/detail/:id' , dbController.detalle);
 
 //RUTA CREAR PRODUCTO
 router.get('/add/', dbController.create); 
-router.post('/' , upload.single('imagen'), dbController.store);
+router.post('/' , upload.single('imagen'), validateProducts, dbController.store);
 
 //RUTA EDITAR PRODUCTO
 router.get('/edit/:id', dbController.edit);

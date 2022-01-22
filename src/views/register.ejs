@@ -12,7 +12,7 @@
     <main>
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="POST" action="/user/register" class="datos" enctype="multipart/form-data">
+        <form method="POST" action="/user/register" class="datos" id="form" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"
@@ -21,7 +21,9 @@
           </div>
 
           <h3>Creá tu cuenta</h3>
-        
+          <div id="error">
+            <p></p>
+          </div>
           <!--Codigo Correspondiente a Grupo NOMBRE-->
           <div class="formulario__grupo" id="grupo__nombre">
             <label for="name" class="formulario__label"></label>
@@ -41,7 +43,7 @@
               <% } %>
             </div>
           </div>
-
+          
           <!--Codigo Correspondiente a Grupo APELLIDO-->
           <div class="formulario__grupo" id="grupo__apellido">
             <label for="lastname" class="formulario__label"></label>
@@ -73,7 +75,7 @@
                 id="email"
                 placeholder="E-Mail"
                 value="<%= locals.old && old.email ? old.email : null %>"
-                required>
+                >
                 <% if (locals.errors && errors.email) { %>
                   <div class="text-danger">
                     <%= errors.email.msg %> 
@@ -111,7 +113,6 @@
               
             </select>
           </div>
-   
 
           <!--Codigo Correspondiente a IMAGEN DE USUARIO-->
           <div class="formulario__grupo">
@@ -163,5 +164,6 @@
         <div class="banner"></div>
       </div>
     </main>
+    <script src="/JS/validaciones.js"></script>
   </body>
 </html>

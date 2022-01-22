@@ -15,7 +15,7 @@ const validateRegister = [
         let file = req.file;
         let extensionesPermitidas = ['.jpg', '.jpeg', '.png', '.gif'];
         if (!file){
-            throw new TypeError('Debes que subir una imagen')
+            throw new TypeError('Debes subir una imagen')
         }else {
 		let fileExtension = path.extname(file.originalname);
 			if (!extensionesPermitidas.includes(fileExtension)) {

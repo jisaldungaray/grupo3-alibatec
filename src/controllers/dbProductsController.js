@@ -1,4 +1,4 @@
-
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const { Op } = require("sequelize");
 
@@ -35,20 +35,29 @@ const dbController = {
         })
     },   
     store: function(req, res) {
-        db.Producto.create({
-            marca_id: req.body.marca,
-            model: req.body.model,
-            detail: req.body.detail,
-            categoria_id: req.body.category,
-            price: req.body.price,
-            discount: req.body.discount,
-            estado_id: req.body.estado,
-            image: "/img/productos/"  + req.file.filename
-        })
-            .then(() => {
-               res.redirect('/productos')
-            })
-            .catch(err => console.log (err))
+        let resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render('productAdd', {
+                errors: resultValidation.mapped(),
+                old: req.body
+            });
+            } else {
+            db.Producto.create({
+                marca_id: req.body.marca,
+                model: req.body.model,
+                detail: req.body.detail,
+                categoria_id: req.body.category,
+                price: req.body.price,
+                discount: req.body.discount,
+                estado_id: req.body.estado,
+                image: "/img/productos/"  + req.file.filename
+                })
+                .then(() => {
+                res.redirect('/productos')
+                })
+                .catch(err => console.log (err))
+            }
     },
     edit: function(req, res) {
         let producto = db.Producto.findByPk(req.params.id)

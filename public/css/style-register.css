@@ -40,7 +40,10 @@ h3{
     font-size: 20px;
     margin: 30px auto;
 }
-
+.text-danger {
+    font-weight: bold;
+    color: red
+}
 .formulario__input{
     width: 70%;
     height: 40px;

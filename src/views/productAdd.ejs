@@ -15,7 +15,7 @@
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
           <h3>Carga tus productos</h3>
-
+          
 
           <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
@@ -27,8 +27,14 @@
                 name="model"
                 placeholder="Modelo del producto"
               />
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                  <%= errors.name.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
+          
 
           <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
@@ -40,8 +46,14 @@
                 name="price"
                 placeholder="Precio"
               />
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                  <%= errors.name.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
+          
 
           <!--Codigo Correspondiente a Descuento-->
           <div class="formulario__grupo">
@@ -53,8 +65,14 @@
                   name="discount"
                   placeholder="Descuento"
                 />
+                <% if (locals.errors && errors.name) { %>
+                  <div class="text-danger">
+                    <%= errors.name.msg %> 
+                  </div>
+                <% } %>
             </div>
           </div>
+         
 
           <!--Codigo Correspondiente a vision general-->
           <div class="formulario__grupo">
@@ -64,8 +82,14 @@
                   class="formulario__input"
                   name="detail">Caracteristicas
                 </textarea>
+                <% if (locals.errors && errors.name) { %>
+                  <div class="text-danger">
+                    <%= errors.name.msg %> 
+                  </div>
+                <% } %>
             </div>
           </div>
+         
           
           <!--Codigo Correspondiente a marca-->
         <div class="formulario__categoria">
@@ -78,6 +102,7 @@
             <% } %>
           </select>
       </div>
+      
           <!--Codigo Correspondiente a Categoria-->         
           
           <div class="formulario__categoria">
@@ -91,6 +116,7 @@
             </select>
         </div>
         
+        
         <!--Codigo Correspondiente al estado-->
         <div class="formulario__grupo">
           <label>Estado</label> 
@@ -102,6 +128,7 @@
             <% } %>
           </select>
       </div>
+      
 
           <!--Codigo Correspondiente a Imagen-->
           <div class="formulario__grupo">
@@ -113,9 +140,14 @@
                 multiple
                 class="formulario__input"
               />
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                  <%= errors.name.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
-
+          
           
 
           <!--Codigo Correspondiente a Boton de Carga-->

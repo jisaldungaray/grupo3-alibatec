@@ -23,7 +23,7 @@ const dbUserController = {
             }).then((userInDB)=>{
 
             
-            if(userInDB ) {
+            if(userInDB) {
                 return res.render('register', {
                     errors:{
                         email:{

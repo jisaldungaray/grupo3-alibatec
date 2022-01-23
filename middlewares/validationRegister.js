@@ -3,7 +3,7 @@ const path = require ('path');
 const validateRegister = [
     body('name').notEmpty().isLength({min: 2}).withMessage('Debe completar este campo'),
     body('lastname').notEmpty().isLength({min: 2}).withMessage('Debe completar este campo'),
-    body('email').notEmpty().withMessage('Debe completar este campo').bail().isEmail().withMessage('Debe escribir un email válido'),
+    body('email').notEmpty().withMessage('Debe completar este campo').isEmail().withMessage('Debe escribir un email válido'),
     body('password').notEmpty().withMessage('Debe completar este campo').isStrongPassword({
         minLength: 8,
         minLowercase: 1,

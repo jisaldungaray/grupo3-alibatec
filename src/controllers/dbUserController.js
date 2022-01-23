@@ -12,7 +12,7 @@ const dbUserController = {
     processRegister: (req, res) => {
         let resultValidation = validationResult(req);
 
-        if(resultValidation.errors.length > 0)
+        if(resultValidation.errors.length)
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 old: req.body

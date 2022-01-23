@@ -22,7 +22,7 @@ router.post('/login',validationLogin, dbUserController.processlogin);
 router.get('/register', usuarioLogeado, dbUserController.register);
 
 //Proceso de registro
-router.post('/register', upload.single('image'),validationRegister, dbUserController.processRegister);
+router.post('/register', upload.single('image'), validationRegister, dbUserController.processRegister);
 
 //Perfil
 router.get('/profile/:id', autenticacion , dbUserController.profile);

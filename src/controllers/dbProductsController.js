@@ -54,7 +54,7 @@ const dbController = {
                 image: "/img/productos/"  + req.file.filename
                 })
                 .then(() => {
-                res.redirect('/productos')
+                res.redirect('/productos', {errors})
                 })
                 .catch(err => console.log (err))
             }

@@ -7,8 +7,7 @@ module.exports = function(sequelize, dataTypes){
             autoIncrement: true 
         }, 
         estado: { 
-            type: dataTypes.STRING, 
-            allowNull: true 
+            type: dataTypes.STRING,
         } 
     } 
     let config = { 

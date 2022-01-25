@@ -45,9 +45,9 @@ module.exports = function (sequelize, dataTypes){
             otherKey:"user_id", 
             timestamps:false 
         }) 
-        Producto.belongsTo(models.Marca,{ 
+        Producto.belongsTo(models.Marca, { 
             as: "marca", 
-            foreignKey: "marca_id",  
+            foreignKey: "marca_id"  
         }) 
         Producto.belongsTo(models.Category, { 
             as: "category", 

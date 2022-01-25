@@ -97,6 +97,20 @@ h3{
     display: none;
 }
 
+.is-valid{
+    border-bottom: 1px solid #44d62d !important;
+}
+
+.is-invalid {
+    border-bottom: 1px solid red !important;
+}
+
+.alert-warning{
+    color:#b10615;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* ------ Media Querys--------*/
 
 @media (min-width: 950px){

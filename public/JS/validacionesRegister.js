@@ -3,23 +3,27 @@
 window.addEventListener('load', ()=>{
 
     const form = document.getElementById('form');
-    const name = document.getElementById('name');
-    const lastName = document.getElementById('lastname');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const img = document.getElementById('image');
     
-    const expresiones = {
-        name: /^[a-zA-Z0-9\_\-]{2,16}$/,
-        lastname: /^[a-zA-Z0-9\_\-]{2,16}$/,
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        password: /^.{8,16}$/,
-    };
-    const formatoImagen = /(.jpg|.jpeg|.png|.gif)$/i;
-    const fileImg = img.value; 
-    const errores = [];
-
     form.addEventListener('submit', (e) =>{
+    
+        const errores = [];
+    
+    
+        const name = document.getElementById('name');
+        const lastName = document.getElementById('lastname');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const img = document.getElementById('image');
+        
+        const expresiones = {
+            name: /^[a-zA-Z0-9\_\-]{2,16}$/,
+            lastname: /^[a-zA-Z0-9\_\-]{2,16}$/,
+            email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+            password: /^.{8,16}$/,
+        };
+        const formatoImagen = /(.jpg|.jpeg|.png|.gif)$/i;
+        const fileImg = img.value; 
+    
         
         if(name.value.length < 2 ){
             errores.push('El nombre debe estar completo')
@@ -47,18 +51,22 @@ window.addEventListener('load', ()=>{
             errores.push('La extención de imagen permitida es: .jpg, .jpeg, .png, .gif')
         }
         
-        if (errores.length > 0){
+        if(errores.length > 0){
             e.preventDefault();
             let error = document.getElementById('error');
-        /*    for(let i = 0; i > errores.length; i++){
-                    error.innerHTML += "<p>" + errores[i] + "</p>"
+            for(let i = 0; i < errores.length; i++){
+                    error.innerHTML += `<li > ${errores[i]} </li>`
                     error.style.color = 'red'
-            }*/
-            errores.forEach(err => {
-               error.innerHTML = '<p>' + err + '</p>';
-               error.style.color = 'red'
-            })
-            console.log(errores)
+
+            }
+            errores = []
+            // errores.forEach(err => {
+            //    error.innerHTML = '<p>' + err + '</p>';
+            //    error.style.color = 'red'
+            // })
+            
+        }else {
+            form.submit();
         }
     })
 })

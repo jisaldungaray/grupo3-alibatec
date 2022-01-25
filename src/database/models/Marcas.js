@@ -8,7 +8,6 @@ module.exports = function(sequelize, dataTypes){
         }, 
         tipo: { 
             type: dataTypes.STRING, 
-            allowNull: false 
         } 
     } 
     let config = { 

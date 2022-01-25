@@ -16,7 +16,9 @@
           </div>
           <h3>Carga tus productos</h3>
           
-
+          <div>
+            <ul id="error"></ul>
+          </div>
           <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
             <label for="model" class="formulario__label"></label>
@@ -29,7 +31,7 @@
                 placeholder="Modelo del producto"
               />
               <% if (locals.errors && errors.model) { %>
-                <div class="text-danger">
+                <div class="alert-warning">
                   <%= errors.model.msg %> 
                 </div>
               <% } %>
@@ -49,7 +51,7 @@
                 placeholder="Precio"
               />
               <% if (locals.errors && errors.price) { %>
-                <div class="text-danger">
+                <div class="alert-warning">
                   <%= errors.price.msg %> 
                 </div>
               <% } %>
@@ -68,7 +70,7 @@
                   placeholder="Descuento"
                 />
                 <% if (locals.errors && errors.discount) { %>
-                  <div class="text-danger">
+                  <div class="alert-warning">
                     <%= errors.discount.msg %> 
                   </div>
                 <% } %>
@@ -83,10 +85,11 @@
                 <textarea
                   class="formulario__input"
                   name="detail"
-                  id="detail">Caracteristicas
+                  id="detail"
+                  placeholder="Caracteristicas">
                 </textarea>
                 <% if (locals.errors && errors.detail) { %>
-                  <div class="text-danger">
+                  <div class="alert-warning">
                     <%= errors.detail.msg %> 
                   </div>
                 <% } %>
@@ -105,7 +108,7 @@
             <% } %>
           </select>
           <% if (locals.errors && errors.marca) { %>
-            <div class="text-danger">
+            <div class="alert-warning">
               <%= errors.marca.msg %> 
             </div>
           <% } %>
@@ -123,7 +126,7 @@
               <% } %>
             </select>
             <% if (locals.errors && errors.category) { %>
-              <div class="text-danger">
+              <div class="alert-warning">
                 <%= errors.category.msg %> 
               </div>
             <% } %>
@@ -141,7 +144,7 @@
             <% } %>
           </select>
           <% if (locals.errors && errors.estado) { %>
-            <div class="text-danger">
+            <div class="alert-warning">
               <%= errors.estado.msg %> 
             </div>
           <% } %>
@@ -160,7 +163,7 @@
                 id="image"
               />
               <% if (locals.errors && errors.imagen) { %>
-                <div class="text-danger">
+                <div class="alert-warning">
                   <%= errors.imagen.msg %> 
                 </div>
               <% } %>
@@ -171,7 +174,7 @@
 
           <!--Codigo Correspondiente a Boton de Carga-->
           <div class="formulario__grupo formulario__grupo-btn-enviar">
-            <button type="submit" class="formulario__btn" id="btnSubmit">
+            <button type="submit" class="formulario__btn">
               Cargar
             </button>
           </div>
@@ -183,4 +186,5 @@
       </div>
     </main>
   </body>
+  <script src="/JS/validacionesProductAdd.js"></script>
 </html>

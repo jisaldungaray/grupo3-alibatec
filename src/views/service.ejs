@@ -45,24 +45,44 @@
             </div>
         </div>
         <br>
-        <form action="" method="GET" class="cuentanos">
+        <form action="/service" method="POST" class="cuentanos" id="form">
             <p class="cuenta-alib">
                 <label>Nombre Completo: </label>
-                <input type="text" name="nombre" value="nombre">
+                <input type="text" name="nombre" id="nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
             </p>
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="text-danger">
+                  <%= errors.nombre.msg %>
+                </div>
+                <% } %>
             <p class="cuenta-alib">
                 <label>E-mail: </label>
-                <input type="email" name="email" value="email" required>
+                <input type="text" name="email" id="email" placeholder="ejemplo@email.com" value="<%= locals.old && old.email ? old.email : null %>">
             </p>
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                  <%= errors.email.msg %>
+                </div>
+                <% } %>
             <p class="coment-alib">
                 <label class="contanos">Cuentanos de tu Proyecto, empresa o emprendimiento:</label>
-                <textarea name="comentario" value="comentario">Comentario</textarea>
+                <textarea name="comentario">Comentario</textarea>
                 <br>
+                <% if (locals.errors && errors.comentario) { %>
+                    <div class="text-danger">
+                      <%= errors.comentario.msg %>
+                    </div>
+                    <% } %>
+
+                <div id= "error">
+                    <ul></ul>
+                </div>    
                 <button type="submit" class="boton-alib">Enviar</button>
             </p>
         </form>
     </main>
     <br>
+    <script src="/JS/validacionesService.js"></script>
 </body>
 <%- include('./partials/footer.ejs') %> 
 </html>

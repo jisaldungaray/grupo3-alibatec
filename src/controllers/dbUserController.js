@@ -21,7 +21,6 @@ const dbUserController = {
             db.Usuarios.findOne({
                 where: {email: req.body.email}
             }).then((userInDB)=>{
-
             
             if(userInDB) {
                 return res.render('register', {
@@ -54,11 +53,16 @@ const dbUserController = {
     },
     processlogin: async (req, res) => {
         
+        let resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length)
+            return res.render('login', {
+                errors: resultValidation.mapped(),
+            });
         const userToLogIn = await db.Usuarios.findOne({
             where: {email: req.body.email}
         })
 
-        
         if(userToLogIn) {
 			let checkPassword = bcrypt.compareSync(req.body.password, userToLogIn.password);
 			if (checkPassword) {

@@ -8,7 +8,6 @@ window.addEventListener('load', ()=>{
     
         const errores = [];
     
-    
         const name = document.getElementById('name');
         const lastName = document.getElementById('lastname');
         const email = document.getElementById('email');
@@ -57,14 +56,8 @@ window.addEventListener('load', ()=>{
             for(let i = 0; i < errores.length; i++){
                     error.innerHTML += `<li > ${errores[i]} </li>`
                     error.style.color = 'red'
-
             }
-            errores = []
-            // errores.forEach(err => {
-            //    error.innerHTML = '<p>' + err + '</p>';
-            //    error.style.color = 'red'
-            // })
-            
+            errores = []          
         }else {
             form.submit();
         }

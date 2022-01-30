@@ -85,6 +85,13 @@ p {
     color: red;
     font-weight: 500;
 }
+.is-valid{
+    border-bottom: 1px solid #44d62d !important;
+}
+
+.is-invalid {
+    border-bottom: 1px solid red !important;
+}
 /* ----- Div del banner----*/
 
 .banner{

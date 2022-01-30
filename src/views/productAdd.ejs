@@ -9,7 +9,7 @@
     <main class="main-add">
       <!--Codigo Correspondiente a Section Formulario-->
       <div class="register">
-        <form method="POST" action="/productos" id="form" class="datos" enctype="multipart/form-data">
+        <form method="POST" action="/productos/add" id="form" class="datos" enctype="multipart/form-data">
           <!--Codigo Correspondiente a Logo de Formulario-->
           <div class="contenedor-logo">
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
@@ -17,7 +17,9 @@
           <h3>Carga tus productos</h3>
           
           <div>
-            <ul id="error"></ul>
+            <ul id="error">
+
+            </ul>
           </div>
           <!--Codigo Correspondiente a model-->
           <div class="formulario__grupo">
@@ -29,6 +31,7 @@
                 name="model"
                 id="model"
                 placeholder="Modelo del producto"
+                value="<%= locals.old && old.model ? old.model : null %>"
               />
               <% if (locals.errors && errors.model) { %>
                 <div class="alert-warning">
@@ -36,8 +39,7 @@
                 </div>
               <% } %>
             </div>
-          </div>
-          
+          </div>        
 
           <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
@@ -49,6 +51,7 @@
                 name="price"
                 id="price"
                 placeholder="Precio"
+                value="<%= locals.old && old.price ? old.price : null %>"
               />
               <% if (locals.errors && errors.price) { %>
                 <div class="alert-warning">
@@ -57,7 +60,6 @@
               <% } %>
             </div>
           </div>
-          
 
           <!--Codigo Correspondiente a Descuento-->
           <div class="formulario__grupo">
@@ -67,7 +69,9 @@
                   type="number"
                   class="formulario__input"
                   name="discount"
+                  id="discount"
                   placeholder="Descuento"
+                  value="<%= locals.old && old.discount ? old.discount : null %>"
                 />
                 <% if (locals.errors && errors.discount) { %>
                   <div class="alert-warning">
@@ -76,7 +80,6 @@
                 <% } %>
             </div>
           </div>
-         
 
           <!--Codigo Correspondiente a vision general-->
           <div class="formulario__grupo">
@@ -95,7 +98,6 @@
                 <% } %>
             </div>
           </div>
-         
           
           <!--Codigo Correspondiente a marca-->
         <div class="formulario__categoria">
@@ -169,9 +171,7 @@
               <% } %>
             </div>
           </div>
-          
-          
-
+           
           <!--Codigo Correspondiente a Boton de Carga-->
           <div class="formulario__grupo formulario__grupo-btn-enviar">
             <button type="submit" class="formulario__btn">

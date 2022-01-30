@@ -1,5 +1,5 @@
-const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 const { Op } = require("sequelize");
 
 const dbController = {
@@ -31,18 +31,25 @@ const dbController = {
 
         Promise.all([producto, marcas, categorys, estado])
         .then(function([product, marca, category, estado]){
-            res.render('productadd', {product, marca, category, estado})
+            res.render('productAdd', {product, marca, category, estado})
         })
     },   
     store: function(req, res) {
         let resultValidation = validationResult(req);
+        let marcas = db.Marca.findAll()
+        let categorys = db.Category.findAll()
+        let estado = db.Estado.findAll()
 
         if(resultValidation.errors.length > 0){
-            return res.render('productAdd', {
-                errors: resultValidation.mapped(),
-                old: req.body
-            });
-            } else {
+            Promise.all([resultValidation, marcas, categorys, estado])
+            .then(function([resultValidation, marca, category, estado]){
+                return res.render('productAdd', {
+                     marca, category, estado,
+                     errors: resultValidation.mapped(),
+                     old: req.body,
+                 });
+            })
+            } else{
             db.Producto.create({
                 marca_id: req.body.marca,
                 model: req.body.model,
@@ -58,6 +65,7 @@ const dbController = {
                 })
                 .catch(err => console.log (err))
             }
+            
     },
     edit: function(req, res) {
         let producto = db.Producto.findByPk(req.params.id)

@@ -73,7 +73,8 @@
     border-radius: 5px;
     padding: 15px
 }
-.coment-alib button {
+.boton-alib {
+    display: block;
     width: 30%;
     border: none;
     background-color: rgb(0,171,240);
@@ -82,6 +83,17 @@
     padding: 10px;
     color: white;
     font-weight: bold;
+}
+.text-danger {
+    color: red;
+    font-weight: bold;
+}
+.is-valid{
+    border-bottom: 1px solid #44d62d !important;
+}
+
+.is-invalid {
+    border-bottom: 1px solid red !important;
 }
 @media (min-width: 768px){
     .propuestas {

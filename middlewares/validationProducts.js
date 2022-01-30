@@ -1,4 +1,4 @@
-const {body}= require('express-validator');
+const { body }= require('express-validator');
 const path = require ('path');
 const validationProducts = [
     body('model').notEmpty().isLength({min: 2}).withMessage('Debe completar este campo'),

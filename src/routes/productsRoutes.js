@@ -21,7 +21,7 @@ router.get('/detail/:id' , dbController.detalle);
 
 //RUTA CREAR PRODUCTO
 router.get('/add/', dbController.create); 
-router.post('/' , upload.single('imagen'), validationProducts, dbController.store);
+router.post('/add' , upload.single('imagen'), validationProducts, dbController.store);
 
 //RUTA EDITAR PRODUCTO
 router.get('/edit/:id', dbController.edit);

@@ -22,14 +22,18 @@
                 </div>
 
                 <h3> Ingresa a tu cuenta</h3>
-
+                <div>
+                    <ul id="error">
+        
+                    </ul>
+                  </div>
                   <!--Codigo Correspondiente a formulario  -->
 
-                <form action="/user/login" method="POST"> 
+                <form action="/user/login" method="POST" id="form"> 
 
                     <div class="nombre-usuario">
                         <label for="email"></label>
-                        <input class="grande" type="email" name="email" id="email" placeholder="E-Mail" value='' required >
+                        <input class="grande" type="email" name="email" id="email" placeholder="E-Mail">
                         <% if (locals.errors && errors.email) { %>
                             <h5 class="feedback"><%= errors.email.msg %></h5>
                         <% } %>
@@ -38,6 +42,9 @@
                     <div class="password">
                         <label for="password"></label>
                         <input class="grande" type="password" name="password" id="password" placeholder="Contraseña">
+                        <% if (locals.errors && errors.password) { %>
+                            <h5 class="feedback"><%= errors.password.msg %></h5>
+                        <% } %>
                     </div>
 
                     <div class="form-group form-check">
@@ -71,7 +78,7 @@
 
 
     </main>
-
+<script src="/JS/validacioneLogin.js"></script>
 
 </body>
 

@@ -6,7 +6,7 @@ window.addEventListener('load', ()=>{
     
     form.addEventListener('submit', (e) =>{
     
-        const errores = [];
+        let errores = [];
     
         const name = document.getElementById('name');
         const lastName = document.getElementById('lastname');
@@ -51,16 +51,17 @@ window.addEventListener('load', ()=>{
         }
         
         if(errores.length > 0){
-            e.preventDefault();
-            let error = document.getElementById('error');
-            for(let i = 0; i < errores.length; i++){
-                    error.innerHTML += `<li > ${errores[i]} </li>`
-                    error.style.color = 'red'
-                    error.style.fontWeight = 'bold'
-            }
-            errores = []          
+                e.preventDefault();
+                let error = document.getElementById('error');
+                error.innerHTML ='';
+                for(let i = 0; i < errores.length; i++){
+                        error.innerHTML += `<li > ${errores[i]} </li>`
+                        error.style.color = 'red'
+                        error.style.fontWeight = 'bold'
+                }
+                errores = []
         }else {
-            form.submit();
+                form.submit();
         }
     })
 })

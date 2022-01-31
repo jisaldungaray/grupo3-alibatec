@@ -18,6 +18,11 @@
             <a href="/"><img src="/img/at-logo-completo.png" alt="Logo de Alibatec"/></a>
           </div>
           <h3>Edita tu Producto</h3>
+          <div>
+            <ul id='error'>
+
+            </ul>
+          </div>
           <% for (let i = 0; i < marca.length; i++) { %>
             <% if (marca[i].id == producto.marca_id){ %>
 
@@ -35,6 +40,7 @@
                 type="text"
                 class="formulario__input"
                 name="model"
+                id= 'model'
                 value="<%=producto.model%>"
               />
             </div>
@@ -48,6 +54,7 @@
                   type="text"
                   class="formulario__input"
                   name="detail"
+                  id="detail"
                   value="<%=producto.detail%>"
                 />
             </div>
@@ -63,6 +70,7 @@
               <input
                 type="file"
                 name="imagen"
+                id="image"
                 multiple
                 class="formulario__input"
               />
@@ -75,7 +83,7 @@
               Selecciona su Categoria</label>
             <div class="formulario__categoria">
               <label for="category" class="formulario__label">Categoria</label> 
-              <select name="category">
+              <select name="category" id="category">
                 <% for (let i = 0; i < category.length; i++) { %>
                   <% if (category[i].id == producto.categoria_id){ %>
       
@@ -96,7 +104,7 @@
           <!--Codigo Correspondiente a Marca de Producto-->
           <div class="formulario__grupo">
             <label for="marca" class="formulario__label">Marca</label>
-            <select name="marca">
+            <select name="marca" id="marca">
               <% for (let i = 0; i < marca.length; i++) { %>
                 <% if (marca[i].id == producto.marca_id){ %>
     
@@ -117,12 +125,13 @@
 
           <!--Codigo Correspondiente a price-->
           <div class="formulario__grupo">
-            <label for="price" class="formulario__label"></label>
+            <label for="price" class="formulario__label">Precio</label>
             <div class="formulario__grupo-input">
               <input
                 type="number"
                 class="formulario__input"
                 name="price"
+                id="price"
                 value="<%=producto.price%>"
               />
             </div>
@@ -130,12 +139,13 @@
 
           <!--Codigo Correspondiente a Descuento-->
           <div class="formulario__grupo">
-            <label for="discount" class="formulario__label"></label>
+            <label for="discount" class="formulario__label">Descuento</label>
             <div class="formulario__grupo-input">
                 <input
                   type="number"
                   class="formulario__input"
                   name="discount"
+                  id="discount"
                   value="<%=producto.discount%>"
                 />
             </div>
@@ -154,5 +164,6 @@
       <div class="banner">
       </div>
     </main>
+    <script src="/JS/validacionesProdEdit.js"></script>
   </body>
 </html>

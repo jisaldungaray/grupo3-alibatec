@@ -5,10 +5,12 @@ const multer = require('multer');
 
 const router = express.Router();
 
-const controller = require ('../controllers/productController');
+//const controller = require ('../controllers/productController');
 const upload = require('../../middlewares/multerProduct');
 const dbController = require('../controllers/dbProductsController');
 const validationProducts = require('../../middlewares/validationProducts');
+const validationProdEdit = require('../../middlewares/validationProdEdit');
+const validationProductEdit = require('../../middlewares/validationProdEdit');
 
 // Ruta TODOS LOS PRODUCTOS
 router.get('/', dbController.productList);
@@ -25,7 +27,7 @@ router.post('/add' , upload.single('imagen'), validationProducts, dbController.s
 
 //RUTA EDITAR PRODUCTO
 router.get('/edit/:id', dbController.edit);
-router.put('/edit/:id', upload.single('imagen'), dbController.update);
+router.put('/edit/:id', upload.single('imagen'), validationProductEdit, dbController.update);
 
 //RUTA ELIMINAR PRODUCTO
 router.delete('/delete/:id', dbController.delete);

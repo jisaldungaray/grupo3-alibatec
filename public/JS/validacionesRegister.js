@@ -56,6 +56,7 @@ window.addEventListener('load', ()=>{
             for(let i = 0; i < errores.length; i++){
                     error.innerHTML += `<li > ${errores[i]} </li>`
                     error.style.color = 'red'
+                    error.style.fontWeight = 'bold'
             }
             errores = []          
         }else {

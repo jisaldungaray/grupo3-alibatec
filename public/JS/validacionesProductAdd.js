@@ -23,7 +23,7 @@ window.addEventListener('load', ()=> {
                 model.classList.remove('is-invalid')               
             };
 
-            if(price.value == '') {
+            if(price.value == null || price.value == "") {
                 errores.push('Debe ingresar el precio de su producto')
                 price.classList.add('is-invalid')
             }else {
@@ -52,12 +52,9 @@ window.addEventListener('load', ()=> {
                 for(let i = 0; i < errores.length; i++) {
                     errors.innerHTML += `<li> ${errores[i]} </li>`
                     errors.style.color = 'red'
-                //    errors.innerHTML = ''
-                }
-            }
-            //    errores = [];
-            //    form.submit()
-            
+                    error.style.fontWeight = 'bold'
+                }          
+            }       
 
     })
 

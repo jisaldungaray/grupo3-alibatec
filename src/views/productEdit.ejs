@@ -19,7 +19,7 @@
           </div>
           <h3>Edita tu Producto</h3>
           <div>
-            <ul id='error'>
+            <ul id="error">
 
             </ul>
           </div>
@@ -43,6 +43,11 @@
                 id= 'model'
                 value="<%=producto.model%>"
               />
+              <% if (locals.errors && errors.model) { %>
+                <div class="alert-warning">
+                  <%= errors.model.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
 
@@ -57,6 +62,11 @@
                   id="detail"
                   value="<%=producto.detail%>"
                 />
+                <% if (locals.errors && errors.detail) { %>
+                  <div class="alert-warning">
+                    <%= errors.detail.msg %> 
+                  </div>
+                <% } %>
             </div>
           </div>
 
@@ -66,15 +76,16 @@
             class="imag"
             src="<%= producto.image %>"/>
             <label for="imagen" class="formulario__label">Imagen de Producto</label>
-            <div class="formulario__grupo-input">
+            <!-- <div class="formulario__grupo-input">
               <input
                 type="file"
                 name="imagen"
                 id="image"
                 multiple
                 class="formulario__input"
+                
               />
-            </div>
+            </div> -->
           </div>
 
           <!--Codigo Correspondiente a Categoria-->
@@ -134,6 +145,11 @@
                 id="price"
                 value="<%=producto.price%>"
               />
+              <% if (locals.errors && errors.price) { %>
+                <div class="alert-warning">
+                  <%= errors.price.msg %> 
+                </div>
+              <% } %>
             </div>
           </div>
 
@@ -148,6 +164,11 @@
                   id="discount"
                   value="<%=producto.discount%>"
                 />
+                <% if (locals.errors && errors.discount) { %>
+                  <div class="alert-warning">
+                    <%= errors.discount.msg %> 
+                  </div>
+                <% } %>
             </div>
           </div>
 
@@ -164,6 +185,6 @@
       <div class="banner">
       </div>
     </main>
-    <script src="/JS/validacionesProdEdit.js"></script>
   </body>
+  <script src="/JS/validacionesProdEdit.js"></script>
 </html>

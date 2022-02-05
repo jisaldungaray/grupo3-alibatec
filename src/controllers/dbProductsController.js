@@ -43,7 +43,7 @@ const dbController = {
         if(resultValidation.errors.length > 0){
             Promise.all([resultValidation, marcas, categorys, estado])
             .then(function([resultValidation, marca, category, estado]){
-                return res.render('productEdit', {
+                return res.render('productAdd', {
                      marca, category, estado,
                      errors: resultValidation.mapped(),
                  });
@@ -81,7 +81,6 @@ const dbController = {
         let resultValidation = validationResult(req);
         let marcas = db.Marca.findAll()
         let categorys = db.Category.findAll()
-        // let estado = db.Estado.findAll()
         let producto = db.Producto.findByPk(req.params.id)
 
         if(resultValidation.errors.length > 0){
@@ -91,7 +90,7 @@ const dbController = {
                      marca, category, producto,
                      errors: resultValidation.mapped(),
                      old: req.body,
-                 });
+                 },/* console.log(resultValidation)*/);
             })
         } else{
             db.Producto.update({

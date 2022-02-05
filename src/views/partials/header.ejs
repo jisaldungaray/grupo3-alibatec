@@ -10,23 +10,31 @@
                 <a href="#"><i id="sim-men" class="fas fa-angle-double-down"></i></a>
                 <ul class="menu">
                     <li class="menu-item-container-submenu">
-                        <a href="/productos" class="submenu-btn">Productos<i class="fas fa-chevron-down"></i></a>
+                        <a class="submenu-btn-pro">Productos<i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu-pro">
                             <li class="menu-item"><a href="">Computadoras</a></li>
                             <li class="menu-item"><a href="">Portátiles</a></li>
-                            <li class="menu-item"><a href="">Celulares</a></li>
                             <li class="menu-item"><a href="">Accesorios</a></li>
                             <li class="menu-item"><a href="/productos">Ver Todos</a></li>
                         </ul>
                     </li>
                     <li class="menu-item"><a href="/service">Servicios</a></li>
                     <li class="menu-item-container-submenu"><a href="#" class="submenu-btn">Cuenta <i class="fas fa-chevron-down"></i></a>
+                        <% if (locals.isLogged) { %>
+                        <ul class="submenu-cuenta">
+                            <li class="menu-item"><a href="/user/profile/<%= locals.userLogged.id %> ">Mi perfil</a></li>
+                            <li class="menu-item"><a href="/user/logout">Cerrar sesión</a></li>       
+                        </ul>
+                        <% } else { %>      
                         <ul class="submenu-cuenta">
                             <li class="menu-item"><a href="/user/register">Registrarse</a></li>
                             <li class="menu-item"><a href="/user/login">Iniciar sesión</a></li>
                         </ul>
+                        <% } %>
                     </li>
+                    <% if (locals.isLogged) { %>
                     <li class="menu-item"><a href="/productos/shop">Carrito</a></li>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -39,7 +47,6 @@
                         <ul class="submenu">
                             <li><a href="#">Computadoras</a></li>
                             <li><a href="#">Portátiles</a></li>
-                            <li><a href="#">Celulares</a></li>
                             <li><a href="#">Accesorios</a></li>
                         </ul>
                     </li>
@@ -51,14 +58,14 @@
                 <ul class="lista-horizontal">
                     <% if (locals.isLogged) { %>
                     <li class="horizontal-item"><a href="#"><%= locals.userLogged.name %><i id="iconos-header" class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
+                        <ul class="submenu" id="submenu-cuenta-usuario">
                             <li><a href="/user/profile/<%= locals.userLogged.id %> ">Mi perfil</a></li>
                             <li><a href="/user/logout">Cerrar sesión</a></li>
                         </ul>
                     </li>
                     <% }else{ %>
-                    <li class="horizontal-item"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
+                    <li class="horizontal-item" id="horizontal-item"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu" id="submenu-cuenta">
                             <li><a href="/user/register">Registrarse</a></li>
                             <li><a href="/user/login">Iniciar sesión</a></li>
                         </ul>
@@ -73,4 +80,5 @@
             </nav>
         </div>
     </div>
+    <script src="/JS/header.js"></script>
 </header>

@@ -38,6 +38,9 @@ div.info-profile{
 div.info-profile > h2{
     text-decoration: underline;
 }
+h2 {
+    color: rgb(0,171,240)
+}
 
 /*---> MEDIA QUERYS <---*/
 

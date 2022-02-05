@@ -9,7 +9,6 @@ const router = express.Router();
 const upload = require('../../middlewares/multerProduct');
 const dbController = require('../controllers/dbProductsController');
 const validationProducts = require('../../middlewares/validationProducts');
-const validationProdEdit = require('../../middlewares/validationProdEdit');
 const validationProductEdit = require('../../middlewares/validationProdEdit');
 
 // Ruta TODOS LOS PRODUCTOS

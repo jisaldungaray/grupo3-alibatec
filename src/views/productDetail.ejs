@@ -27,15 +27,19 @@
                             <p>
                                 Hasta 12 cuotas sin interes con tarjeta de credito
                             </p>
+                            <% if (locals.isLogged) { %>
                             <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar producto</button></a>
                             <div class="prod-edit-button">
                                 <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
                                    <button type="submit" class="button-pedido"> Eliminar producto</button>
                                 </form>
                             </div>
-                            
+                            <% } %>
+                            <% if (locals.isLogged) { %>
                                 <a href="/productos/shop"><button class="button-pedido"> Hacer pedido </button></a>
-            
+                            <% } else { %>
+                                <a href="/user/register"><button class="button-pedido"> Hacer pedido </button></a>
+                           <% } %>            
                         </div>
                     </div>
             </div>
@@ -70,7 +74,6 @@
                     </h3>
                     <p><%= product.detail %> </p>
                 
-                    
                 </div>
                 
             </div>

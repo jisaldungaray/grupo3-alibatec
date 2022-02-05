@@ -102,7 +102,7 @@ const dbUserController = {
         db.Usuarios.findByPk(req.params.id)
         .then((user)=> {
             req.session.userLogged = user;
-            res.render('userEdit')
+            res.render('userEdit', {user} )
         })
     },
     update: (req, res) => {

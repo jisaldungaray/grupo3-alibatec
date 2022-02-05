@@ -47,11 +47,6 @@
     overflow: hidden;
     opacity: 0;
 }
-.header-menu:hover .menu{
-    overflow: visible;
-    opacity: 1;
-    transition: all 800ms;
-}
 .menu-item-container-submenu {
     position: relative;
     padding-top: 10px;
@@ -66,14 +61,6 @@
 .submenu-pro a, .submenu-cuenta a{
     background-color: rgb(254,100,26);
 }
-.submenu-pro, .submenu-cuenta {
-    height: 0;
-    overflow: hidden;
-    transition: all 800ms;
-    position: absolute;
-    opacity: 0;
-    z-index: 1000;
-}
 .menu-item-container-submenu:hover .submenu-pro {
     overflow: visible;
     opacity: 1;
@@ -83,6 +70,14 @@
     overflow: visible;
     opacity: 1;
     transition: all 800ms;
+}
+.submenu-pro, .submenu-cuenta {
+    height: 0;
+    overflow: hidden;
+    transition: all 800ms;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
 }
 .menu-item:hover {
     background-color: rgb(124,217,51);
@@ -494,21 +489,12 @@ article.ofertas {
     }
     .submenu li a {
         display: block;
-        margin-bottom: 10px;
         background-color: rgb(0,171,240);
         padding: 10px;
-        border-radius: 5%;
         color: rgb(54, 52, 52);
-    }   
-    .horizontal-item:hover .submenu {
-        overflow: visible;
-        display: block;
-        top: 60px;
-        opacity: 1; 
-    }
+    }    
     .submenu li a:hover {
         background-color: rgb(199,0,143);
-        padding: 10px;
         border-radius: 5%;
         color: white;
         font-weight: bold;
@@ -770,5 +756,4 @@ article.ofertas {
     .copyright {
         font-size: 8px;
     }
-
 }

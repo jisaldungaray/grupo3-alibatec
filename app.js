@@ -12,6 +12,10 @@ const router = require('./src/routes/mainRoutes');
 const productRouter = require('./src/routes/productsRoutes');
 const userRouter = require('./src/routes/userRoutes');
 
+//ROUTES API
+const productsAPIRouter = require('./src/routes/APIS/productsApiRoutes');
+
+
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +35,10 @@ app.set('view engine', 'ejs');
 app.use('/', router);
 app.use('/productos' , productRouter);
 app.use('/user' , userRouter);
+
+//APIS 
+app.use('/api/products', productsAPIRouter);
+
 
 // Hasta aca
 

@@ -42,9 +42,9 @@
         <div class="nav-complete">
             <nav class="nav-bar">
                 <ul class="lista-horizontal">
-                    <li class="horizontal-item">
+                    <li class="horizontal-item" id="horizontal-item1">
                     <a href="/productos">Productos <i id="iconos-header" class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
+                        <ul class="submenu" id="submenu-prod">
                             <li><a href="#">Computadoras</a></li>
                             <li><a href="#">Portátiles</a></li>
                             <li><a href="#">Accesorios</a></li>
@@ -57,14 +57,14 @@
 
                 <ul class="lista-horizontal">
                     <% if (locals.isLogged) { %>
-                    <li class="horizontal-item"><a href="#"><%= locals.userLogged.name %><i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                    <li class="horizontal-item" id="horizontal-item3"><a href="#"><%= locals.userLogged.name %><i id="iconos-header" class="fas fa-chevron-down"></i></a>
                         <ul class="submenu" id="submenu-cuenta-usuario">
                             <li><a href="/user/profile/<%= locals.userLogged.id %> ">Mi perfil</a></li>
                             <li><a href="/user/logout">Cerrar sesión</a></li>
                         </ul>
                     </li>
                     <% }else{ %>
-                    <li class="horizontal-item" id="horizontal-item"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
+                    <li class="horizontal-item" id="horizontal-item2"><a href="#">Cuenta <i id="iconos-header" class="fas fa-chevron-down"></i></a>
                         <ul class="submenu" id="submenu-cuenta">
                             <li><a href="/user/register">Registrarse</a></li>
                             <li><a href="/user/login">Iniciar sesión</a></li>
@@ -81,4 +81,15 @@
         </div>
     </div>
     <script src="/JS/header.js"></script>
+    <script>
+        const horizontalItemId3 = document.getElementById('horizontal-item3')
+        horizontalItemId3.addEventListener('mouseover', () => {
+            submenuCuentaUser.style.overflow = 'visible'
+            submenuCuentaUser.style.opacity = 1
+            submenuCuentaUser.style.top = '40px'
+        })
+        horizontalItemId3.addEventListener('mouseout', () => {
+            submenuCuentaUser.style.opacity = 0
+        })
+    </script>
 </header>

@@ -8,7 +8,6 @@ const mainController = {
         })
             .then((product) =>{
                 res.render('index', {product})
-                console.log (product[0])
     })
     },
     servicios: (req, res ) => {

@@ -13,34 +13,26 @@ menu.addEventListener('mouseout', () => {
 })
 
 // menu header desktop
-const horizontalItem = document.querySelector('.horizontal-item')
-const horizontalItemId = document.getElementById('horizontal-item')
-const iconoHeader = document.querySelector('.fa-chevron-down')
-const submenu = document.querySelector('.submenu')
+const horizontalItemId1 = document.getElementById('horizontal-item1')
+const horizontalItemId2 = document.getElementById('horizontal-item2')
+
+const submenu = document.getElementById('submenu-prod')
 const submenuCuenta = document.getElementById('submenu-cuenta')
 const submenuCuentaUser = document.getElementById('submenu-cuenta-usuario')
 
-horizontalItem.addEventListener('mouseover', () => {
+horizontalItemId1.addEventListener('mouseover', () => {
     submenu.style.overflow = 'visible'
     submenu.style.opacity = 1
     submenu.style.top = '40px'
 })
-horizontalItem.addEventListener('mouseout', () => {
+horizontalItemId1.addEventListener('mouseout', () => {
     submenu.style.opacity = 0
 })
-horizontalItemId.addEventListener('mouseover', () => {
+horizontalItemId2.addEventListener('mouseover', () => {
     submenuCuenta.style.overflow = 'visible'
     submenuCuenta.style.opacity = 1
     submenuCuenta.style.top = '40px'
 })
-horizontalItemId.addEventListener('mouseout', () => {
+horizontalItemId2.addEventListener('mouseout', () => {
     submenuCuenta.style.opacity = 0
-})
-horizontalItemId.addEventListener('mouseover', () => {
-    submenuCuentaUser.style.overflow = 'visible'
-    submenuCuentaUser.style.opacity = 1
-    submenuCuentaUser.style.top = '40px'
-})
-horizontalItemId.addEventListener('mouseout', () => {
-    submenuCuentaUser.style.opacity = 0
 })

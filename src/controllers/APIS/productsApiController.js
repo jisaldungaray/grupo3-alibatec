@@ -2,18 +2,29 @@ const db = require('../../database/models');
 
 const productApiController = {
     list: (req, res) => {
-        db.Producto
-            .findAll({include: ["category", "marca"] })
-            .then((products) => {
+        let productos = db.Producto.findAll()
+        let categorias = db.Category.findAll()
+        let marcas = db.Marca.findAll()
+
+        Promise.all([productos, categorias, marcas])
+            .then(function([products, category, marcas]){
                 return res.status(200).json({
                     total: products.length,
                     data: products,
+                    category: category,
+                    marcas: marcas,
                     url: '/api/products/:id',
                     status: 200
                 });
             })
 
+        
+
+            
+
     },
+
+    
     
     detail: (req, res) => {
         db.Producto

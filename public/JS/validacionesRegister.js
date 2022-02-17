@@ -59,9 +59,8 @@ window.addEventListener('load', ()=>{
                         error.style.color = 'red'
                         error.style.fontWeight = 'bold'
                 }
-                errores = []
-        }else {
-                form.submit();
+                
         }
+        
     })
 })

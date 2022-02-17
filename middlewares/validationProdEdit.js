@@ -4,7 +4,7 @@ const validationProductEdit = [
     body('model').notEmpty().withMessage('Debe completar este campo').isLength({min: 2}).withMessage('Debe completar este campo'),
     body('detail').notEmpty().withMessage('Debe completar este campo').isLength({min: 20}).withMessage('Debe completar este campo'),
     body('price').notEmpty().withMessage('Debe poner un precio al producto'),
-/*    body('imagen').custom((value, { req }) => {
+    body('imagen').custom((value, { req }) => {
         let file = req.file;
         let extensionesPermitidas = ['.jpg', '.jpeg', '.png', '.gif'];
         if (!file){
@@ -16,6 +16,6 @@ const validationProductEdit = [
 			}
 		}
         return true;
-    })*/
+    })
 ];
 module.exports = validationProductEdit;

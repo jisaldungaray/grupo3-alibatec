@@ -90,7 +90,7 @@ const dbController = {
                      marca, category, producto,
                      errors: resultValidation.mapped(),
                      old: req.body,
-                 },/* console.log(resultValidation)*/);
+                 });
             })
         } else{
             db.Producto.update({
@@ -100,7 +100,7 @@ const dbController = {
             price: req.body.price,
             discount: req.body.discount,
             categoria_id: req.body.category,
-            // image: "/img/productos/"  + req.file.filename
+            image: "/img/productos/"  + req.file.filename
         }, {
             where: {id: req.params.id}
         })

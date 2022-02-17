@@ -12,8 +12,8 @@ window.addEventListener('load', ()=> {
 
         let errores = [];
 
-        // const formatoImagen = /(.jpg|.jpeg|.png|.gif)$/i;
-        // const fileImg = img.value; 
+        const formatoImagen = /(.jpg|.jpeg|.png|.gif)$/i;
+        const fileImg = img.value; 
 
         if(!model.value){
             errores.push('Debe completar el modelo correspondiente')
@@ -38,17 +38,18 @@ window.addEventListener('load', ()=> {
             detail.classList.add('is-valid')
             detail.classList.remove('is-invalid')
         }
-        // if(!fileImg){
-        //     errores.push('Debe insertar una imagen');
-        //     img.classList.add('is-invalid')
-        // }else if(!formatoImagen.exec(fileImg)){
-        //     errores.push('La extención de imagen permitida es: .jpg, .jpeg, .png, .gif')
-        //     img.classList.add('is-valid');
-        //     img.classList.remove('is-invalid')
-        // }
+        if(!fileImg){
+            errores.push('Debe insertar una imagen');
+            img.classList.add('is-invalid')
+        }else if(!formatoImagen.exec(fileImg)){
+            errores.push('La extención de imagen permitida es: .jpg, .jpeg, .png, .gif')
+            img.classList.add('is-valid');
+            img.classList.remove('is-invalid')
+        }
         if(errores.length > 0){
             e.preventDefault();
             let errors = document.getElementById('error')
+            errors.innerHTML=''
             for(let i = 0; i < errores.length; i++) {
                 errors.innerHTML += `<li> ${errores[i]} </li>`
                 errors.style.color = 'red'

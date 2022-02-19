@@ -115,8 +115,15 @@ const dbController = {
             where: {id: req.params.id}
         })
             res.redirect('/productos')
-    }
-            
+    },
+    carritoCompras: (req, res) => {
+        let producto = db.Producto.findAll()
+        let marcas = db.Marca.findAll()
 
+        Promise.all([producto, marcas])
+            .then(function([product, marca]){
+                res.render('productCart', {product, marca})
+            })
+    }
 }
 module.exports = dbController;

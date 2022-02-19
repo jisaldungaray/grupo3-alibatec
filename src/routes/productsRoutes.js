@@ -18,7 +18,7 @@ router.get('/', dbController.productList);
 router.get('/detail/:id' , dbController.detalle);
 
 // RUTA CARRITO DE COMPRAS
-//router.get('/shop', controller.carritoCompras);
+router.get('/shop', dbController.carritoCompras);
 
 //RUTA CREAR PRODUCTO
 router.get('/add/', dbController.create); 

@@ -37,7 +37,10 @@ window.addEventListener('load', ()=>{
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
         }
-    
+        
+
+
+
         let totalCarrito = 0;
     
         for (let i=0; i < carrito.length; i++) {

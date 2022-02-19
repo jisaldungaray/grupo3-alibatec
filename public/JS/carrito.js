@@ -22,7 +22,9 @@ window.addEventListener('load', ()=>{
                     <h4>  ${producto.descuentoCar}</h4>
                     <h4>  ${producto.precioCar}</h4>
                 </div>
-
+                <button class= "borraritem" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
         `
         div.innerHTML += contenido
@@ -32,7 +34,15 @@ window.addEventListener('load', ()=>{
   let divTotal = document.querySelector('.envio')
   let totalCarrito = localStorage.totalCarrito;
 
-
-
+  if(typeof localStorage.totalCarrito == 'undefined'){
+    let contenido2 = `0`
+    divTotal.innerHTML += contenido2
+  }else{
+    let contenido2 = `${toThousand(totalCarrito)}`
+    divTotal.innerHTML += contenido2
+  }
+  
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    location.reload();
 
 })

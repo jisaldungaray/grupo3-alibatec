@@ -16,13 +16,16 @@
                             <h2>
                                 <%= product.marca.tipo %>
                             </h2>
-                            <h3>
+                            <h3 class="titulo-producto">
                                 <%= product.model %>
                             </h3>   
                         </div>
                         <div class="main-product-precio">
-                            <h4>
+                            <h4 class="price">
                                 $<%= product.price %>
+                            </h4>
+                            <h4 class="discount">
+                                $<%= product.discount %>
                             </h4>
                             <p>
                                 Hasta 12 cuotas sin interes con tarjeta de credito
@@ -36,7 +39,7 @@
                             </div>
                             <% } %>
                             <% if (locals.isLogged) { %>
-                                <a href="/productos/shop"><button class="button-pedido"> Hacer pedido </button></a>
+                                <a href="/productos/shop"><button class="button-pedido" id="button-pedido"> Hacer pedido </button></a>
                             <% } else { %>
                                 <a href="/user/register"><button class="button-pedido"> Hacer pedido </button></a>
                            <% } %>            
@@ -80,5 +83,6 @@
         </section>   
     </main>
 </body>
+<script src="/JS/addProducts.js"></script>
 <%- include('./partials/footer.ejs')  %> 
 </html>

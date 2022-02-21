@@ -31,39 +31,26 @@
                 </div>
             </div>
 
-                <div class="informacion">
-
-                    <h2> Información de Contacto</h2>
-                    <input type="email" class="grande" name="email" id="email" placeholder="Email@email.com.co">
-
-                    
-                    <input type="checkbox" class="newsletter" name="newsletter" id="newsletter" >
-                    <label for="newsletter"> Recibir Información sobre nuevos Productos</label>
-
-            
-
-                    <h2>Información de Envio</h2>
-
-                    <form action="/" method="post"></form>
-
-                    <div class="nombre-apellido">
-                        <input type="text" class="grande" name="nombre" id=" nombre" placeholder="Nombre">
-                        <input type="text" class="grande" name="apellido" id="apellido" placeholder="Apellido">
-                    </div>
-
-                    <div class="ubicacion">
-
-                        <input type="text" class="grande" name="direccion" id="direccion" placeholder="Dirección">
-                        <input type="text" class="grande" name="altura" id="altura" placeholder="Altura">
-                        <input type="text" class="grande" name="Provincia" id="Provincia" placeholder="Provincia">
-                        <input type="text" class="grande" name="localidad" id="localidad" placeholder="localidad">
-
-                    </div>
-
-                    <input type="text" class="grande" name="cp" id="cp" placeholder="CP">
+            <div class="informacion">
+                <div class="errors">
 
                 </div>
 
+                <h2> Información de Contacto</h2>
+                <form action="/" method="GET">
+                    <input type="email" class="grande" name="email" id="email" placeholder="Email@email.com.co">
+ 
+                    <input type="checkbox" class="newsletter" name="newsletter" id="newsletter" >
+                    <label for="newsletter"> Recibir Información sobre nuevos Productos</label>
+
+                    <h2>Información de Envio</h2>
+
+                        <input type="text" class="grande" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+                        <input type="text" class="grande" name="direccion" id="direccion" placeholder="Dirección Completa">
+                        <input type="text" class="grande" name="Provincia" id="Provincia" placeholder="Provincia">
+                        <input type="text" class="grande" name="cp" id="cp" placeholder="CP">
+
+            </div>
         </div>
 
         <div class="detalle-pedido">
@@ -82,14 +69,15 @@
             <a href="/"> << Volver al inicio </a>
 
             <button type="submit" id="botonEnviar" class="botones">Enviar Pedido</button>
-
+        </form>
 
         </div>
+    
     </main>
 
 <!--Footer-->
 <%- include('./partials/footer.ejs') %>
 
 </body>
-<script src="../../JS/carrito.js"></script>
+<script src="/JS/carrito.js"></script>
 </html>

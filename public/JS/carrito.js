@@ -1,6 +1,5 @@
 window.onload = function () {
 
-  const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   if (typeof localStorage.carrito == "undefined" || typeof localStorage.carrito == "[]"
   ) {
     let div = document.querySelector(".sinProducto");
@@ -40,23 +39,21 @@ window.onload = function () {
     div2.innerHTML+= contenido2
   }
 
-let botonBorrar = document.querySelector("#botonBorrar");
-botonBorrar.addEventListener('click', function(e) {
-  e.preventDefault();
-  localStorage.clear();
-  alert('Has vaciado el carrito');
-  location.reload();
-})
-let comprar = document.getElementById('botonEnviar')
-  comprar.addEventListener('click', (e)=>{
+  let botonBorrar = document.querySelector("#botonBorrar");
+  botonBorrar.addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.clear();
-    alert('Su compra se ha realizado satisfactoriamente, le enviaremos el detalle de la compra a su correo')
+    alert('Has vaciado el carrito');
     location.reload();
-    location.href = '/'
-  })
+  });
+let comprar = document.getElementById("botonEnviar");
+comprar.addEventListener('click', ()=> {
+  alert('Su compra se ha realizado satisfactoriamente, le enviaremos el detalle de la compra a su correo')
+        localStorage.clear();
+        location.reload();
+        location.href = '/'
+})
 };
-
 function borrarItem(id) {
   let carrito = JSON.parse(localStorage.carrito); 
   carrito = carrito.filter((producto, i) => {

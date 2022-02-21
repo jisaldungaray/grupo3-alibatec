@@ -49,6 +49,7 @@ window.addEventListener('load', ()=> {
             if(errores.length > 0){
                 e.preventDefault();
                 let errors = document.getElementById('error')
+                errors.innerHTML= ''
                 for(let i = 0; i < errores.length; i++) {
                     errors.innerHTML += `<li> ${errores[i]} </li>`
                     errors.style.color = 'red'

@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %>
-<body>
-<%- include('./partials/header.ejs') %> 
-    <main>
-        <section>
-            <div class="head-product">
-                <div>
-                        <img src="<%=product.image %>" class="foto">
-                </div>
-                
-                   <!---PRODUCTO---> 
-                    <div class="product">
-                        <div class="main-product">
-                            <h2>
-                                <%= product.marca.tipo %>
-                            </h2>
-                            <h3 class="titulo-producto">
-                                <%= product.model %>
-                            </h3>   
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+            <main>
+                <section>
+                    <div class="head-product">
+                        <div>
+                            <img src="<%=product.image %>" class="foto">
                         </div>
-                        <div class="main-product-precio">
-                            <h4 class="price">
-                                $<%= product.price %>
-                            </h4>
-                            <h4 class="discount">
-                                $<%= product.discount %>
-                            </h4>
-                            <p>
-                                Hasta 12 cuotas sin interes con tarjeta de credito
-                            </p>
+
+                        <!---PRODUCTO--->
+                        <div class="product" >
+                            <div class="main-product">
+                                <h2>
+                                    <%=product.marca.tipo%>
+                                </h2>
+                                <h3 class="titulo-producto">
+                                    <%=product.model%>
+                                </h3>
+                            </div>
+                            <div class="main-product-precio">
+                                <h4 class="price">
+                                    $<%=product.price%>
+                                </h4>
+                                <h4 class="discount">
+                                    <%=product.discount%>
+                                </h4>
+                                <p>
+                                    Hasta 12 cuotas sin interes con tarjeta de credito
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <div>
                             <% if (locals.isLogged) { %>
-                            <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar producto</button></a>
+                            <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar
+                            producto</button></a>
                             <div class="prod-edit-button">
                                 <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                   <button type="submit" class="button-pedido"> Eliminar producto</button>
+                                <button type="submit" class="button-pedido" id=""> Eliminar
+                                producto</button>
                                 </form>
                             </div>
-                            <% } %>
-                            <% if (locals.isLogged) { %>
-                                <a href="/productos/shop"><button class="button-pedido" id="button-pedido"> Hacer pedido </button></a>
-                            <% } else { %>
-                                <a href="/user/register"><button class="button-pedido"> Hacer pedido </button></a>
-                           <% } %>            
+                                <% } %>
+                                <% if (locals.isLogged) { %>
+                                <a href="/productos/shop"><button class="button-pedido btn-compra"> Hacer
+                                    pedido
+                                </button></a>
+                                <% } else { %>
+                                <a href="/user/register"><button class="button-pedido"> Hacer pedido
+                                    </button></a>
+                                <% } %>
                         </div>
                     </div>
-            </div>
-        </section> 
+                </section>
+
+                <section>
+                    <!--DETALLES DE COMPRA-->
+                    <div class="main-section-details">
+                        <div class="desplegable">
+                            <ul>
+                                <hr>
+                                <li>
+                                    <a href="#">Asistencia de ventas <i class="fas fa-sort-down"></i></a>
+
+                                        <p class="desplegable-ventas"> 
+                                            Todos los productos se envían a través de servicios de mensajería totalmente rastreables, que se ofrecen de forma gratuita a direcciones en cualquier lugar de Argentina.
+                                        </p>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#">Envios <i class="fas fa-sort-down"></i>
+                                        <p class="desplegable-ventas">
+                                            Garantias : Nuestra garantía de 12 meses cubre fallas del fabricante que no se derivan del uso y desgaste estándar.
+                                        </p>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#">Denuncias y devoluciones <i class="fas fa-sort-down"></i>
+                                        <p class="desplegable-ventas">
+                                            Con gusto lo ayudaremos a procesar un cambio dentro de los 30 días posteriores a la entrega. Deberá devolvernos el artículo en su estado original con el embalaje intacto. Comuníquese con support-au@studioproper.com para obtener ayuda.  
+                                        </p>
+                                    </a>
+                                </li>
+                                <hr>
+                            </ul>
+                        </div>
+                        <!--DETALLE PRODUCTO-->
+
+                        <div class="main-section-info-product">
+
+                            <h3>
+                                Caracteristicas
+                            </h3>
+                            <p>
+                                <%= product.detail %>
+                            </p>
+
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+    
        
-        <section>
-            <!--DETALLES DE COMPRA-->
-            <div class="main-section-details">
-                <div class="desplegable">
-                    <ul>
-                        <hr>
-                        <li>
-                            <a href="#">Asistencia de ventas <i class="fas fa-sort-down"></i></a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="#">Envios <i class="fas fa-sort-down"></i></a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="#">Denuncias y devoluciones <i class="fas fa-sort-down"></i></a>
-                        </li>
-                        <hr>
-                    </ul>
-                </div>
-                <!--DETALLE PRODUCTO-->
+        <script src="/JS/addProducts.js"></script>
 
-                <div class="main-section-info-product">
-
-                    <h3>
-                        Caracteristicas
-                    </h3>
-                    <p><%= product.detail %> </p>
-                
-                </div>
-                
-            </div>
-        </section>   
-    </main>
-</body>
-<script src="/JS/addProducts.js"></script>
-<%- include('./partials/footer.ejs')  %> 
 </html>

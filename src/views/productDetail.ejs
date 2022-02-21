@@ -31,28 +31,25 @@
                                 <p>
                                     Hasta 12 cuotas sin interes con tarjeta de credito
                                 </p>
-                            </div>
-                        </div>
-                    
-                        <div>
-                            <% if (locals.isLogged) { %>
-                            <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar
-                            producto</button></a>
-                            <div class="prod-edit-button">
-                                <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="button-pedido" id=""> Eliminar
-                                producto</button>
-                                </form>
-                            </div>
-                                <% } %>
                                 <% if (locals.isLogged) { %>
-                                <a href="/productos/shop"><button class="button-pedido btn-compra"> Hacer
-                                    pedido
-                                </button></a>
-                                <% } else { %>
-                                <a href="/user/register"><button class="button-pedido"> Hacer pedido
+                                <a href="/productos/edit/<%= product.id %>"><button class="button-pedido">Editar
+                                producto</button></a>
+                                <div class="prod-edit-button">
+                                    <form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="button-pedido" id=""> Eliminar
+                                    producto</button>
+                                    </form>
+                                </div>
+                                    <% } %>
+                                    <% if (locals.isLogged) { %>
+                                    <a href="/productos/shop"><button class="button-pedido btn-compra"> Hacer
+                                        pedido
                                     </button></a>
-                                <% } %>
+                                    <% } else { %>
+                                    <a href="/user/register"><button class="button-pedido"> Hacer pedido
+                                        </button></a>
+                                    <% } %>
+                            </div>
                         </div>
                     </div>
                 </section>

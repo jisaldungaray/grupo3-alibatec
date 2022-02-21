@@ -9,25 +9,29 @@ window.onload = function() {
         
         let id = url [url.length -1]
         
-        let imagen = document.querySelector('.foto').src
-        let titulo = document.querySelector('.titulo-producto').innerText
-        let precio = document.querySelector('.price').innerText
+        let imagen = document.querySelector('.foto').src;
+        let titulo = document.querySelector('.titulo-producto').innerText;
+        let precio = document.querySelector('.price');
+        let descuento = document.querySelector('.discount');
+
+        let precioCar = Number(precio.textContent.replace('$', ''));
+        let descuentoCar = Number(descuento.textContent.replace('$', ''));
         
         let producto = {
             idProducto: id, 
             imagen,
             titulo,
-            precio,
+            precioCar,
+            descuentoCar
         }
-        
         
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
-            localStorage.setItem("totalCarrito", producto.precio)
+            localStorage.setItem("totalCarrito", producto.precioCar)
         }else{
-            let carrito = JSON.parse(localStorage.carrito)
+            carrito = JSON.parse(localStorage.carrito)
             let arrayProductos = carrito.filter(function(producto){
                 return producto.idProducto == id
             })
@@ -37,13 +41,10 @@ window.onload = function() {
                 localStorage.setItem("carrito", JSON.stringify(carrito))
             } 
         
-            
             let totalCarrito = 0
             for (let i=0; i < carrito.length; i++) { 
-                let carro = carrito[i].precio
-                totalCarrito += carro
+                totalCarrito = totalCarrito + carrito[i].precioCar
             }
-            
             localStorage.setItem("totalCarrito", totalCarrito)            
         }             
         
